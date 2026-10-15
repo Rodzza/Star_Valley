@@ -3,64 +3,56 @@
  * O teste tokens.test.ts falha se algum par texto/fundo ficar abaixo de 4,5:1 (WCAG AA).
  */
 export interface Palette {
-  bg: string;
-  surface: string;
+  bg: string; // céu do entardecer (fundo da página)
+  onBg: string; // texto sobre o céu
+  onBgMuted: string;
+  surface: string; // pergaminho dos painéis
   surfaceAlt: string;
   text: string;
   textMuted: string;
   accent: string;
   onAccent: string;
-  accentText: string; // acento usado como cor de TEXTO sobre bg/surface
+  accentText: string; // verde usado como cor de TEXTO sobre o pergaminho
   warnBg: string;
   warnText: string;
   lockedText: string;
-  border: string;
+  border: string; // madeira
 }
 
-export const dark: Palette = {
-  bg: '#101a24',
-  surface: '#1b2a38',
-  surfaceAlt: '#243647',
-  text: '#eef3f7',
-  textMuted: '#b4c2cf',
-  accent: '#5cc28a',
-  onAccent: '#08251a',
-  accentText: '#7fd6a5',
-  warnBg: '#3a2f12',
-  warnText: '#ffe6a3',
-  lockedText: '#c9b8ff',
-  border: '#3a4f63',
+/** O jogo tem um visual só (entardecer); o tema escuro apenas aprofunda o céu. */
+export const light: Palette = {
+  bg: '#2f2358',
+  onBg: '#fff1d6',
+  onBgMuted: '#dccbf0',
+  surface: '#f7e3b0',
+  surfaceAlt: '#ebc98a',
+  text: '#3a2110',
+  textMuted: '#6a4421',
+  accent: '#78c850',
+  onAccent: '#1d2f0c',
+  accentText: '#25581a',
+  warnBg: '#ffe28a',
+  warnText: '#4a2f00',
+  lockedText: '#5b2f99',
+  border: '#5a2f12',
 };
 
-export const light: Palette = {
-  bg: '#f6f4ec',
-  surface: '#ffffff',
-  surfaceAlt: '#ece9dd',
-  text: '#1d2b36',
-  textMuted: '#4a5b69',
-  accent: '#1f7a4d',
-  onAccent: '#ffffff',
-  accentText: '#17613c',
-  warnBg: '#fff3cf',
-  warnText: '#5c4200',
-  lockedText: '#4b3a9a',
-  border: '#b9c2c9',
-};
+export const dark: Palette = { ...light, bg: '#1d1538' };
 
 /** Pares (texto, fundo) que precisam ter contraste mínimo de 4,5:1. */
 export const TEXT_PAIRS: ReadonlyArray<readonly [keyof Palette, keyof Palette]> = [
-  ['text', 'bg'],
+  ['onBg', 'bg'],
+  ['onBgMuted', 'bg'],
   ['text', 'surface'],
   ['text', 'surfaceAlt'],
-  ['textMuted', 'bg'],
   ['textMuted', 'surface'],
   ['textMuted', 'surfaceAlt'],
-  ['accentText', 'bg'],
   ['accentText', 'surface'],
+  ['accentText', 'surfaceAlt'],
   ['onAccent', 'accent'],
   ['warnText', 'warnBg'],
   ['lockedText', 'surface'],
-  ['lockedText', 'bg'],
+  ['lockedText', 'surfaceAlt'],
 ];
 
 const toVar = (k: string) => `--${k.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`)}`;

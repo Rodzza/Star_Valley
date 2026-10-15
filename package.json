@@ -16,6 +16,8 @@
     "@capacitor-community/admob": "^8.2.1",
     "@capacitor/core": "^8.5.3",
     "@capacitor/preferences": "^8.0.1",
+    "@fontsource/nunito": "^5.3.0",
+    "@fontsource/pixelify-sans": "^5.3.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "valley-native": "file:./plugins/valley-native"
