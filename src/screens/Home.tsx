@@ -16,24 +16,24 @@ export function Home({ onOpen, onPaywall, onCredits, notices }: Props) {
 
   return (
     <>
-      <header className="scene">
-        <div className="stars" aria-hidden="true" />
-        <div className="sun" aria-hidden="true" />
-        <div className="hill back" aria-hidden="true" />
-        <div className="hill front" aria-hidden="true" />
-        <div className="sign">
-          <h1>Valley Tracker</h1>
-          <p>Seu caderno de campo do vale</p>
+      <header className="top">
+        <span className="cloud c1" aria-hidden="true" />
+        <span className="cloud c2" aria-hidden="true" />
+        <div className="brand">
+          <span className="brand-icon">
+            <PixelIcon name="sprout" size={34} />
+          </span>
+          <div>
+            <h1>Valley Tracker</h1>
+            <p>Seu caderno de campo do vale</p>
+          </div>
         </div>
         <div className="hud" role="status" aria-label={isPro ? 'Plano Pro ativo' : `Anúncios restantes hoje: ${adsLeft} de 5`}>
-          <div className="hud-count">
-            <PixelIcon name="coin" size={22} />
-            <span>{isPro ? 'Pro' : `${adsLeft}/5`}</span>
-          </div>
+          <PixelIcon name="coin" size={22} />
+          <span className="hud-count">{isPro ? 'Pro' : `${adsLeft}/5`}</span>
           <span className="hud-label">{isPro ? 'tudo liberado' : 'anúncios hoje'}</span>
         </div>
       </header>
-      <div className="fence" aria-hidden="true" />
       {notices}
 
       {FEATURES.map((f) => {
@@ -46,7 +46,7 @@ export function Home({ onOpen, onPaywall, onCredits, notices }: Props) {
             ? 'Libere com 1 anúncio (vale até meia-noite)'
             : 'Pro';
         return (
-          <button key={f.id} className="card feature" onClick={() => onOpen(f.id)}>
+          <button key={f.id} className={`card feature ${f.access}`} onClick={() => onOpen(f.id)}>
             <span className="feature-slot">
               <PixelIcon name={FEATURE_ICON[f.id]} size={38} />
               {!ok && (

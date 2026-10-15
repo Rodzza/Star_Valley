@@ -19,25 +19,26 @@ export interface Palette {
   border: string; // madeira
 }
 
-/** O jogo tem um visual só (entardecer); o tema escuro apenas aprofunda o céu. */
+/** Paleta tirada da folha de consulta: céu azul, pergaminho dourado, madeira laranja, verde das colinas. */
 export const light: Palette = {
-  bg: '#2f2358',
-  onBg: '#fff1d6',
-  onBgMuted: '#dccbf0',
-  surface: '#f7e3b0',
-  surfaceAlt: '#ebc98a',
-  text: '#3a2110',
-  textMuted: '#6a4421',
-  accent: '#78c850',
-  onAccent: '#1d2f0c',
-  accentText: '#25581a',
-  warnBg: '#ffe28a',
-  warnText: '#4a2f00',
-  lockedText: '#5b2f99',
-  border: '#5a2f12',
+  bg: '#bfe8fa',
+  onBg: '#3a2110',
+  onBgMuted: '#5a3a1f',
+  surface: '#ffd889',
+  surfaceAlt: '#ffeabb',
+  text: '#44220e',
+  textMuted: '#7a4a22',
+  accent: '#2e7d1f',
+  onAccent: '#ffffff',
+  accentText: '#2a6a1a',
+  warnBg: '#fff1c2',
+  warnText: '#5a3200',
+  lockedText: '#9a2a00',
+  border: '#b9602c',
 };
 
-export const dark: Palette = { ...light, bg: '#1d1538' };
+/** Um visual só (o dia no vale), independente do tema do sistema. */
+export const dark: Palette = { ...light };
 
 /** Pares (texto, fundo) que precisam ter contraste mínimo de 4,5:1. */
 export const TEXT_PAIRS: ReadonlyArray<readonly [keyof Palette, keyof Palette]> = [
