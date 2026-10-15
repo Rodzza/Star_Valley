@@ -96,6 +96,12 @@ export function App() {
             Anúncios e compras são simulados, e o botão flutuante só existe no app Android.
           </p>
         )}
+        {import.meta.env.VITE_UNLOCK_ALL === 'true' && (
+          <p className="notice" role="note">
+            <strong>Versão de teste</strong>
+            Todas as funções estão liberadas para você testar. Na versão publicada, valem os planos e anúncios.
+          </p>
+        )}
         <Router />
       </main>
     </EntitlementsProvider>

@@ -27,6 +27,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+        env:
+          VITE_UNLOCK_ALL: 'true'
       - run: npx cap add android
       - run: npx tsx tools/configureAndroid.ts --test
       - run: npx cap sync android

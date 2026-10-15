@@ -28,9 +28,13 @@ interface Ctx {
 
 const EntitlementsContext = createContext<Ctx | null>(null);
 
+/** Só em builds de teste: libera tudo como se fosse Pro, sem anúncio nem compra. */
+const UNLOCK_ALL = import.meta.env.VITE_UNLOCK_ALL === 'true';
+
 export function EntitlementsProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
-  const [isPro, setIsPro] = useState(false);
+  const [proState, setIsPro] = useState(false);
+  const isPro = UNLOCK_ALL || proState;
   const [daily, setDaily] = useState<DailyState>(() => emptyState(new Date()));
   const [, setTick] = useState(0);
   const watching = useRef(false);
