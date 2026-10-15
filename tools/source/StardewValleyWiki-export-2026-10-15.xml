@@ -1,0 +1,2961 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Stardew Valley Wiki</sitename>
+    <dbname>stardewvalley</dbname>
+    <base>https://stardewvalley.fandom.com/wiki/Stardew_Valley_Wiki</base>
+    <generator>MediaWiki 1.43.9</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Stardew Valley Wiki</namespace>
+      <namespace key="5" case="first-letter">Stardew Valley Wiki talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="110" case="first-letter">Forum</namespace>
+      <namespace key="111" case="first-letter">Forum talk</namespace>
+      <namespace key="420" case="first-letter">GeoJson</namespace>
+      <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="500" case="first-letter">User blog</namespace>
+      <namespace key="501" case="first-letter">User blog comment</namespace>
+      <namespace key="502" case="first-letter">Blog</namespace>
+      <namespace key="503" case="first-letter">Blog talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1200" case="first-letter">Message Wall</namespace>
+      <namespace key="1201" case="first-letter">Thread</namespace>
+      <namespace key="1202" case="first-letter">Message Wall Greeting</namespace>
+      <namespace key="1203" case="first-letter">Message Wall Greeting Talk</namespace>
+      <namespace key="2000" case="first-letter">Board</namespace>
+      <namespace key="2001" case="first-letter">Board Thread</namespace>
+      <namespace key="2002" case="first-letter">Topic</namespace>
+      <namespace key="2900" case="first-letter">Map</namespace>
+      <namespace key="2901" case="first-letter">Map talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Rhubarb</title>
+    <ns>0</ns>
+    <id>4301</id>
+    <revision>
+      <id>61267</id>
+      <parentid>52835</parentid>
+      <timestamp>2026-07-11T19:13:14Z</timestamp>
+      <contributor>
+        <username>RealGameTime102</username>
+        <id>51483418</id>
+      </contributor>
+      <origin>61267</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="844" sha1="pt6vqw0yef9vfzrwx7rhnj9wjv26rdp" xml:space="preserve">{{Infobox_crops
+|Name = Rhubarb
+|image = Rhubarb.png
+|alt = Rhubarb
+|Release = February 26, 2016
+|Growth = 13 Days
+|Season = Spring
+|Seed Name = Rhubarb Seeds
+|Seed Description = Plant these in the Spring. Takes 13 days to produce a Rhubarb.
+|Description = A great tasty texture for a pie.
+|Energy = 
+|Health = 
+|Crop Pierre Sell = No Star: 220g, Silver: 275g, Gold: 330g
+|Seed Pierre Buy = Desert Store 100g
+|Seed Joja Buy = Desert Store 100g
+|season = Spring
+}}
+'''Rhubarb''' is a crop in [[Stardew Valley]]. It can be grown during the spring and takes 13 days to mature.
+
+Rhubarb seeds are sold at The [[Oasis]].
+
+== Used In: ==
+* [[Rhubarb Pie]]
+
+{{NavboxCrop}}
+[[Category:Items]]
+[[Category:Vegetables]]
+[[Category:Spring crops]]
+[[Category:Spring]]
+[[Category:Needs cost added]]
+
+[[pl:Rabarbar]]
+[[ru:Ревень]]
+[[uk:Ревінь]]</text>
+      <sha1>pt6vqw0yef9vfzrwx7rhnj9wjv26rdp</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Amaranth</title>
+    <ns>0</ns>
+    <id>4306</id>
+    <revision>
+      <id>52866</id>
+      <parentid>50512</parentid>
+      <timestamp>2025-01-07T23:49:35Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52866</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1291" sha1="snob1cu3nmv78ryp9akylq4x8xcxe3o" xml:space="preserve">{{Infobox_crops
+|Name = Amaranth
+|Description = A purple grain cultivated by an ancient civilization.
+|image = Amarath Growth.png
+|Growth = 7 days
+|Season = Fall
+|Seed Pierre Sell = 
+|Crop Pierre Sell = No Star: 150g, Silver: 187g, Gold: 225g
+|Crop Joja Sell = 
+|Seed Joja Sell = 
+|Seed Name = Amaranth Seeds
+|Seed Description = Plant these in the fall. Takes 7 days to grow. Harvest with the scythe.
+|Energy = No Star: +50, Silver: +70, Gold: +90
+|Health = No Star: +20, Silver: +28, Gold: +36
+|Crop Joja Buy = 
+|Seed Joja Buy = 87g 
+|Crop Pierre Buy = 
+|alt = amarath
+|Release = February 26, 2016
+|Seed Pierre Buy = 70g
+}}
+Amaranth is a crop in [[Stardew Valley]]. It can be grown during the [[Fall]] and takes 7 days to grow. They sell through the shipping container for:
+*No Star: 150g
+*Silver: 187g
+*Gold: 225g
+
+== Recipes ==
+{| class="article-table"
+!Image
+!Name
+!Description
+!Ingredients
+!Restores
+!Recipe Source
+!Sell Price
+|-
+|[[File:Salmon Dinner.png|thumb|48x48px]]
+|[[Salmon Dinner|Salmon]][[Salmon Dinner|Dinner]]
+|The lemon spritz makes it special.
+|[[Salmon]] (1)
+Amaranth (1)
+
+[[Kale]] (1)
+|125 E
+56 H
+|Gus mail (3+)
+|300g
+|}
+
+{{NavboxCrop}}
+[[Category:Items]]
+[[Category:Fall]]
+[[Category:Fall crops]]
+
+[[pl:Amarant]]
+[[ru:Амарант]]
+[[uk:В'язка щириці]]</text>
+      <sha1>snob1cu3nmv78ryp9akylq4x8xcxe3o</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Cauliflower</title>
+    <ns>0</ns>
+    <id>4330</id>
+    <revision>
+      <id>52833</id>
+      <parentid>50541</parentid>
+      <timestamp>2025-01-07T22:58:38Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52833</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1332" sha1="89a87slkgx6xoa2khafhr760ascgfeo" xml:space="preserve">{{Infobox_crops
+|Name = Cauliflower
+|Release = February 26, 2016
+|Growth = 12 Days
+|Season = Spring
+|Seed Name = Cauliflower Seeds
+|Seed Description = Plant these in the spring. Takes 12 days to produce a large cauliflower.
+|Seed Cost = 80
+|Description = Valuable, but slow-growing.  Despite its pale color, the florets are packed with nutrients. This can become a giant crop!
+|Energy = No Star: +75, Silver: +105, Gold: +135
+|Health = No Star: +30, Silver: +42, Gold: +54
+|Crop Pierre Sell = No Star: 175g, Silver: 218g, Gold: 262g
+|image = Cauliflower.png
+|alt = Cauliflower
+|Crop Sell = 175g
+|Seed Pierre Buy = 80g
+|Crop Joja Buy = None
+|Seed Joja Buy = None
+}}
+Cauliflower is a [[Crops|crop]] in Stardew Valley. They can be grown during the spring and take 12 days to mature. You can sell them through the shipping container for No Star: 175g, Silver: 218g, Gold: 262g each.
+
+This crop has a chance of becoming a giant crop every day if it is placed in a 3x3 pattern and keeps being watered when it's full-grown. It then can be harvested with an axe yielding double quantity.
+
+This crop is used in: Spring Crops Bundle and Cheese Cauliflower recipe.
+
+== Gifts: ==
+*Loved by Maru
+
+{{NavboxCrop}}
+[[Category:Farming]]
+[[Category:Vegetables]]
+
+[[pl:Kalafior]]
+[[ru:Цветная капуста]]
+[[uk:Цвітна капуста]]</text>
+      <sha1>89a87slkgx6xoa2khafhr760ascgfeo</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Potato</title>
+    <ns>0</ns>
+    <id>4332</id>
+    <revision>
+      <id>52838</id>
+      <parentid>41699</parentid>
+      <timestamp>2025-01-07T23:01:14Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52838</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1466" sha1="bozofjysu8hyivmonjplt5uobhdfcll" xml:space="preserve">{{Infobox_crops
+|Name = Potato
+|Release = February 26, 2016
+|Growth = 6 Days
+|Season = Spring
+|Seed Name = Potato Seeds
+|Seed Description = Plant these in the spring. Takes 6 days to mature, and has a chance of yielding multiple potatoes at harvest.
+|Seed Cost = 
+|Seed Sell = 
+|Seed Pierre Sell = 50g
+|Seed Pierre Buy = 50g
+|Seed Joja Buy = 62g
+|image = Potato.png
+|alt = Potato
+|Description = A widely cultivated tuber.
+|Crop Sell = 80G
+|Crop Pierre Buy = 
+|Crop Pierre Sell = No Star: 80g, Silver: 100g, Gold: 120g
+|Energy = No Star: +25, Silver: +35, Gold: +45
+|Health = No Star: +10, Silver: +14, Gold: +18
+}}
+The '''Potato''' is a crop in [[Stardew Valley (location)|Stardew Valley]]. It can be grown during the [[Spring]] and take 6 days to mature. They sell through the shipping container for No Star: 80g, Silver: 100g, Gold: 120g each.
+
+
+
+Additionally, there is a Chance of multiple crops after harvest.
+
+== Recipes ==
+{| class="article-table sortable"
+!Name
+!Image
+!Description
+!Ingredients
+!Restores
+!Buff(s)
+!Buff Duration
+!Recipe Source(s)
+!Sell Price
+|-
+|[[Hashbrowns]]
+|[[File:Hashbrowns.png|thumb]]
+|Crispy and golden-brown!
+|Potato (1)  [[Oil]] (1)
+|90
+40
+|Farming (+1)
+|5m 35s
+|The Queen   of sauce
+
+14th of spring     Stardrop
+
+Saloon for 50g
+|120g
+|}
+{{NavboxCrop}}
+[[Category:Spring]]
+[[Category:Farming]]
+[[Category:Vegetables]]
+[[Category:Items]]
+[[Category:Spring crops]]
+
+[[pl:Ziemniak]]
+[[ru:Картофель]]
+[[uk:Картопля]]</text>
+      <sha1>bozofjysu8hyivmonjplt5uobhdfcll</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Green Bean</title>
+    <ns>0</ns>
+    <id>4356</id>
+    <revision>
+      <id>52837</id>
+      <parentid>52065</parentid>
+      <timestamp>2025-01-07T23:00:52Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52837</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1390" sha1="1jyifuff73901ia5c7yff5q3pnh3k11" xml:space="preserve">{{Infobox crops
+|Name = Green Bean
+|Release = February 26, 2016
+|Growth = 10 Days (Keeps producing after 3 Days)
+|Season = Spring
+|Seed = 
+|Seed Name = Bean Starter
+|Seed Description = Plant these in the spring. Takes 10 days to mature, but keeps producing after that. Yields multiple beans per harvest. Grows on a trellis.
+|Seed Cost = 
+|Seed Pierre Buy = 60g
+|Seed Joja Buy = 75g
+|Description = A juicy little bean with a cool, crisp snap.
+|Energy = No Star: +25, Silver: +35, Gold: +45
+|Health = No Star: +10, Silver: +14, Gold: +18
+|Crop Pierre Sell = No Star: 40g, Silver: 50g, Gold: 60g
+|image = Green Bean.png
+}}
+The '''Green Bean''' is a [[crop]] in Stardew Valley. They can be grown during the [[Spring]] and take 10 days to mature and keeps producing after 3 days. They sell through the [[shipping bin]] for 40g, 50g at silver [[quality]], and 60g at gold.
+
+Planted green beans cannot be walked through, requiring the player to walk around the crop. The Green Bean does not yield multiple beans per harvest despite the tool-tip on the seed packet item stating that they do.
+
+== Recipes ==
+{| class="article-table"
+|+
+!Name
+!Image
+!Descripton
+!Ingredients
+|-
+|[[Bean Hotpot]]
+|[[File:Bean Hotpot.png|thumb]]
+|It sure is healthy
+|Green bean (2)
+|}
+
+{{NavboxCrop}}
+[[Category:Spring crops]]
+
+[[pl:Zielona fasola]]
+[[ru:Зелёная фасоль]]
+[[uk:Зелена квасоля]]</text>
+      <sha1>1jyifuff73901ia5c7yff5q3pnh3k11</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Strawberry</title>
+    <ns>0</ns>
+    <id>4396</id>
+    <revision>
+      <id>52836</id>
+      <parentid>51516</parentid>
+      <timestamp>2025-01-07T23:00:30Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52836</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1582" sha1="8oi5bt4wi4uzdk5vhr8tlm5yh5lm5j3" xml:space="preserve">{{Infobox crops
+|Name = Strawberry
+|image = Strawberry.png
+|alt = Strawberry
+|Release = February 26, 2016
+|Growth = 8 days (Keeps producing after 4 days)
+|Season = Spring
+|Seed Name = Strawberry Seeds
+|Seed Description = Plant these in the spring at the Egg Festival. Takes 8 days to mature, and keeps producing strawberries after that.
+|Seed Cost = 100G
+|Energy = No Star: +50, Silver: +70, Gold: +90
+|Health = No Star: +20, Silver: +28, Gold: +36
+|Crop Sell = 120G
+|Description = Juicy sweet fruit that provides a good amount of cash because it keeps growing!
+|Crop Pierre Sell = No Star: 120g, Silver: 150g, Gold: 180g
+|Seed Pierre Buy = Egg Festival 100g
+|Seed Joja Buy = Egg Festival 100g
+}}
+{{tocright}}
+{{Stub}}
+[[File:Strawberry Growth.png|thumb|link=]]
+'''Strawberries''' are a [[crop]] in [[Stardew Valley]]. [[Strawberry seeds]] can purchased from a [[shop]] during the [[Egg Festival]] or from [[Oasis]] in the [[Calico Desert]]. They can be grown during [[Spring]] and take 8 days to mature and will keep producing fruit after 4 days. They sell through the [[shipping bin]] for 120g, 150g at silver [[quality]], and 180g at gold quality. Strawberry [[Jelly]] sells for 290g each. Strawberry [[Wine]] sells for 360g.
+
+== Growing ==
+Strawberries can be grown by planting [[strawberry seeds]] and watering them for 8 days. After harvest, strawberries will continue to grow from the original plant until the end of the [[season]].
+
+{{NavboxCrop}}
+[[Category:Fruits]]
+[[Category:Farming]]
+[[Category:Spring]]
+
+[[pl:Truskawka]]
+[[ru:Клубника]]
+[[uk:Полуниця]]</text>
+      <sha1>8oi5bt4wi4uzdk5vhr8tlm5yh5lm5j3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Corn</title>
+    <ns>0</ns>
+    <id>4593</id>
+    <revision>
+      <id>52845</id>
+      <parentid>48249</parentid>
+      <timestamp>2025-01-07T23:14:55Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52845</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2544" sha1="eg3p4efur1k7r6rctgyh3npvi70our6" xml:space="preserve">{{Infobox crops
+|Name = Corn
+|Growth = 14 Days (Keeps producing after 4 days)
+|Season = Summer/Fall
+|Seed Pierre Sell = 
+|image = corn.png
+|alt = Corn
+|Release = February 26, 2016
+|Seed Name = Corn Seeds
+|Seed Description = Plant these in the Summer and Fall. Takes 14 days to produce.
+|Description = One, of the most popular grains.The sweet, fresh cobs are a summer favorite.
+|Energy = No Star: +25, Silver: +35, Gold: +45
+|Health = No Star: +10, Silver: +14, Gold: +18
+|Crop Pierre Sell = No Star: 55g, Silver: 68g, Gold: 82g
+|Seed Pierre Buy = 150g
+}}
+'''Corn''' is a crop in [[Stardew Valley]]. It can be grown during the [[Summer]] and [[Fall]] and take 14 days to mature and keeps producing after 4 days. It can be sold to [[Pierre's General Store]] and the shipping bin for:
+
+
+*No Star: 55g
+*Silver: 68g
+*Gold: 82g each.
+
+==Stages==
+{| class=wikitable style="text-align:center;" id="roundedborder"
+!Stage 1
+!Stage 2
+!Stage 3
+!Stage 4
+!Stage 5
+!Harvest
+!After-Harvest
+|-
+|[[File:Corn Stage 1.png|center|link=]]
+|[[File:Corn Stage 2.png|center|link=]]
+|[[File:Corn Stage 3.png|center|link=]]
+|[[File:Corn Stage 4.png|center|link=]]
+|[[File:Corn Stage 5.png|center|link=]]
+|[[File:Corn Stage 6.png|center|link=]]
+|[[File:Corn Stage 7.png|center|link=]]
+|-
+|2 Day
+|3 Day
+|3 Day
+|3 Day
+|3 Days
+|Total: 14 Days
+|Repeats every 4 days
+|}
+
+==Healing==
+It heals for
+*10 [[File:Health.png|24px]] and 25 [[File:Energy.png|24px]] with no star
+*14 [[File:Health.png|24px]] and 35 [[File:Energy.png|24px]] with silver star
+*18 [[File:Health.png|24px]] and 45 [[File:Energy.png|24px]] with gold star
+
+==Gifting==
+=== Liked by: ===
+[[Alex]], [[Caroline]], [[Clint]], [[Demetrius]], [[Dwarf]], [[Elliott]], [[Emily]], [[Evelyn]], [[George]], [[Gus]], [[Harvey]], [[Jodi]], [[Kent]], [[Krobus]], [[Leah]], [[Lewis]], [[Linus]], [[Marnie]], [[Maru]], [[Pam]], [[Penny]], [[Robin]], [[Sandy]], [[Sebastian]], [[Shane]],[[Willy]], [[Wizard]]
+
+=== Disliked by: ===
+[[Abigail]], [[Haley]], [[Jas]], [[Sam]], [[Vincent]]
+
+=== Hated by: ===
+[[Pierre]]
+
+==Bundles==
+It is used in the Fall Crops Bundle and the Quality Crops Bundle, part of the Pantry in the [[Community Center]].
+
+==Recipes==
+{| class="wikitable sortable"
+!Image
+!Name
+!Description
+!Ingredients
+!Recipe From
+|-
+|[[File:Tortilla.png]]
+|[[Tortilla]]
+|Can be used as a vessel for food or eaten by itself.
+|{{name|Corn|1}}
+|[[The Queen of Sauce]]
+|}
+
+{{NavboxCrop}}
+[[Category:Items]]
+[[Category:Farming]]
+[[Category:Vegetables]]
+
+[[pl:Kukurydza]]
+[[ru:Кукуруза]]
+[[uk:Кукурудза]]</text>
+      <sha1>eg3p4efur1k7r6rctgyh3npvi70our6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Blueberry</title>
+    <ns>0</ns>
+    <id>4579</id>
+    <revision>
+      <id>61152</id>
+      <parentid>52844</parentid>
+      <timestamp>2026-03-29T23:52:11Z</timestamp>
+      <contributor>
+        <username>RealGameTime102</username>
+        <id>51483418</id>
+      </contributor>
+      <origin>61152</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1375" sha1="filw8ozxzpvgiegk6erkd73rja5m6e6" xml:space="preserve">{{Infobox crops
+|Name = Blueberry
+|image = Blueberry.png
+|alt = Blueberry
+|Release = February 26, 2016
+|Growth = 13 Days (Keeps producing 3-4 after 4 days)
+|Season = Summer
+|Seed Name = Blueberry Seeds
+|Seed Description = Plant these in the summer. Takes 13 days to produce.
+|Description = A juicy blue fruit
+|Energy = No Star: +25, Silver: +35, Gold: +45
+|Health = No Star: +10, Silver: +14, Gold: +18
+|Crop Pierre Sell = Normal: 80g, Silver: 100g, Gold: 120g
+|Seed Pierre Buy = 80g
+}}
+'''Blueberries''' are a type of crop in Stardew Valley. They can be grown during the Summer. They take 13 days to mature, and keeps producing 3-4 blueberries after 4 days.
+
+
+
+== Gifting ==
+{| class="article-table"
+|'''Like'''
+|[[Demetrius]], [[Elliott]], [[Harvey]], [[Jodi]], [[Kent]], [[Leah]], [[Lewis]], [[Linus]], [[Pam]], [[Robin]], [[Sandy]], [[Shane]]
+|-
+|'''Neutral'''
+|[[Alex]], [[Caroline]], [[Clint]], [[Emily]], [[Evelyn]], [[George]], [[Gus]], [[Krobus]], [[Marnie]], [[Maru]], [[Penny]], [[Pierre]], [[Sam]], [[Sebastian]], [[Willy]], [[Wizard]]
+|-
+|'''Dislike'''
+|[[Abigail]], [[Dwarf]], [[Haley]], [[Jas]], [[Vincent]]
+|}
+
+== Used In: ==
+* Blueberry Tart
+* Fruit Salad 
+* Summer Crops Bundle
+* Blueberry Jelly
+* Blueberry Wine
+
+{{NavboxCrop}}
+[[Category:Crops]]
+[[Category:Summer]]
+[[Category:Fruits]]
+[[Category:Farming]]
+
+[[ru:Черника]]
+[[uk:Чорниця]]</text>
+      <sha1>filw8ozxzpvgiegk6erkd73rja5m6e6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Melon</title>
+    <ns>0</ns>
+    <id>4933</id>
+    <revision>
+      <id>61082</id>
+      <parentid>52850</parentid>
+      <timestamp>2026-02-11T05:32:34Z</timestamp>
+      <contributor>
+        <username>Klap Trap</username>
+        <id>3194273</id>
+      </contributor>
+      <comment>interwiki</comment>
+      <origin>61082</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2396" sha1="aafweynfr654z5fe2vhpvmzlhny6sgu" xml:space="preserve">{{Infobox crops
+|Name = Melon
+|Growth = 12 Days
+|Season = Summer
+|Seed Name = Melon Seeds
+|Crop Pierre Sell = {{Price|250}}
+|Crop Joja Sell = 
+|Seed Description = Plant these in the summer. Takes 12 days to mature.
+|Seed Pierre Sell = 
+|Crop Joja Buy = 
+|Seed Joja Buy = 
+|Seed Pierre Buy = 80g
+|image = melon.png
+|alt = melon
+|Release = February 26, 2016
+|Description = A juicy plump fruit.
+|Energy = No Star: +113, Silver: +158, Gold: +203
+|Health = No Star: +45, Silver: +63, Gold: +81
+}}
+'''Melon''' is a crop in [[Stardew Valley]]. They can be grown during the [[Summer]] and take 12 days to mature. They sell through the shipping container for No Star: 250g, Silver: 312g, Gold: 375g each. This crop has a chance of becoming a giant crop every day if it is placed in a 3x3 pattern and keeps being watered when it's full-grown. It then can be harvested with an axe yielding double quantity.
+
+
+
+==Stages==
+{| class=wikitable style="text-align:center;" id="roundedborder"
+!Stage 1
+!Stage 2
+!Stage 3
+!Stage 4
+!Stage 5
+!Harvest
+|-
+|[[File:Melon Stage 1.png|center|link=]]
+|[[File:Melon Stage 2.png|center|link=]]
+|[[File:Melon Stage 3.png|center|link=]]
+|[[File:Melon Stage 4.png|center|link=]]
+|[[File:Melon Stage 5.png|center|link=]]
+|[[File:Melon Stage 6.png|center|link=]]
+|-
+|1 Day
+|2 Days
+|3 Days
+|3 Days
+|3 Days
+|Total: 12 Days
+|-
+|}
+
+==Healing==
+It heals for 
+*Normal: 42 [[File:Health.png|24px]] and 113 [[File:Energy.png|24px]] 
+*Silver Quality: 63 [[File:Health.png|24px]] and 158 [[File:Energy.png|24px]] 
+*Gold Quality: 81 [[File:Health.png|24px]] and 203 [[File:Energy.png|24px]] 
+
+==Gifting==
+The Melon is liked by most [[villagers]] and loved by [[Penny]].
+
+==Bundles==
+It is used in the Summer Crops Bundle and the Quality Crops Bundle in the Pantry.
+
+==Recipes==
+{| class="wikitable sortable"
+!Image
+!Name
+!Description
+!Ingredients
+!Recipe From
+|-
+|[[File:Pink Cake.png]]
+|[[Pink Cake]]
+|There's little heart candies on top.
+|{{name|Melon|1}}{{name|Wheat Flour|1}}{{name|Sugar|1}}{{name|Egg|1}}
+|[[The Queen of Sauce]]
+|-
+|[[File:Fruit Salad.png]]
+|[[Fruit Salad]]
+|A delicious combination of summer fruits.
+|{{name|Blueberry|1}}{{name|Melon|1}}{{name|Apricot|1}}
+|[[The Queen of Sauce]]
+|-
+|}
+
+{{NavboxCrop}}
+[[Category:Summer crops]]
+[[Category:Crops]]
+[[Category:Summer]]
+[[Category:Farming]]
+[[Category:Fruits]]
+[[de:Melone]]
+[[pl:Melon]]
+[[ru:Дыня]]
+[[uk:Диня]]</text>
+      <sha1>aafweynfr654z5fe2vhpvmzlhny6sgu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Tomato</title>
+    <ns>0</ns>
+    <id>4842</id>
+    <revision>
+      <id>53630</id>
+      <parentid>52852</parentid>
+      <timestamp>2025-01-10T23:19:05Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>53630</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2863" sha1="o5d5n9ejwar4hl0ws9qxtw4r5y3hway" xml:space="preserve">{{Infobox crops
+|Name = Tomato
+|image = Tomato.png
+|alt = tomato
+|Release = February 26, 2016
+|Growth = 11 Days (Keeps producing after 4 days)
+|Season = Summer
+|Seed Name = Tomato Seeds
+|Seed Description = Plant these in the summer. Takes 11 days to produce.
+|Description = Rich and slightly tangy, the Tomato has a wide variety of culinary uses.
+|Energy = No Star: +20, Silver: +28, Gold: +36
+|Health = No Star: +8, Silver: +11, Gold: +14
+|Crop Pierre Sell = No Star: 60g, Silver: 75g, Gold: 90g
+|Seed Pierre Buy = 50g
+}}
+{{Stub}}
+{{tocright}}
+'''Tomatoes''' are a [[crop]] grown from [[Tomato Seeds]] in [[Summer]]. They take 11 days to mature and keep producing the [[fruit]] every 4 days. Tomatoes sell for 60g, 75g at silver [[quality]], and 90g at gold quality. 
+
+== Recipes ==
+{| class="wikitable sortable"
+!Image
+!Name
+!Description
+!Ingredients
+!Restores
+!Buff(s)
+!Buff Duration
+!Recipe Source(s)
+!Sell Price
+|
+|Bruschetta
+|Roasted tomatoes on a crisp white bread.
+|Bread (1) Oil (1) &lt;strong&gt;Tomato&lt;/strong&gt; (1)
+|113&lt;br&gt;
+ 50
+|N/A
+|N/A
+|
+{|
+| rowspan="2" |
+|The Queen of Sauce
+|-
+|21 Winter, Year 2
+|}
+|210g
+|-
+|[[File:Eggplant Parm.png|thumb|48x48px]]
+|[[Eggplant Parmesan]]
+|Tangy, cheesy, and wonderful.
+|[[Eggplant]] (1) &lt;strong&gt;Tomato&lt;/strong&gt; (1)
+|175&lt;br&gt;
+ 78
+|[[Mining]] (+1) Defense (+3)
+|4m 39s
+|[[Lewis]] (Mail - 7+ )
+|200g
+|-
+|[[File:Fish Stew.png|thumb|48x48px]]
+|[[Fish Stew]]
+|It smells a lot like the sea. Tastes better, though.
+|[[Crayfish]] (1) [[Mussel]] (1) [[Periwinkle]] (1) &lt;strong&gt;Tomato&lt;/strong&gt; (1)
+|225&lt;br&gt;
+ 101
+|Fishing (+3)
+|16m 47s
+|[[Willy]] (Mail - 7+ )
+|175g
+|-
+|[[File:Pizza.png|thumb|48x48px]]
+|[[Pizza]]
+|It's popular for all the right reasons.
+|[[Wheat Flour]] (1) &lt;strong&gt;Tomato&lt;/strong&gt; (1) [[Cheese]] (1)
+|150&lt;br&gt;
+ 67
+|N/A
+|N/A
+|
+{|
+| rowspan="2" |
+|[[The Queen of Sauce]]
+|-
+|7 [[Spring]], Year 2
+|}
+Stardrop Saloon for 150g
+|300g
+|-
+|[[File:Shrimp Cocktail.png|thumb]]
+|[[Shrimp Cocktail]]
+|A sumptuous appetizer made with freshly-caught shrimp.
+|&lt;strong&gt;[[Tomato]]&lt;/strong&gt; (1) [[Shrimp]] (1) [[Wild Horseradish]] (1)
+|225&lt;br&gt;
+ 101
+|[[Fishing]] (+1) Luck (+1)
+|10m 2s
+|
+{|
+| rowspan="2" |
+|The Queen of Sauce
+|-
+|28 Winter, Year 2
+|}
+|160g
+|-
+|[[File:Spaghetti.png|thumb|48x48px]]
+|[[Spaghetti]]
+|An old favorite.
+|[[Wheat Flour]] (1) Tomato (1)
+|75&lt;br&gt;
+ 33
+|N/A
+|N/A
+|Lewis (Mail - 3+ )
+|120g
+|-
+|[[File:Vegetable Stew.png|thumb]]
+|[[Vegetable Medley]]
+|This is very nutritious.
+|Tomato (1) [[Beet]] (1)
+|165&lt;br&gt;
+ 74
+|N/A
+|N/A
+|[[Caroline]] (Mail - 7+ )
+|120g
+|}
+
+&lt;br&gt; 
+
+== Used In: ==
+===Bundles===
+* [[Summer Crops Bundle]]
+
+== Gifting ==
+===Liked by:===
+[[Willy]], [[Caroline]]
+
+===Disliked by:===
+[[Jas]], [[Haley]]  
+
+{{NavboxCrop}}
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Farming]]
+
+[[pl:Pomidor]]
+[[ru:Помидор]]
+[[uk:Помідор]]</text>
+      <sha1>o5d5n9ejwar4hl0ws9qxtw4r5y3hway</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Kale</title>
+    <ns>0</ns>
+    <id>5039</id>
+    <revision>
+      <id>52831</id>
+      <parentid>39233</parentid>
+      <timestamp>2025-01-07T22:57:37Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52831</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="960" sha1="3lj70k7o8z4w3ve0eypq8cxgyefda3h" xml:space="preserve">{{Infobox_crops
+|Name = Kale
+|image = Kale.png
+|Release = February 26, 2016
+|Growth = 6 Days
+|Seed = 
+|Cost = 
+|Description = Crunchy and delicious leaves to add to a stir fry or a fish dinner!
+|Season = Spring
+|Seed Name = 
+|Crop Pierre Sell = No Star: 110g, Silver: 137g, Gold: 165g 
+|Seed Pierre Buy = 70g
+|Seed Joja Buy = 
+|Seed Description = Plant these in the spring. Takes 6 days to mature. Harvest with scythe.
+|Energy = No Star: +50, Silver: +70, Gold: +90
+|Health = No Star: +20, Silver: +28, Gold: +36
+|alt = 
+|seed = Kale Seeds
+}}
+Kale is a crop in Stardew Valley. It can be grown during the Spring and take 6 days to mature. They sell through the shipping container for No Star: 110g, Silver: 137g, Gold: 165g each.
+
+== Used In: ==
+* [[Stir Fry]]
+* [[Salmon Dinner]]
+
+{{NavboxCrop}}
+[[Category:Spring]]
+[[Category:Farming]]
+[[Category:Vegetables]]
+[[Category:Spring crops]]
+
+[[pl:Jarmuż]]
+[[ru:Кудрявая капуста]]
+[[uk:Кейл]]</text>
+      <sha1>3lj70k7o8z4w3ve0eypq8cxgyefda3h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Blue Jazz</title>
+    <ns>0</ns>
+    <id>6167</id>
+    <revision>
+      <id>52840</id>
+      <parentid>51486</parentid>
+      <timestamp>2025-01-07T23:03:05Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52840</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1933" sha1="lo6tuk7ltmre7i9f97xa17jmxo1nwgq" xml:space="preserve">{{Infobox crops
+|Name = Blue Jazz
+|image = Blue Jazz.png
+|alt = BlueJazz
+|Release = February 26, 2016
+|Growth = 7 Days
+|Season = Spring
+|Seed Name = Jazz Seeds
+|Seed Description = Plant these in the spring. Takes 7 days to produce a Blue Jazz flower.
+|Description = Blue Flower that can be used in the Lucky Dish recipe.
+|Energy = No Star: +50, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver +25, Gold: +32
+|Seed Pierre Buy = 30g
+|Crop Pierre Sell = No Star: 50g, Silver: 62, Gold:75
+|Crop Joja Buy = None
+|Seed Joja Buy = None
+|Seed = Jazz Seeds
+}}
+'''Blue Jazz''' is a [[Crops|crop]] in Stardew Valley. They can be grown during the Spring and take 7 days to grow. They sell through the shipping container for No Star: 50g, Silver: 62, Gold: 75g each.
+
+
+
+==Stages==
+{|class="article-table"
+!style="text-align:center" colspan="5"|Blue Jazz Growth
+|-
+|style="text-align:center" colspan="5"|[[File:Blue Jazz Growth.png|link=]]
+|-
+|style="text-align:center"|Stage 1:&lt;br/&gt;1 Day
+|style="text-align:center"|Stage 2:&lt;br/&gt;2 Days
+|style="text-align:center"|Stage 3:&lt;br/&gt;2 Days
+|style="text-align:center"|Stage 4:&lt;br/&gt;2 Days
+|style="text-align:center"|Harvest:&lt;br/&gt;7 Days Total
+|}
+
+==Healing==
+It heals for 
+*18 [[File:Health.png|24px]] and 45 [[File:Energy.png|24px]] with no star
+*25 [[File:Health.png|24px]] and 63 [[File:Energy.png|24px]] with silver star
+*32 [[File:Health.png|24px]] and 81 [[File:Energy.png|24px]] with gold star
+
+==Gifts==
+The Blue Jazz is liked by the [[villagers]].
+
+==Bundles==
+It is not used in any Bundles.
+
+==Recipes==
+{| class="wikitable sortable"
+!Image
+!Name
+!Description
+!Ingredients
+!Recipe From
+|-
+|[[File:Lucky Lunch.png]]
+|[[Lucky Lunch]]
+|A special little meal.
+|{{name|Sea Cucumber|1}}{{name|Tortilla|1}}{{name|Blue Jazz|1}}
+|[[The Queen of Sauce]]
+|-
+|}
+
+{{NavboxCrop}}[[Category:Spring crops]]
+
+[[pl:Niebieski jazz]]
+[[ru:Синий яркоцвет]]
+[[uk:Блакитний яркоцвіт]]</text>
+      <sha1>lo6tuk7ltmre7i9f97xa17jmxo1nwgq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Garlic</title>
+    <ns>0</ns>
+    <id>6176</id>
+    <revision>
+      <id>52832</id>
+      <parentid>44606</parentid>
+      <timestamp>2025-01-07T22:58:06Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52832</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1665" sha1="7laelc5j4cmlbu5p4o9qn4kl4vee6dq" xml:space="preserve">{{Infobox crops
+|Name = Garlic
+|image = Garlic.png
+|alt = Garlic
+|Release = February 26, 2016
+|Growth = 4 Days
+|Seed Name = Garlic Seeds
+|Description = A fast growing plant that adds zestiness to dishes. The high quality garlic can be pretty spicy.
+|Seed Description = Plant these in the spring. Takes 4 days to produce Garlic.
+|Season = Spring
+|Energy = {{energy|+20}}&lt;br&gt;{{energy|+28}}&lt;br&gt;{{energy|+36}}
+|Health = {{health|+8}}&lt;br&gt;{{health|+11}}&lt;br&gt;{{health|+14}}
+|Crop Pierre Sell = {{Price|60}}
+|Seed Pierre Buy = 40g
+|Crop Joja Buy = None
+|Seed Joja Buy = None
+|season = [[Spring]]
+}}
+Garlic is a crop in [[Stardew Valley]]. They can be grown during the [[Spring]] and take 4 days to mature. 
+
+== Recipes ==
+{| class="article-table"
+!Image
+!Name
+!description
+!ingredients 
+!restores
+!buffs
+!buff duration
+!sellprice
+!recipe source
+|-
+|[[File:Escargot.png|thumb|42x42px]]
+|[[Escargot]]
+|Butter-soaked snails cooked to perfection.
+|[[File:Snail.png|thumb|28x28px]]snail (1)
+Garlic [[File:Garlic.png|thumb|24x24px]]
+|225 E
+101 H
+|fishing +2
+|16m 47s
+|125
+|willy mail +5
+|-
+|[[File:Fiddlehead Risotto.png|thumb|48x48px]]
+|[[fiddlehead Risotto|fiddlehead]][[fiddlehead Risotto|risotto]] 
+|A creamy rice dish served with sauteed fern heads. It's a little bland.
+|oil (1)
+fiddlehead
+
+fern (1)
+
+garlic(1)
+|225 E
+101 H
+|N/A
+|N/A
+|350
+|The queen of sauce
+|-
+|[[File:Oil of Garlic.png|thumb|38x38px]]
+|[[Oil of Garlic]]
+|Drink this and weaker monsters will avoid you.
+|garlic (10)
+oil(1)
+|200 E
+90 H
+
+|oil of garlic buff
+|10m
+|1000
+|combat level 6
+|}
+
+{{NavboxCrop}}
+[[Category:Spring crops]]
+[[Category:Spring]]
+
+[[pl:Czosnek]]
+[[ru:Чеснок]]
+[[uk:Часник]]</text>
+      <sha1>7laelc5j4cmlbu5p4o9qn4kl4vee6dq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Tulip</title>
+    <ns>0</ns>
+    <id>6199</id>
+    <revision>
+      <id>52839</id>
+      <parentid>44607</parentid>
+      <timestamp>2025-01-07T23:01:33Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52839</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1602" sha1="gt9ydqdwux50ybijajk6l0nckqm344z" xml:space="preserve">{{Infobox crops
+|Name = Tulip
+|image = tulip.png
+|alt = Tulip
+|Release = February 26, 2016
+|Growth = 6 Days
+|Season = Spring
+|Seed Name = Tulip Bulb
+|Seed Description = Plant this in the spring. Takes 6 days to produce a tulip.
+|Description = A pretty flower.
+|Energy = No star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = {{Price|30}}
+|Seed Pierre Buy = 20g
+|name = Tulip
+}}
+Tulip is a crop in [[Stardew Valley]]. They can be grown during the [[Spring]] and take 6 days to mature. They sell through the shipping container for No Star: 30g, Silver: 37g, Gold: 45g each.
+
+==Stages==
+{| class=wikitable style="text-align:center;" id="roundedborder"
+!Stage 1
+!Stage 2
+!Stage 3
+!Stage 4
+!Stage 5
+!Harvest
+|-
+|[[File:Tulip Stage 1.png|center|link=]]
+|[[File:Tulip Stage 2.png|center|link=]]
+|[[File:Tulip Stage 3.png|center|link=]]
+|[[File:Tulip Stage 4.png|center|link=]]
+|[[File:Tulip Stage 5.png|center|link=]]
+|[[File:Tulip Stage 6.png|center|link=]]
+|-
+|1 Day
+|1 Day
+|2 Days
+|1 Day
+|1 Day
+|Total: 6 Days
+|-
+|}
+
+==Healing==
+It heals for 
+*18 [[File:Health.png|24px]] and 45 [[File:Energy.png|24px]] with no star
+*25 [[File:Health.png|24px]] and 63 [[File:Energy.png|24px]] with silver star
+*32 [[File:Health.png|24px]] and 81 [[File:Energy.png|24px]] with gold star
+
+==Gifts==
+The Tulip is liked by the [[villagers]].
+
+==Bundles==
+They are not used in any [[bundles]].
+
+==Recipes==
+They are not used in any [[Cooking|recipes]].
+
+{{NavboxCrop}}
+[[Category:Spring crops]]
+[[Category:Spring]]
+
+[[pl:Tulipan]]
+[[ru:Тюльпан]]
+[[uk:Тюльпан]]</text>
+      <sha1>gt9ydqdwux50ybijajk6l0nckqm344z</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hops</title>
+    <ns>0</ns>
+    <id>4840</id>
+    <revision>
+      <id>52846</id>
+      <parentid>51881</parentid>
+      <timestamp>2025-01-07T23:15:11Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52846</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1431" sha1="pr9p2xtdqch190u0br8icwiwr43m1le" xml:space="preserve">{{Infobox crops
+|Name = Hops
+|image = hops.png
+|alt = Hop
+|Release = February 26, 2016
+|Growth = 11 Days (Keeps producing everyday)
+|Season = Summer
+|Seed Name = Hops Starter
+|Seed Description = Plant these in the summer. Takes 11 days to produce.
+|Description = A bitter, tangy flower used to flavor beer.
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = No Star: 25g, Silver: 31g, Gold: 37g
+|Seed Pierre Buy = 60g
+}}
+Hops are a crop in Stardew Valley. They can be grown during the Summer and take 11 days to mature and keeps producing everyday. They sell through the shipping container for No Star: 25g, Silver: 31g, Gold: 37g each.
+
+You cannot walk through hops at any stage of growth.
+
+== Used In: ==
+* Pale Ale
+== Notes ==
+Hops do have a special way of growing, after reaching the matured state hops will be grown each day making it a vital source for creating pale ale with the use of a [[keg]]. Pale ale sells for 300g or for 420g if the players chooses the artisan talent upon reaching max farming skill; so hops generate a lot of money when grown in bulk in combination with brewing.
+
+While it is possible to make a tidy profit by selling the raw fruit if you can set up a large amount of kegs you will be able to produce pale ale year round using your stockpiles.
+
+{{NavboxCrop}}
+[[Category:Vegetables]]
+
+[[pl:Chmiel]]
+[[ru:Хмель]]
+[[uk:Хміль]]</text>
+      <sha1>pr9p2xtdqch190u0br8icwiwr43m1le</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hot Pepper</title>
+    <ns>0</ns>
+    <id>6223</id>
+    <revision>
+      <id>60543</id>
+      <parentid>52851</parentid>
+      <timestamp>2025-03-07T18:05:45Z</timestamp>
+      <contributor>
+        <username>HNC5</username>
+        <id>50006882</id>
+      </contributor>
+      <origin>60543</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1030" sha1="0rxpngio775cr3mwm2a7vijt9m2p2pz" xml:space="preserve">{{Infobox crops
+|Name = Hot Pepper
+|image = Hot Pepper.png
+|alt = HotPepper
+|Release = February 26, 2016
+|Growth = 5 Days (Keeps producing after 3 days)
+|Season = Summer
+|Seed Name = Pepper Seeds
+|Seed Description = Plant these in the Summer. Takes 5 days to produce a hot pepper.
+|Description = 
+|Energy = No Star: +13, Silver: +18, Gold: +23
+|Health = No Star: +5, Silver: +7, Gold: +9
+|Crop Pierre Sell = No Star: 40g, Silver: 50g, Gold: 60g
+|Seed Pierre Buy = 40g
+|description = Fiery hot with a hint of sweetness.
+}}
+'''Hot Peppers''' are a [[crop]] in Stardew Valley. They can be grown during the [[Summer]] and take 5 days to mature and keeps producing after 3 days. They sell through the [[shipping bin]] for 40g, 50g at silver [[quality]], and 60g at gold.
+
+Hot Peppers are also one of [[Shane|Shane's]] and [[Lewis|Lewis's]]  loved [[gifts]].      
+
+== Bundles ==
+The Hot pepper is used in the summer crops bundle.
+
+{{NavboxCrop}}
+
+[[pl:Ostra papryczka]]
+[[ru:Жгучий перец]]
+[[uk:Гострий перець]]</text>
+      <sha1>0rxpngio775cr3mwm2a7vijt9m2p2pz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Poppy</title>
+    <ns>0</ns>
+    <id>6263</id>
+    <revision>
+      <id>52849</id>
+      <parentid>50550</parentid>
+      <timestamp>2025-01-07T23:16:35Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52849</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1996" sha1="tofshr29ytyzeaj61zkwqj2rgzhbre4" xml:space="preserve">{{Infobox crops
+|Name = Poppy
+|image = poppy.png
+|alt = poppy
+|Release = February 26, 2016
+|Growth = 7 Days
+|Season = Summer
+|Seed Name = Poppy Seeds
+|Seed Description = Plant these in the Summer. Takes 7 days to grow.
+|Description = Orange flower used in recipies.
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = {{Price|140}}
+|Seed Pierre Buy = 100g
+}}
+A '''Poppy''' is a flower in Stardew Valley. They can be grown during the Summer and take 7 days to grow. They sell through the shipping container for No Star: 140g, Silver: 275g, Gold: 310g each.
+
+
+
+==Stages==
+{| class=wikitable style="text-align:center;" id="roundedborder"
+!Stage 1
+!Stage 2
+!Stage 3
+!Stage 4
+!Harvest
+|-&lt;!--Need to verify this growth day back--&gt;
+|[[File:Poppy Stage 1.png|center|link=]]
+|[[File:Poppy Stage 2.png|center|link=]]
+|[[File:Poppy Stage 3.png|center|link=]]
+|[[File:Poppy Stage 4.png|center|link=]]
+|[[File:Poppy Stage 5.png|center|link=]]
+&lt;!--|[[File:Poppy Stage 6.png|center|link=]]--&gt;
+|-
+|1 Day
+|2 Days
+|2 Days
+|2 Days
+|Total: 7 Days
+|-
+|}
+
+==Healing==
+It heals for 
+*18 [[File:Health.png|24px]] and 45 [[File:Energy.png|24px]] with no star
+*25 [[File:Health.png|24px]] and 63 [[File:Energy.png|24px]] with silver star
+*32 [[File:Health.png|24px]] and 81 [[File:Energy.png|24px]] with gold star
+
+==Gifting==
+The Poppy is loved by Penny and hated by all the other [[villagers]].
+
+==Bundles==
+It is used in the Chef's Bundle in the Bulletin Board.
+
+==Recipes==
+{| class="wikitable sortable"
+!Image
+!Name
+!Description
+!Ingredients
+!Recipe From
+|-
+|[[File:Poppyseed Muffin.png]]
+|[[Poppyseed Muffin]]
+|It has a soothing effect.
+|{{name|Poppy|1}}{{name|Wheat Flour|1}}{{name|Sugar|1}}
+|[[The Queen of Sauce]]
+|-
+|}
+
+==Trivia==
+* When you put a poppy that's any colour but orange in the chef's bundle, it will change colour.
+
+{{NavboxCrop}}
+[[Category:Summer crops]]
+[[Category:Farming]]
+[[Category:Plants]]
+
+[[pl:Mak]]
+[[ru:Мак]]
+[[uk:Мак]]</text>
+      <sha1>tofshr29ytyzeaj61zkwqj2rgzhbre4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Radish</title>
+    <ns>0</ns>
+    <id>6269</id>
+    <revision>
+      <id>52854</id>
+      <parentid>50548</parentid>
+      <timestamp>2025-01-07T23:18:57Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52854</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="834" sha1="c7t1mcb37ebtav797r1a17ycya9o54e" xml:space="preserve">{{Infobox crops
+|Name = Radish
+|image = Radish.png
+|alt = radish
+|Release = February 26, 2016
+|Growth = 6 Days
+|Season = Summer
+|Seed Name = Radish Seeds
+|Seed Description = Plant these in the Summer. Takes 6 days to produce.
+|Description = Crunchy crop used in recipes.
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = No Star: 90g, Silver: 112g, Gold: 135g
+|Seed Pierre Buy = 40g
+}}
+'''Radish''' is a crop in [[Stardew Valley]]. It can be grown during the [[Summer]] and take 6 days to mature. They sell through the shipping container for:
+
+
+
+*Normal: 90g 
+*Silver: 112g 
+*Gold: 135g
+
+==Used In:==
+*Red Plate
+*Radish Salad
+
+{{NavboxCrop}}
+
+[[Category:Vegetables]]
+[[Category:Summer]]
+[[Category:Summer crops]]
+
+[[pl:Rzodkiewka]]
+[[ru:Редис]]
+[[uk:Редис]]</text>
+      <sha1>c7t1mcb37ebtav797r1a17ycya9o54e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Red Cabbage</title>
+    <ns>0</ns>
+    <id>6271</id>
+    <revision>
+      <id>52843</id>
+      <parentid>50525</parentid>
+      <timestamp>2025-01-07T23:13:39Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52843</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="952" sha1="loccng0aau49tsrvmf7c99fcbqs2cf6" xml:space="preserve">{{Infobox crops
+|Name = Red Cabbage
+|image = Red Cabbage.png
+|alt = RedCabbage
+|Release = February 26, 2016
+|Growth = 9 Days
+|Season = Summer
+|Seed Name = Red Cabbage Seeds
+|Seed Description = Plant these in the Summer. Takes 9 days to produce.
+|Description = Aside from the name, this is a crunch purple crop to use in recipes!
+|Energy = No Star: +75, Silver: +105, Gold: +135
+|Health = No Star: +30, Silver: +42, Gold: +54
+|Crop Pierre Sell = No Star: 260g, Silver: 325g, Gold: 390g
+|Seed Pierre Buy = 100g
+}}
+Red Cabbage is a crop in [[Stardew Valley]]. They can be grown during the [[Summer]] and take 9 days to mature. They sell through the shipping container for:
+*No Star: 260g
+*Silver: 353g
+*Gold: 390g
+
+== Used In: ==
+* {{name|Fish Taco}}
+* {{name|Red Plate}}
+* {{name|Coleslaw}}
+
+{{NavboxCrop}}
+[[Category:Summer crops]]
+[[Category:Summer]]
+
+[[pl:Czerwona kapusta]]
+[[ru:Красная капуста]]
+[[uk:Червона капуста]]</text>
+      <sha1>loccng0aau49tsrvmf7c99fcbqs2cf6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Summer Spangle</title>
+    <ns>0</ns>
+    <id>6433</id>
+    <revision>
+      <id>52848</id>
+      <parentid>52847</parentid>
+      <timestamp>2025-01-07T23:16:12Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <minor/>
+      <origin>52848</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="955" sha1="leslj0ix94p25o9tgawsit8ds6x4zf5" xml:space="preserve">{{Infobox crops
+|Name = Summer Spangle
+|image = Summer Spangle.png
+|alt = summerspangle
+|Release = February 26, 2016
+|Growth = 8 Days
+|Season = Summer
+|Seed Name = Spangle Seeds
+|Seed Description = Plant these in the summer. Takes 8 days to grow.
+|Description = Pretty flower that only grows in Summer.
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = No Star: 90g, Silver: 112g, Gold: 135g
+|Seed Pierre Buy = 50g
+}}
+
+Summer Spangle is a flower in [[Stardew Valley]]. They can be grown during the [[Summer]] and take 8 days to grow. They sell through the shipping container for:
+*No Star: 90g
+*Silver: 112g
+*Gold: 135g
+
+==Gifting==
+The Summer Spangle is loved by [[Caroline]] and liked by most other [[villagers]] (except by [[Clint]], [[George]] and [[Sebastian]] that hate it).
+
+{{NavboxCrop}}
+
+[[pl:Letni błysk]]
+[[ru:Летний блестник]]
+[[uk:Літній блискун]]</text>
+      <sha1>leslj0ix94p25o9tgawsit8ds6x4zf5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Starfruit</title>
+    <ns>0</ns>
+    <id>4894</id>
+    <revision>
+      <id>61089</id>
+      <parentid>52858</parentid>
+      <timestamp>2026-02-21T17:46:05Z</timestamp>
+      <contributor>
+        <username>Мелісса Лимонна</username>
+        <id>53412696</id>
+      </contributor>
+      <minor/>
+      <comment>+ Spanish, Vietnamese</comment>
+      <origin>61089</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1303" sha1="krgayreslaz3znvh2ifnxxsx1v2c4tm" xml:space="preserve">{{Infobox crops
+|Name = Starfruit
+|image = Starfruit.png
+|Release = February 26, 2016
+|Growth = 13 Days
+|Season = Summer
+|Seed Name = Starfruit Seeds
+|Seed Description = Plant these in the Summer. Takes 13 days to produce.
+|Description = An extremely juicy fruit that grows in hot, humid weather. Slightly sweet with a sour undertone.
+|Energy = No Star: +125, Silver: +175, Gold: +225
+|Health = No Star: +50, Silver: +70, Gold: +90
+|Crop Pierre Sell = No Star: 750g, Silver: 927g, Gold: 1124g
+|Seed Pierre Buy = Desert Store 400g
+|Seed Joja Buy = Desert Store 400g
+}}
+{{tocright}}
+{{Stub}}
+[[File:Starfruit Growth.png|thumb|link=]]
+'''Starfruit''' is a crop in [[Stardew Valley (location)|Stardew Valley]]. It can be grown in the [[Summer]] and takes 13 days to mature. It sells for relatively high prices and may be requested for specific quests.  
+
+Notes: 
+
+Not to be mistaken for [[Stardrop|Stardrops]] (they do not have permanent effects).
+
+== Quests ==
+Kent requests a Starfruit by mail on the 15th of Summer (year 2) in the "A Soldier's Star" Quest. The reward is 500g and 1 Friendship heart.{{NavboxCrop}}
+
+
+[[Category:Fruit]]
+[[Category:Summer]]
+[[Category:Farming]]
+[[Category:Items]]
+
+[[de:Sternfrucht]]
+[[es:Carambola]]
+[[ru:Карамбола]]
+[[uk:Карамбола]]
+[[vi:Starfruit]]</text>
+      <sha1>krgayreslaz3znvh2ifnxxsx1v2c4tm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Artichoke</title>
+    <ns>0</ns>
+    <id>6568</id>
+    <revision>
+      <id>52865</id>
+      <parentid>48231</parentid>
+      <timestamp>2025-01-07T23:49:19Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52865</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="833" sha1="1sk25vxzq3nkig4pfsil7ckfa97u0c0" xml:space="preserve">{{Infobox crops
+|Name = Artichoke
+|image = Artichoke growth.png
+|alt = artichoke
+|Release = February 26, 2016
+|Growth = 8 Days
+|Season = Fall
+|Seed Name = Artichoke Seeds
+|Seed Description = Plant these in the Fall. Takes 8 days to produce.
+|Description = Don't choke on this green crop.
+|Energy = No Star: +30, Silver: +42, Gold: +54
+|Health = No Star: +12, Silver: +16, Gold: +21
+|Crop Pierre Sell = No Star: 160g, Silver: 200g, Gold: 240g
+|Seed Pierre Buy = 30g
+}}
+Artichokes are crops in Stardew Valley. They can be grown during the Fall and take 8 days to mature. They sell through the shipping container for No Star: 160g, Silver: 200g, Gold: 240g each.
+
+== Used In: ==
+* [[Artichoke Dip]]
+{{NavboxCrop}}
+
+[[Category:Items]]
+[[Category:Food]]
+[[Category:Farming]]
+
+[[pl:Karczoch]]
+[[ru:Артишок]]
+[[uk:Артишок]]</text>
+      <sha1>1sk25vxzq3nkig4pfsil7ckfa97u0c0</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Beet</title>
+    <ns>0</ns>
+    <id>6570</id>
+    <revision>
+      <id>52862</id>
+      <parentid>52861</parentid>
+      <timestamp>2025-01-07T23:47:11Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <minor/>
+      <origin>52862</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="910" sha1="f25wqxmg17v1nibngqk7iya3hpzmy47" xml:space="preserve">{{Infobox crops
+|Name = Beet
+|image = Beet.png
+|alt = beet
+|Release = February 26, 2016
+|Growth = 6 Days
+|Season = Fall
+|Seed Name = Beet Seeds
+|Seed Description = Plant these in the fall. Takes 6 days to produce.
+|Description = Nice for stew.
+|Energy = No Star: +30, Silver: +42, Gold: +54
+|Health = No Star: +12, Silver: +16, Gold: +21
+|Crop Pierre Sell = No Star: 100g, Silver: 125g, Gold: 150g
+|Seed Pierre Buy = 20g (Desert Store)
+|Seed Joja Buy = 20g (Desert Store)
+}}
+'''Beet''' are crops in [[Stardew Valley]]. They can be grown during the Fall and takes 6 days to mature. They sell through the shipping container for:
+
+
+*No Star: 100g
+*Silver: 125g
+*Gold: 150g
+
+Pickled Beets sell for 250g (only available from year 2).
+
+== Used In: ==
+* Vegetable Stew/Medley (1 Tomato, 1 Beet)
+* The Mysterious Qi's Quest
+
+{{NavboxCrop}}
+[[Category:Vegetables]]
+
+[[pl:Burak]]
+[[ru:Свёкла]]
+[[uk:Буряк]]</text>
+      <sha1>f25wqxmg17v1nibngqk7iya3hpzmy47</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Bok Choy</title>
+    <ns>0</ns>
+    <id>6572</id>
+    <revision>
+      <id>52864</id>
+      <parentid>51489</parentid>
+      <timestamp>2025-01-07T23:48:59Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52864</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="829" sha1="juenrob46387bt8r5eqovnq5kvg7ut9" xml:space="preserve">{{Infobox crops
+|Name = Bok Choy
+|image = Bok Choy.png
+|Release = February 26, 2016
+|Growth = 4 Days
+|Season = Fall
+|Seed Name = Bok Choy Seeds
+|Seed Description = Plant these in the Fall. Takes 4 days to produce.
+|Energy = No Star: +25, Silver: +35, Gold: +45
+|Health = No Star: +10, Silver: +14, Gold: +18
+|Crop Pierre Sell = No Star: 80g, Silver: 110g, Gold: 132g
+|Seed Pierre Buy = 50g
+|Seed Joja Buy = 62g
+}}
+'''Bok Choy''' is a [[crop]] in [[Stardew Valley]]. It can be grown during the [[Fall]] and take 4 days to mature. They sell through the [[shipping container]] for:
+*80g
+*Silver: 110g
+*Gold: 132g each.
+[[File:Bok Choy Growth.png|thumb|link=]]
+== Used In: ==
+*[[Super Meal]]
+{{NavboxCrop}}
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Farming]]
+
+[[pl:Kapusta chińska]]
+[[ru:Бок-чой]]
+[[uk:Бок-чой]]</text>
+      <sha1>juenrob46387bt8r5eqovnq5kvg7ut9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Eggplant</title>
+    <ns>0</ns>
+    <id>6585</id>
+    <revision>
+      <id>52860</id>
+      <parentid>48252</parentid>
+      <timestamp>2025-01-07T23:43:47Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52860</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1060" sha1="59c3lx42ery957mx2pqd7s41fdusht1" xml:space="preserve">{{Infobox crops
+|Name = Eggplant
+|image = eggplant g.png
+|alt = egg plant
+|Release = February 26, 2016
+|Growth = 5 Days (Keeps producing  every 5 days)
+|Season = Fall
+|Seed Name = Eggplant Seeds
+|Seed Description = Plant these in the fall. Takes 5 days to produce.
+|Description = Purple crop used for cooking
+|Energy = No Star: +20, Silver: +28, Gold: +36
+|Health = No Star: +8, Silver: +11, Gold: +14
+|Crop Pierre Sell = No Star: 60g, Silver: 75g, Gold: 90g
+|Seed Pierre Buy = 20g
+|Seed Joja Buy = 25g
+}}
+Eggplant is a [[Farming|crop]] in [[Stardew Valley]]. It can be grown during the [[Fall]] and take 5 days to mature and keeps producing every 5 days. They sell through the shipping container for:
+*No Star: 60g
+*Silver: 75g
+*Gold: 90g
+
+== Used In: ==
+* [[Survival Burger]]
+* [[Eggplant Parmesan|Eggplant Parm]] 
+* Fall Crops Bundle
+
+== Gifting ==
+===Disliked by:===
+[[Jas]], [[Abigail]]
+{{NavboxCrop}}
+
+[[Category:Items]]
+[[Category:Food]]
+[[Category:Vegetables]]
+[[Category:Farming]]
+
+[[pl:Bakłażan]]
+[[ru:Баклажан]]
+[[uk:Баклажан]]</text>
+      <sha1>59c3lx42ery957mx2pqd7s41fdusht1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Fairy Rose</title>
+    <ns>0</ns>
+    <id>6590</id>
+    <revision>
+      <id>52859</id>
+      <parentid>40659</parentid>
+      <timestamp>2025-01-07T23:42:50Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52859</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="796" sha1="7pnr50216fky01twj10zqhotnc94xz4" xml:space="preserve">{{Infobox crops
+|Name = Fairy Rose
+|image = Fairy Rose g.png
+|alt = Fairyrose
+|Release = February 26, 2016
+|Growth = 12 Days
+|Season = Fall
+|Seed Description = Fairy Rose Seed
+|Description = An old folk legend suggests that the sweet smell of this flower attracts fairies.
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = No Star: 319g, Silver: 362g, Gold: 435g
+|Seed Pierre Buy = 200g
+|Seed Joja Buy = 250g
+}}
+
+Fairy Rose is a flower in [[Stardew Valley]]. It can be planted during the [[Fall]] and takes 12 days to grow.
+
+==Gifting==
+Favorite of [[Evelyn]] and [[Jas]].
+
+{{NavboxCrop}}
+
+[[Category:Plants]]
+[[Category:Fall crops]]
+
+[[pl:Bajeczna róża]]
+[[ru:Сказочная роза]]
+[[uk:Казкова троянда]]</text>
+      <sha1>7pnr50216fky01twj10zqhotnc94xz4</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pumpkin</title>
+    <ns>0</ns>
+    <id>6595</id>
+    <revision>
+      <id>52863</id>
+      <parentid>51500</parentid>
+      <timestamp>2025-01-07T23:47:36Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52863</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1008" sha1="javrwd84qiecdjx1rb4qs7m9j92yn3x" xml:space="preserve">{{Infobox crops
+|Name = Pumpkin
+|image = Pumpkin.png
+|Release = February 26, 2016
+|Growth = 13 Days
+|Season = Fall
+|Seed Name = Pumpkin Seeds
+|Seed Description = Plant these in the Fall. Takes 13 days to produce.
+|Energy = None
+|Health = None
+|Crop Pierre Sell = No Star: 320g, Silver: 400g, Gold: 480g
+|Seed Pierre Buy = 100g
+|Seed Joja Buy = 125g
+}}
+{{tocright}}
+{{Stub}}
+[[File:Pumpkin Growth.png|thumb|link=]]
+'''Pumpkin''' is a [[crop]] in Stardew Valley. It can be grown during the [[Fall]] and takes 13 days to mature. They sell through the [[shipping container]] for 320g, 400g at silver [[quality]], and 480g at gold quality.
+
+This crop has a chance of becoming a giant crop every day if it is placed in a 3x3 pattern and if it is kept watered until matured. It can then be harvested with an [[axe]] for double harvest.
+
+== Used In: ==
+* Autumn's Bounty
+* Pumpkin Soup 
+* Pumpkin Pie 
+* Fall Crops Bundle 
+* Quality Crops Bundle
+
+{{NavboxCrop}}
+
+[[pl:Dynia]]
+[[ru:Тыква]]
+[[uk:Гарбуз]]</text>
+      <sha1>javrwd84qiecdjx1rb4qs7m9j92yn3x</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Sweet Gem Berry</title>
+    <ns>0</ns>
+    <id>4672</id>
+    <revision>
+      <id>52870</id>
+      <parentid>51506</parentid>
+      <timestamp>2025-01-07T23:51:14Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52870</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1394" sha1="t5o1vm92h9cshy30r4y27je70joe4h5" xml:space="preserve">{{Infobox crops
+|Name = Sweet Gem Berry
+|image = Sweet Gem Berry.png
+|alt = Rare Seed
+|Release = February 26, 2016
+|Growth = All Season
+|Season = Fall
+|Seed Name = Rare Seed
+|Seed Description = Plant these in the fall. Takes all season to produce
+|Energy = None
+|Health = None
+|Crop Pierre Sell = No Star: 3000g, Silver: 3750g, Gold: 4500g
+|Crop Pierre Buy = None
+|Seed Pierre Buy = Traveling Cart 1000g
+|Crop Joja Buy = None
+|Seed Joja Buy = Traveling Cart 1000g
+|Description = It's by far the sweetest thing you've ever smelled.
+|season = Fall (All Seasons in the Greenhouse)
+}}
+{{tocright}}
+{{Stub}}
+[[File:Rare Seed Growth.png|thumb|link=]]
+'''Sweet Gem Berry''' is a [[crop]] in [[Stardew Valley]]. It can be grown during the [[Fall]] from [[Rare Seed]]s and takes 24 days to mature. They sell through the [[shipping container]] for 3000g, 3750g at silver [[quality]], and 4500g at gold quality. They cannot be used in the [[Preserves Jar]] nor a [[Keg]]. 
+
+1 or 5 Rare Seeds can be bought from the [[Traveling Cart]] for 1000g each.
+
+==Stardrop Trade ==
+A Sweet Gem Berry can be given to the [[Old Master Cannoli]] statue located in the [[Secret Woods]] to receive a [[Stardrop]]. This can only be done once per player character.
+
+{{NavboxCrop}}
+[[Category:Fall crops]]
+
+[[pl:Jagoda słodkiego kryształu]]
+[[ru:Сладкая самоцветинка]]
+[[uk:Солодка ягідка]]</text>
+      <sha1>t5o1vm92h9cshy30r4y27je70joe4h5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Sunflower</title>
+    <ns>0</ns>
+    <id>6602</id>
+    <revision>
+      <id>52856</id>
+      <parentid>52855</parentid>
+      <timestamp>2025-01-07T23:19:33Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <minor/>
+      <origin>52856</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1357" sha1="j4cfoipbg3i9e4md2yn7vvgkl2dihcv" xml:space="preserve">{{Infobox crops
+|Name = Sunflower
+|image = Sunflower.png
+|alt = Sun Flower
+|Release = February 26, 2016
+|Growth = 8 days
+|Season = Fall
+|Seed Name = Sunflower Seeds
+|Seed Description = Plant these in the fall. Takes 8 days to produce and drops 0-2 seeds after harvest!
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = No Star: 80g, Silver: 100g, Gold: 120g
+|Seed Pierre Buy = 200g
+|Seed Joja Buy = 50g
+}}
+{{tocright}}
+{{Stub}}
+[[File:Sunflower Growth.png|thumb|link=]]
+'''Sunflowers''' are a [[crop]] in Stardew Valley. [[Sunflower Seeds]] can be purchased at [[Pierre's General Store]] for 200g each and from [[JojaMart]] for 175g. Sunflowers grow during [[Summer]] and [[Fall]], take 8 days to mature, and give 1-3 Sunflower seeds when harvested along with the flower itself. 
+
+They sell through the [[shipping bin]] for 
+* 80g 
+* 100g at silver [[quality]]
+* 120g at gold quality
+
+==Gifting==
+Flowers are universally liked as a gift.
+
+===Loved by:===
+[[Haley]]
+
+===Disliked by:=== 
+[[George]] dislikes all flowers.
+[[Clint]] dislikes most flowers (including the sunflower).
+
+==Boosts==
++81 Energy
+
++36 Health
+
+== Used In: ==
+* Dye Bundle from the bulletin board.
+{{NavboxCrop}}
+[[Category:Fall]]
+[[Category:Fall crops]]
+
+[[pl:Słonecznik]]
+[[ru:Подсолнух]]
+[[uk:Соняшник]]</text>
+      <sha1>j4cfoipbg3i9e4md2yn7vvgkl2dihcv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Yam</title>
+    <ns>0</ns>
+    <id>6604</id>
+    <revision>
+      <id>52867</id>
+      <parentid>51548</parentid>
+      <timestamp>2025-01-07T23:50:06Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52867</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1002" sha1="b4ja42s9svyj97616fyzjf1w3mucdr1" xml:space="preserve">{{Infobox crops
+|Name = Yam
+|image = Yam.png
+|Release = February 26, 2016
+|Growth = 10 Days
+|Season = Fall
+|Seed Name = Yam Seeds
+|Seed Description = Plant these in the fall. Takes 10 days to produce.
+|Energy = No Star: +45, Silver: +63, Gold: +81
+|Health = No Star: +18, Silver: +25, Gold: +32
+|Crop Pierre Sell = No Star: 160g, Silver: 200g, Gold: 240g
+|Seed Pierre Buy = 60g
+|Seed Joja Buy = 75g
+}}
+{{Tocright}}
+{{Stub}}
+[[File:Yam Growth.png|thumb|link=]]
+'''Yam''' is a [[crop]] in [[Stardew Valley]]. It can be grown during the [[Fall]] and take 10 days to mature. Shipping a yam can yield various amounts of money depending on the quality: 160g for no star, 200g for a silver star, and 240g for a gold star. 
+
+== Used In: ==
+* [[Glazed Yams]]
+* [[Autumn's Bounty]]
+* Fall Crops Bundle
+
+== Gifting ==
+=== Loved by: ===
+[[Linus]]
+
+=== Disliked by: ===
+[[Vincent]]
+
+{{NavboxCrop}}
+[[Category:Vegetables]]
+[[Category:Items]]
+[[Category:Fall]]
+
+[[pl:Słodki ziemniak]]
+[[ru:Батат]]
+[[uk:Ямс]]</text>
+      <sha1>b4ja42s9svyj97616fyzjf1w3mucdr1</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Coffee Bean</title>
+    <ns>0</ns>
+    <id>12792</id>
+    <revision>
+      <id>52842</id>
+      <parentid>50516</parentid>
+      <timestamp>2025-01-07T23:05:59Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <origin>52842</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="653" sha1="3z12m3flpo37jtdndnrvjt94g2z2ha9" xml:space="preserve">{{Infobox_crops|Name = Coffee Bean|image = Coffee Bean.png|description = Plant in Spring and Summer to grow a coffee plant. Place Five beans in a keg to make coffee|growth = 10 days|season = Spring and Summer|value = 15g}}The Coffee Bean is a crop and a plantable seed. Coffee Beans take 10 days to grow and then 2 days to regrowth.
+
+Placing 5 Coffee Beans in a [[keg]] will make [[Coffee]].
+
+When harvested it will produce 4 beans. [[Basic Fertilizer]] and [[Quality Fertilizer]] only affect the first Coffee bean.
+[[Category:Spring crops]]
+[[Category:Summer crops]]
+
+[[pl:Ziarno kawy]]
+[[ru:Кофейное зерно]]
+[[uk:Кавове зерно]]</text>
+      <sha1>3z12m3flpo37jtdndnrvjt94g2z2ha9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Giant Crops</title>
+    <ns>0</ns>
+    <id>8640</id>
+    <revision>
+      <id>43441</id>
+      <parentid>43440</parentid>
+      <timestamp>2023-12-18T19:54:42Z</timestamp>
+      <contributor>
+        <username>SUNNYFLIGHT4LIFEEEEEE</username>
+        <id>53020698</id>
+      </contributor>
+      <origin>43441</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="613" sha1="6gjv4o8yecfparoquq1bgg7c1m7zdwl" xml:space="preserve">[[Category:Gameplay]]
+[[Category:Crops]]
+At the start of each day, every possible 3x3 grid of crops (including overlaps) has a 1% chance to grow into a giant crop as long as the center crop is fully-grown and watered, and all constituent crops are of the same type. Giant crops won't necessarily appear on the day the crops finish growing; it can happen any day those criteria are met.
+
+&lt;nowiki&gt;***&lt;/nowiki&gt;0 = [[Cauliflower]] (Spring), [[Melon]] (Summer) or [[Pumpkin]] (Fall)***
+{| class="fandom-table"
+!0
+!0
+!0
+|-
+|0
+|0
+|0
+|-
+|0
+|0
+|0
+|}
+Giant Crops can be harvested by using [[Axe]] and yield double quantity.</text>
+      <sha1>6gjv4o8yecfparoquq1bgg7c1m7zdwl</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Spring crops</title>
+    <ns>14</ns>
+    <id>15230</id>
+    <revision>
+      <id>41695</id>
+      <timestamp>2021-07-08T00:18:15Z</timestamp>
+      <contributor>
+        <username>Atvelonis</username>
+        <id>25356303</id>
+      </contributor>
+      <comment>Created page with "Spring crops in ''[[Stardew Valley]]''.  [[Category:Crops]]"</comment>
+      <origin>41695</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="59" sha1="6wuavifag94o28tf9p3qlqjxcwku89v" xml:space="preserve">Spring crops in ''[[Stardew Valley]]''.
+
+[[Category:Crops]]</text>
+      <sha1>6wuavifag94o28tf9p3qlqjxcwku89v</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Fall crops</title>
+    <ns>14</ns>
+    <id>15231</id>
+    <revision>
+      <id>41696</id>
+      <timestamp>2021-07-08T00:18:21Z</timestamp>
+      <contributor>
+        <username>Atvelonis</username>
+        <id>25356303</id>
+      </contributor>
+      <comment>Created page with "Fall crops in ''[[Stardew Valley]]''.  [[Category:Crops]]"</comment>
+      <origin>41696</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="57" sha1="fk44kqnnzm8ke9rv09wvugylb7bp34d" xml:space="preserve">Fall crops in ''[[Stardew Valley]]''.
+
+[[Category:Crops]]</text>
+      <sha1>fk44kqnnzm8ke9rv09wvugylb7bp34d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Summer crops</title>
+    <ns>14</ns>
+    <id>15232</id>
+    <revision>
+      <id>41697</id>
+      <timestamp>2021-07-08T00:18:46Z</timestamp>
+      <contributor>
+        <username>Atvelonis</username>
+        <id>25356303</id>
+      </contributor>
+      <comment>Created page with "Summer crops in ''[[Stardew Valley]]''.  [[Category:Crops]]"</comment>
+      <origin>41697</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="59" sha1="6rl1h1bmzyh85nvrj3f41bkpbl7ushc" xml:space="preserve">Summer crops in ''[[Stardew Valley]]''.
+
+[[Category:Crops]]</text>
+      <sha1>6rl1h1bmzyh85nvrj3f41bkpbl7ushc</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Tea Leaves</title>
+    <ns>0</ns>
+    <id>15471</id>
+    <revision>
+      <id>53649</id>
+      <parentid>53648</parentid>
+      <timestamp>2025-01-11T00:16:50Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>53649</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="806" sha1="jiybmd2hfabgmottkwxz4n6b0x55dje" xml:space="preserve">{{Stub}}
+'''Tea Leaves''' are a [[crop]] harvested from [[Tea Sapling]]s in [[Spring]], [[Summer]], and [[Fall]], as well as [[Winter]] when planted indoors using [[Garden Pots]] or the [[Greenhouse]]. 
+
+A Tea Sapling is given after completing [[Caroline's]] 2nd [[friendship]] event, as well as the [[Seed Maker]] crafting recipe. They take 20 days to mature and can be harvested every day on the last week of each month (days 22 through 28, for a total of 7 leaves). Tea Saplings don't die between [[season]] changes, and will continue to grow outdoors in Winter but wont produce any leaves.
+
+== Usage ==
+Tea leaves can be placed in a [[Keg]] to make [[Green Tea]], whch restores 5 Health, 13 Energy, and gives a +30 increase to maximum energy.
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Farming]]</text>
+      <sha1>jiybmd2hfabgmottkwxz4n6b0x55dje</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Fertilizer</title>
+    <ns>14</ns>
+    <id>9063</id>
+    <revision>
+      <id>45406</id>
+      <parentid>25857</parentid>
+      <timestamp>2024-12-04T02:58:41Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>45406</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="108" sha1="5tcm7yzcz53ht6vamnb3uke77axvror" xml:space="preserve">A list of fertilizer in [[Stardew Valley]].
+[[Category:Items|#]]
+[[Category:Crops|#]]
+[[Category:Farming|#]]</text>
+      <sha1>5tcm7yzcz53ht6vamnb3uke77axvror</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Qi Fruit</title>
+    <ns>0</ns>
+    <id>16388</id>
+    <revision>
+      <id>49336</id>
+      <timestamp>2024-12-27T04:38:00Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "{{Stub}}  '''Qi Fruit''' is a [[crop]] that is [[farmed]] and harvested for the [[Qi's Crop]] special order quest, started in [[Qi's Walnut Room]]. It is grown from [[Qi Bean]]s, which can only be found on [[Ginger Island]] while the quest is active. Both Qi Beans and Qi Fruit will disappear when the quest ends.  [[Category:Items]] [[Category:Crops]] [[Category:Farming]]"</comment>
+      <origin>49336</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="373" sha1="17sc1jlu8a4h7l1zxdysfzv27s1ia0t" xml:space="preserve">{{Stub}}
+
+'''Qi Fruit''' is a [[crop]] that is [[farmed]] and harvested for the [[Qi's Crop]] special order quest, started in [[Qi's Walnut Room]]. It is grown from [[Qi Bean]]s, which can only be found on [[Ginger Island]] while the quest is active. Both Qi Beans and Qi Fruit will disappear when the quest ends.
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Farming]]</text>
+      <sha1>17sc1jlu8a4h7l1zxdysfzv27s1ia0t</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Unmilled Rice</title>
+    <ns>0</ns>
+    <id>16740</id>
+    <revision>
+      <id>51017</id>
+      <parentid>51014</parentid>
+      <timestamp>2025-01-02T09:07:11Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>51017</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="256" sha1="r5zx4c6h2j88lwhpyj7kxojukbe4egv" xml:space="preserve">{{Stub}}
+[[File:Unmilled Rice.png|thumb]]
+'''Unmilled Rice''' is a [[vegetable]] and a [[crop]] harvested from matured [[Rice Shoot]]s in the [[Spring]] using a [[Scythe]].
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Vegetables]]
+[[Category:Cooking]]</text>
+      <sha1>r5zx4c6h2j88lwhpyj7kxojukbe4egv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Pineapple</title>
+    <ns>0</ns>
+    <id>16745</id>
+    <revision>
+      <id>51022</id>
+      <timestamp>2025-01-02T09:11:33Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "{{Stub}} [[File:Pineapple.png|thumb]] '''Pineapple''' is a [[fruit]] and a [[crop]], available for [[farming]] some time after the player has reached [[Ginger Island]].  [[Category:Items]] [[Category:Crops]] [[Category:Fruit]] [[Category:Cooking]]"</comment>
+      <origin>51022</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="247" sha1="tgkp6adkw0w05z228y58ilzt6dsznzk" xml:space="preserve">{{Stub}}
+[[File:Pineapple.png|thumb]]
+'''Pineapple''' is a [[fruit]] and a [[crop]], available for [[farming]] some time after the player has reached [[Ginger Island]].
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Fruit]]
+[[Category:Cooking]]</text>
+      <sha1>tgkp6adkw0w05z228y58ilzt6dsznzk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Cranberries</title>
+    <ns>0</ns>
+    <id>16750</id>
+    <revision>
+      <id>53641</id>
+      <parentid>51030</parentid>
+      <timestamp>2025-01-10T23:39:57Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>53641</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1290" sha1="9ne2al3i59rgcfjbcl4djn231gye1n8" xml:space="preserve">{{Infobox crops
+|Name = Cranberries
+|image = Cranberry.png
+|alt = Cranberry
+|Release = February 26, 2016
+|Growth = 
+|Season = Fall
+|Seed Name = Cranberry Seeds
+|Seed Description =Plant these in the fall. Takes 7 days to mature, and continues to produce after first harvest. 
+|Description = These tart red berries are a traditional winter food.
+|Energy = Normal: +38, Silver: +53, Gold: +68
+|Health = Normal: +15, Silver: +21, Gold: +27
+|Crop Pierre Sell = Normal: 130g, Silver: 162g, Gold: 195g
+|Seed Pierre Buy = 
+|Seed Pierre Sell = 
+|Seed Joja Buy = 
+|name = Cranberries
+|season = Fall
+}}
+{{Stub}}
+'''Cranberries''' are a [[crop]] grown in [[Fall]] from [[Cranberry Seeds]]. They mature after 7 days and keep producing the [[fruit]] every 5th day. 
+
+== Gifting ==
+{| class="article-table"
+|'''Like'''
+|[[Demetrius]], [[Elliott]], [[Harvey]], [[Jodi]], [[Kent]], [[Leah]], [[Linus]], [[Pam]], [[Robin]], [[Sandy]], [[Shane]]
+|-
+|'''Neutral'''
+|[[Alex]], [[Caroline]], [[Clint]], [[Dwarf]], [[Emily]], [[Evelyn]], [[George]], [[Gus]], [[Krobus]], [[Lewis]], [[Marnie]], [[Maru]], [[Penny]], [[Pierre]], [[Sam]], [[Sebastian]],
+|-
+|'''Dislike'''
+|
+|}
+
+{{NavboxCrop}}
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Farming]]
+
+[[pl:Żurawina]]
+[[ru:Клюква]]
+[[uk:Журавлина]]</text>
+      <sha1>9ne2al3i59rgcfjbcl4djn231gye1n8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Sweet Pea</title>
+    <ns>0</ns>
+    <id>5992</id>
+    <revision>
+      <id>52433</id>
+      <parentid>52432</parentid>
+      <timestamp>2025-01-06T00:14:38Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>/* Uses */</comment>
+      <origin>52433</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1146" sha1="odsqly98qvc1dz8od260mehy5bo20wz" xml:space="preserve">{{Starbox_item|item=Sweet Pea|image=Sweet_Pea.png|description=A fragrant summer flower|season=Summer|energy=0|health=0|source=Foraging|source2=Summer Seeds|sellvalue=50|sellquality=y|type=Forage}}
+
+A [[foraged]] item that shows up in the [[Summer]]. 
+
+== Sources ==
+Foraged during Summer.
+
+Can be grown from [[Summer Seeds]].
+
+Can be found in [[Garbage Can]]s during Summer.
+
+==Uses==
+Used in the [[Summer Foraging Bundle]].
+
+Used to craft Summer Seeds.
+
+{{Starbox gifting|loves={{Icon|Sandy}}|neutral=-|hates=-|dislikes={{Icon|Clint}} {{Icon|George}} {{Icon|Sebastian}}|likes={{Icon|Abigail}} {{Icon|Alex}} {{Icon|Caroline}} {{Icon|Demetrius}} {{Icon|Dwarf}} {{Icon|Elliott}} {{Icon|Emily}} {{Icon|Evelyn}} {{Icon|Gus}} {{Icon|Haley}} {{Icon|Harvey}} {{Icon|Jas}} {{Icon|Jodi}} {{Icon|Kent}} {{Icon|Krobus}} {{Icon|Leah}} {{Icon|Leo}} {{Icon|Lewis}} {{Icon|Linus}} {{Icon|Marnie}} {{Icon|Maru}} {{Icon|Pam}} {{Icon|Penny}} {{Icon|Pierre}} {{Icon|Robin}} {{Icon|Sam}} {{Icon|Shane}} {{Icon|Vincent}} {{Icon|Willy}} {{Icon|Wizard}}}}
+
+[[Category:Forage]]
+[[Category:Crops]]
+[[Category:Farming]]
+[[Category:Foraging]]
+[[Category:Summer]]
+
+__NOTOC__</text>
+      <sha1>odsqly98qvc1dz8od260mehy5bo20wz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Leek</title>
+    <ns>0</ns>
+    <id>8577</id>
+    <revision>
+      <id>52443</id>
+      <parentid>52351</parentid>
+      <timestamp>2025-01-06T00:23:52Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>52443</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1143" sha1="krvqd0s2ubl18k1voy69cqu3iwuyedq" xml:space="preserve">{{Starbox_item|item=Leek|image=Leek.png|description=A tasty relative of the onion.|season=Spring|energy=40|health=18|healquality=y|source=Foraging|source2=Spring Seeds|sellvalue=60|sellquality=y|type=Forage}}
+
+The '''leek''' is a [[forage]] item found during [[Spring]].
+
+==Sources==
+Foraged in Spring.
+
+Grown from [[Spring Seeds]].
+
+Found in [[Garbage Can]]s during Spring
+
+==Uses==
+Used in the [[Spring Foraging Bundle]].
+
+Used to cook [[Salad]].
+
+Used to make Spring Seeds.
+
+{{Starbox gifting|loves={{Icon|George}}|likes={{Icon|Harvey}} {{Icon|Leah}} {{Icon|Linus}} {{Icon|Penny}}|neutral={{Icon|Abigail}} {{Icon|Alex}} {{Icon|Clint}} {{Icon|Demetrius}} {{Icon|Emily}} {{Icon|Evelyn}} {{Icon|Gus}} {{Icon|Kent}} {{Icon|Lewis}} {{Icon|Marnie}} {{Icon|Maru}} {{Icon|Pam}} {{Icon|Robin}} {{Icon|Sandy}}|dislikes={{Icon|Caroline}} {{Icon|Dwarf}} {{Icon|Elliott}} {{Icon|Haley}} {{Icon|Jas}} {{Icon|Jodi}} {{Icon|Krobus}} {{Icon|Leo}} {{Icon|Pierre}} {{Icon|Sam}} {{Icon|Sebastian}} {{Icon|Shane}} {{Icon|Vincent}} {{Icon|Willy}} {{Icon|Wizard}}|hates=-}}
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Forage]]
+[[Category:Spring]]
+
+__NOTOC__</text>
+      <sha1>krvqd0s2ubl18k1voy69cqu3iwuyedq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wild Plum</title>
+    <ns>0</ns>
+    <id>8819</id>
+    <revision>
+      <id>52446</id>
+      <parentid>52364</parentid>
+      <timestamp>2025-01-06T00:25:40Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>52446</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1348" sha1="5yxwgdhenpbtoegmyc5tert30b11l03" xml:space="preserve">{{Starbox_item|item=Wild Plum|image=Wild_Plum.png|description=Tart and juicy with a pungent aroma.|location=Stardew Valley|location2=The Farm Cave|season=Fall|energy=25|health=11|healquality=y|source=Foraging|source2=Fall Seeds|sellvalue=80|sellquality=y|type=Forage}}
+
+'''Wild Plum''' is a [[forage]] item gathered in [[Fall]].
+
+==Sources==
+[[Foraging]] during Fall.
+
+Grown from [[Fall Seeds]].
+
+Can spawn in [[The Cave]] if the fruit bat option was chosen.
+
+Can be found in [[Garbage Cans]] during Fall.
+
+==Uses==
+Used in the [[Fall Foraging Bundle]].
+
+May be used in the remixed [[Forager's Bundle]].
+
+Used to craft Fall Seeds.
+
+Used to cook [[Plum Pudding]].
+
+{{Starbox gifting|loves=-|likes={{Icon|Demetrius}} {{Icon|Elliott}} {{Icon|Harvey}} {{Icon|Jodi}} {{Icon|Kent}} {{Icon|Leah}} {{Icon|Linus}} {{Icon|Pam}} {{Icon|Robin}} {{Icon|Sandy}} {{Icon|Shane}}|neutral={{Icon|Alex}} {{Icon|Caroline}} {{Icon|Clint}} {{Icon|Dwarf}} {{Icon|Emily}} {{Icon|Evelyn}} {{Icon|George}} {{Icon|Gus}} {{Icon|Krobus}} {{Icon|Leo}} {{Icon|Lewis}} {{Icon|Marnie}} {{Icon|Maru}} {{Icon|Penny}} {{Icon|Pierre}} {{Icon|Sam}} {{Icon|Sebastian}} {{Icon|Willy}} {{Icon|Wizard}}|dislikes={{Icon|Abigail}} {{Icon|Haley}} {{Icon|Jas}} {{Icon|Vincent}}|hates=-}}
+
+[[Category:Items]]
+[[Category:Fruit]]
+[[Category:Crops]]
+[[Category:Forage]]
+[[Category:Fall]]
+
+__NOTOC__</text>
+      <sha1>5yxwgdhenpbtoegmyc5tert30b11l03</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Common Mushroom</title>
+    <ns>0</ns>
+    <id>7773</id>
+    <revision>
+      <id>58078</id>
+      <parentid>53104</parentid>
+      <timestamp>2025-01-17T10:45:22Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>58078</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1592" sha1="dm5i39v4q2dr4m08wfuhta2nlcwro94" xml:space="preserve">{{Starbox_item
+|item = Common Mushroom
+|image = Common Mushroom.png
+|description = Slightly nutty, with good texture.
+|location = [[Stardew Valley (location)|Stardew Valley]] ([[Forage]] in [[Fall]])
+|location2 = [[Secret Woods]] (Forage in [[Spring]] &amp; Fall)
+|energy = 38
+|health = 17
+|healquality = y
+|source = [[Farming]] ([[Fall Seeds]])
+|source2 = Mushroom Bins ([[The Cave]])
+|craftstation = [[Mushroom Log]]&lt;br/&gt;[[Tapper]] ([[Red Mushroom Tree]])
+|crafttime = Every 4th day
+|sellvalue = 40
+|sellquality = y 
+|type = Forage
+}}
+'''Common Mushrooms''' are a [[forage]] item that can also be [[farmed]] from [[Fall Seeds]].
+
+== Sources ==
+Foraged around the valley during [[Fall]].
+
+Appear in [[The Cave]] if the mushroom option was chosen at the end of [[Demetrius']] research quest.
+
+Appear in the [[Secret Woods]] during [[Spring]] and Fall.
+
+Can spawn on the [[Forest Farm]].
+
+== Uses ==
+*[[Fall Foraging Bundle]]
+
+{{Starbox gifting
+|loves=-
+|likes={{Icon|Harvey}} {{Icon|Leah}} {{Icon|Linus}}|neutral={{Icon|Abigail}} {{Icon|Alex}} {{Icon|Clint}} {{Icon|Demetrius}} {{Icon|Emily}} {{Icon|Evelyn}} {{Icon|George}} {{Icon|Gus}} {{Icon|Kent}} {{Icon|Lewis}} {{Icon|Marnie}} {{Icon|Pam}} {{Icon|Penny}} {{Icon|Robin}} {{Icon|Sandy}}
+|dislikes={{Icon|Caroline}} {{Icon|Dwarf}} {{Icon|Elliott}} {{Icon|Haley}} {{Icon|Jas}} {{Icon|Jodi}} {{Icon|Krobus}} {{Icon|Leo}} {{Icon|Maru}} {{Icon|Pierre}} {{Icon|Sam}} {{Icon|Sebastian}} {{Icon|Shane}} {{Icon|Vincent}} {{Icon|Willy}} {{Icon|Wizard}}
+|hates=-
+}}
+
+[[Category:Items]]
+[[Category:Forage]]
+[[Category:Crops]]
+[[Category:Fall]]
+
+__NOTOC__</text>
+      <sha1>dm5i39v4q2dr4m08wfuhta2nlcwro94</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Grape</title>
+    <ns>0</ns>
+    <id>6149</id>
+    <revision>
+      <id>53643</id>
+      <parentid>42309</parentid>
+      <timestamp>2025-01-10T23:44:51Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Removed redirect to [[Grapes]]</comment>
+      <origin>53643</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1290" sha1="gqcs07bzijkwrgz43nez1pbiaqm3kj5" xml:space="preserve">{{Infobox crops
+|Name = Grape
+|image = Grape.png
+|alt = Grape
+|Release = February 26, 2016
+|Growth = 10 Days (Keeps producing every 3 days)
+|Season = Fall
+|Seed Name = Grape Starter
+|Seed Description = Plant these in the Fall. Takes 10 days to produce.
+|Energy = No Star: +38, Silver: +53, Gold: +45
+|Health = No Star: +15, Silver: +21, Gold: +27
+|Crop Pierre Sell = No Star: 80g, Silver: 100g, Gold: 120g
+|Seed Pierre Buy = 60g
+|Seed Joja Buy = 75g
+}}
+{{tocright}}
+{{Stub}}
+'''Grapes''' are both a [[crop]] and a type [[forage]] that can be grown from [[Grape Starter]] in [[Fall]]. They mature after 10 days and keep producing the [[fruit]] every 4th day. They can also be [[foraged]] during [[Summer]].
+
+Using the [[Keg]], grapes can be used to produce [[Wine]].
+
+"Grape day" is a day where grape spawns are better and takes place on Summer 13. If it is raining, "grape day" will take place on Summer 20. 
+
+==Sell Prices:==
+*No Star: 88g
+*Silver Star: 110g
+*Gold Star: 132g
+
+== Gifting ==
+===Loved by:===
+[[Vincent]]
+
+===Neutral:===
+[[Caroline]]
+
+===Disliked by:===
+[[Abigail]]
+
+===Hated by:===
+[[Alex]]
+
+{{NavboxCrop}}
+
+[[Category:Items]]
+[[Category:Crops]]
+[[Category:Forage]]
+[[Category:Farming]]
+[[Category:Foraging]]
+
+[[pl:Winogrono]]
+[[ru:Виноград]]
+[[uk:Виноград]]</text>
+      <sha1>gqcs07bzijkwrgz43nez1pbiaqm3kj5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Winter Crops</title>
+    <ns>14</ns>
+    <id>17185</id>
+    <revision>
+      <id>53720</id>
+      <timestamp>2025-01-11T09:42:32Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "[[Category:Crops]]"</comment>
+      <origin>53720</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" sha1="izusdaafrl0w9mk9b26o9vkqupkkfae" xml:space="preserve">[[Category:Crops]]</text>
+      <sha1>izusdaafrl0w9mk9b26o9vkqupkkfae</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Summer Crops</title>
+    <ns>14</ns>
+    <id>17186</id>
+    <revision>
+      <id>53721</id>
+      <timestamp>2025-01-11T09:43:13Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "[[Category:Crops]]"</comment>
+      <origin>53721</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" sha1="izusdaafrl0w9mk9b26o9vkqupkkfae" xml:space="preserve">[[Category:Crops]]</text>
+      <sha1>izusdaafrl0w9mk9b26o9vkqupkkfae</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Spring Crops</title>
+    <ns>14</ns>
+    <id>17187</id>
+    <revision>
+      <id>53722</id>
+      <timestamp>2025-01-11T09:43:45Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "[[Category:Crops]]"</comment>
+      <origin>53722</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" sha1="izusdaafrl0w9mk9b26o9vkqupkkfae" xml:space="preserve">[[Category:Crops]]</text>
+      <sha1>izusdaafrl0w9mk9b26o9vkqupkkfae</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Fall Crops</title>
+    <ns>14</ns>
+    <id>17188</id>
+    <revision>
+      <id>53723</id>
+      <timestamp>2025-01-11T09:44:07Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "[[Category:Crops]]"</comment>
+      <origin>53723</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" sha1="izusdaafrl0w9mk9b26o9vkqupkkfae" xml:space="preserve">[[Category:Crops]]</text>
+      <sha1>izusdaafrl0w9mk9b26o9vkqupkkfae</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:All Year Crops</title>
+    <ns>14</ns>
+    <id>17189</id>
+    <revision>
+      <id>53724</id>
+      <timestamp>2025-01-11T09:44:32Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <comment>Created page with "[[Category:Crops]]"</comment>
+      <origin>53724</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="18" sha1="izusdaafrl0w9mk9b26o9vkqupkkfae" xml:space="preserve">[[Category:Crops]]</text>
+      <sha1>izusdaafrl0w9mk9b26o9vkqupkkfae</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Powdermelon</title>
+    <ns>0</ns>
+    <id>16080</id>
+    <revision>
+      <id>60582</id>
+      <parentid>60569</parentid>
+      <timestamp>2025-04-02T09:50:11Z</timestamp>
+      <contributor>
+        <username>Баба Зина</username>
+        <id>56474199</id>
+      </contributor>
+      <minor/>
+      <origin>60582</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="769" sha1="ffmudwzh9gw4g68ke6e7tzfd5nqcvw7" xml:space="preserve">{{Starbox crop
+|description = Named for the powdery coating that forms on the surface, this melon is crisp and sweet, with a delicate flavor.
+|type        = Fruit
+|season      = Winter
+|seed        = Powdermelon Seeds
+|energy      = 28
+|health      = 63
+|sellvalue   = 60
+|quality     = y
+}}
+'''Powdermelon''' is one of 3 [[crops]] that can grow in [[Winter]], the other two being [[Winter Seeds]] (produces [[Crocus]], [[Crystal Fruit]], [[Snow Yam]], and [[Winter Root]]) and [[Fiber]] from [[Fiber Seeds]]. [[Powdermelon Seeds]] can be obtained the same way as [[Snow Yams]] and [[Winter Root]] by using the hoe on [[artifact spots]].
+* Can be jellied in the [[Preserves Jar]]
+
+[[Category:Needs more information]]
+
+[[ru:Снегодыня]]
+[[uk:Снігодиня]]</text>
+      <sha1>ffmudwzh9gw4g68ke6e7tzfd5nqcvw7</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Taro Root</title>
+    <ns>0</ns>
+    <id>18379</id>
+    <revision>
+      <id>59648</id>
+      <parentid>59647</parentid>
+      <timestamp>2025-02-06T16:49:08Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>59648</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="999" sha1="ezfsenasnq7so2jalnxitg0gtizv6wy" xml:space="preserve">{{Stub}}
+{{Starbox crop
+|description = This starchy root is one of the most ancient crops.
+|seed        = Taro Tuber
+|gestation   = 10 days (7 when irrigated)
+|season      = Summer
+|energy      = 38
+|health      = 17
+|sellvalue   = 100
+|quality     = y
+}}
+
+== Gifting ==
+{| class="fandom-table"
+|+Villager Reactions
+!Likes
+|[[Alex]], [[Caroline]], [[Clint]], [[Demetrius]], [[Dwarf]], [[Elliott]], [[Emily]], [[Evelyn]], [[George]], [[Gus]], [[Harvey]], [[Jodi]], [[Kent]]
+[[Krobus]], [[Leah]], [[Leo]], [[Lewis]], [[Linus]], [[Marnie]], [[Maru]], [[Pam]], [[Penny]], [[Pierre]], [[Robin]], [[Sandy]], [[Sebastian]]
+[[Shane]], [[Willy]], [[Wizard]]
+|-
+!Dislikes
+|[[Abigail]], [[Haley]], [[Jas]], [[Sam]], [[Vincent]]
+|}
+
+== Recipes ==
+{| class="fandom-table"
+|+
+!Name
+!Description
+!Ingredients
+!Energy/Health
+!Recipe Source
+!Sell Price
+|-
+|[[Poi]]
+|A traditional food with a delicate, sweet flavor when eaten fresh.
+|Taro Root (4)
+|75 Energy
+33 Health
+|[[Leo]] (Mail 3 heart)      
+|{{Price|400}}
+|}</text>
+      <sha1>ezfsenasnq7so2jalnxitg0gtizv6wy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Parsnip</title>
+    <ns>0</ns>
+    <id>4316</id>
+    <revision>
+      <id>59821</id>
+      <parentid>59816</parentid>
+      <timestamp>2025-02-20T18:55:58Z</timestamp>
+      <contributor>
+        <username>StarSnack</username>
+        <id>55664636</id>
+      </contributor>
+      <origin>59821</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2003" sha1="89j22k2531pi49y6j3oj8czuubg957d" xml:space="preserve">{{Starbox crop|crop=Parsnip|image=parsnip.png|description=A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.|type=crop|season=Spring|seed=Parsnip Seeds|energy=25|health=11|quality=y|sellvalue=35}}
+{{tocright}}
+'''Parsnip''' is a crop in Stardew Valley. This is one of the most basic crops in the game. They can be grown during the Spring and take 4 days to mature. 
+
+==Stages==
+{| class="wikitable" style="text-align:center;" id="roundedborder"
+!Stage 1
+!Stage 2
+!Stage 3
+!Stage 4 
+!Harvest
+|-
+|[[File:Parsnip Stage 1.png|center|link=]]
+|[[File:Parsnip Stage 2.png|center|link=]]
+|[[File:Parsnip Stage 3.png|center|link=]]
+|[[File:Parsnip Stage 4.png|center|link=]]
+|[[File:Parsnip Stage 5.png|center|link=]]
+|-
+|Planting Day
+|Day 1
+|Day 2
+|Day 3
+|Day 4
+|}
+
+
+==Gifting==
+{{Starbox gifting|loves={{Icon|Pam}}|likes={{Icon|Alex}} {{Icon|Caroline}} {{Icon|Clint}} {{Icon|Demetrius}}  {{Icon|Dwarf}} {{Icon|Elliott}} {{Icon|Emily}}  {{Icon|Evelyn}} {{Icon|George}} {{Icon|Gus}} {{Icon|Harvey}} {{Icon|Jodi}} {{Icon|Kent}} {{Icon|Krobus}} {{Icon|Leah}} {{Icon|Leo}} {{Icon|Lewis}} {{Icon|Linus}} {{Icon|Marnie}} {{Icon|Maru}} {{Icon|Penny}} {{Icon|Pierre}} {{Icon|Robin}} {{Icon|Sandy}} {{Icon|Sebastian}} {{Icon|Shane}} {{Icon|Willy}} {{Icon|Wizard}}|dislikes={{Icon|Abigail}} {{Icon|Haley}} {{Icon|Jas}} {{Icon|Sam}} {{Icon|Vincent}}}}
+
+==Bundles==
+It is used in the Spring Crops Bundle and Quality Crops Bundle in the Pantry.
+
+==Recipes==
+{| class="wikitable sortable"
+!Image
+!Name
+! Description
+!Ingredients
+!Recipe From
+|-
+|[[File:Parsnip Soup.png]]
+|[[Parsnip Soup]]
+|It's fresh and hearty.
+|{{name|Parsnip|1}}{{name|Milk|1}}{{name|Vinegar|1}}
+|Caroline - Heart event 
+|-
+|[[File:Farmers Lunch.png|thumb|48x48px]]
+|[[Farmer's Lunch]]
+|This'll keep you going.
+|{{name|Omelet|1}}{{name|Parsnip|1}}
+| Farming level 3
+|-
+|}
+
+{{NavboxCrop}}
+[[Category:Spring crops]]
+[[Category:Vegetables]]
+
+[[pl:Pasternak]]
+[[ru:Пастернак]]
+[[uk:Пастернак]]</text>
+      <sha1>89j22k2531pi49y6j3oj8czuubg957d</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Summer Squash</title>
+    <ns>0</ns>
+    <id>18925</id>
+    <revision>
+      <id>60723</id>
+      <parentid>60722</parentid>
+      <timestamp>2025-05-06T09:35:22Z</timestamp>
+      <contributor>
+        <username>Pramod7</username>
+        <id>57274102</id>
+      </contributor>
+      <origin>60723</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="293" sha1="bn61lz54z8a8lptu42p1t6djf4pqb4v" xml:space="preserve">{{Infobox crops|Name=Summer Squash|Seed Name=|Growth=6 days|season=[[Summer]]}}
+'''Summer Squash''' - A curved yellow squash that is harvested while immature, and still tender. It takes 6 days to grow and 3 days to regrow.
+
+[[Category:Vegetables]]
+[[Category:Summer]]
+[[Category:Summer crops]]</text>
+      <sha1>bn61lz54z8a8lptu42p1t6djf4pqb4v</sha1>
+    </revision>
+  </page>
+</mediawiki>

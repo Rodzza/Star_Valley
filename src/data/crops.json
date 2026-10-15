@@ -1,0 +1,483 @@
+{
+  "_licenca": "Dados extraídos da Stardew Valley Wiki (Fandom), conteúdo sob CC BY-SA (padrão da Fandom: 3.0). Cada item traz a página de origem e o histórico de autores. Este arquivo é uma adaptação e deve continuar sob CC BY-SA.",
+  "_origem": "https://stardewvalley.fandom.com/wiki/Stardew_Valley_Wiki",
+  "_exportadoDe": "StardewValleyWiki-export-2026-10-15.xml",
+  "_aviso": "Dados de wiki editada por comunidade: confira valores suspeitos antes de publicar.",
+  "crops": [
+    {
+      "name": "Amaranth",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 7,
+      "seedPrice": 70,
+      "sellPrice": 150,
+      "source": {
+        "title": "Amaranth",
+        "url": "https://stardewvalley.fandom.com/wiki/Amaranth",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Amaranth?action=history",
+        "revisedAt": "2025-01-07T23:49:35Z"
+      }
+    },
+    {
+      "name": "Artichoke",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 8,
+      "seedPrice": 30,
+      "sellPrice": 160,
+      "source": {
+        "title": "Artichoke",
+        "url": "https://stardewvalley.fandom.com/wiki/Artichoke",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Artichoke?action=history",
+        "revisedAt": "2025-01-07T23:49:19Z"
+      }
+    },
+    {
+      "name": "Beet",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 6,
+      "seedPrice": 20,
+      "sellPrice": 100,
+      "source": {
+        "title": "Beet",
+        "url": "https://stardewvalley.fandom.com/wiki/Beet",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Beet?action=history",
+        "revisedAt": "2025-01-07T23:47:11Z"
+      }
+    },
+    {
+      "name": "Blue Jazz",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 7,
+      "seedPrice": 30,
+      "sellPrice": 50,
+      "source": {
+        "title": "Blue Jazz",
+        "url": "https://stardewvalley.fandom.com/wiki/Blue_Jazz",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Blue_Jazz?action=history",
+        "revisedAt": "2025-01-07T23:03:05Z"
+      }
+    },
+    {
+      "name": "Blueberry",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 13,
+      "seedPrice": 80,
+      "sellPrice": 80,
+      "source": {
+        "title": "Blueberry",
+        "url": "https://stardewvalley.fandom.com/wiki/Blueberry",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Blueberry?action=history",
+        "revisedAt": "2026-03-29T23:52:11Z"
+      },
+      "regrowDays": 4
+    },
+    {
+      "name": "Bok Choy",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 4,
+      "seedPrice": 50,
+      "sellPrice": 80,
+      "source": {
+        "title": "Bok Choy",
+        "url": "https://stardewvalley.fandom.com/wiki/Bok_Choy",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Bok_Choy?action=history",
+        "revisedAt": "2025-01-07T23:48:59Z"
+      }
+    },
+    {
+      "name": "Cauliflower",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 12,
+      "seedPrice": 80,
+      "sellPrice": 175,
+      "source": {
+        "title": "Cauliflower",
+        "url": "https://stardewvalley.fandom.com/wiki/Cauliflower",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Cauliflower?action=history",
+        "revisedAt": "2025-01-07T22:58:38Z"
+      }
+    },
+    {
+      "name": "Corn",
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "growthDays": 14,
+      "seedPrice": 150,
+      "sellPrice": 55,
+      "source": {
+        "title": "Corn",
+        "url": "https://stardewvalley.fandom.com/wiki/Corn",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Corn?action=history",
+        "revisedAt": "2025-01-07T23:14:55Z"
+      },
+      "regrowDays": 4
+    },
+    {
+      "name": "Eggplant",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 5,
+      "seedPrice": 20,
+      "sellPrice": 60,
+      "source": {
+        "title": "Eggplant",
+        "url": "https://stardewvalley.fandom.com/wiki/Eggplant",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Eggplant?action=history",
+        "revisedAt": "2025-01-07T23:43:47Z"
+      },
+      "regrowDays": 5
+    },
+    {
+      "name": "Fairy Rose",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 12,
+      "seedPrice": 200,
+      "sellPrice": 319,
+      "source": {
+        "title": "Fairy Rose",
+        "url": "https://stardewvalley.fandom.com/wiki/Fairy_Rose",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Fairy_Rose?action=history",
+        "revisedAt": "2025-01-07T23:42:50Z"
+      }
+    },
+    {
+      "name": "Garlic",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 4,
+      "seedPrice": 40,
+      "sellPrice": 60,
+      "source": {
+        "title": "Garlic",
+        "url": "https://stardewvalley.fandom.com/wiki/Garlic",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Garlic?action=history",
+        "revisedAt": "2025-01-07T22:58:06Z"
+      }
+    },
+    {
+      "name": "Grape",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 10,
+      "seedPrice": 60,
+      "sellPrice": 80,
+      "source": {
+        "title": "Grape",
+        "url": "https://stardewvalley.fandom.com/wiki/Grape",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Grape?action=history",
+        "revisedAt": "2025-01-10T23:44:51Z"
+      },
+      "regrowDays": 3
+    },
+    {
+      "name": "Green Bean",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 10,
+      "seedPrice": 60,
+      "sellPrice": 40,
+      "source": {
+        "title": "Green Bean",
+        "url": "https://stardewvalley.fandom.com/wiki/Green_Bean",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Green_Bean?action=history",
+        "revisedAt": "2025-01-07T23:00:52Z"
+      },
+      "regrowDays": 3
+    },
+    {
+      "name": "Hops",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 11,
+      "seedPrice": 60,
+      "sellPrice": 25,
+      "source": {
+        "title": "Hops",
+        "url": "https://stardewvalley.fandom.com/wiki/Hops",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Hops?action=history",
+        "revisedAt": "2025-01-07T23:15:11Z"
+      },
+      "regrowDays": 1
+    },
+    {
+      "name": "Hot Pepper",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 5,
+      "seedPrice": 40,
+      "sellPrice": 40,
+      "source": {
+        "title": "Hot Pepper",
+        "url": "https://stardewvalley.fandom.com/wiki/Hot_Pepper",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Hot_Pepper?action=history",
+        "revisedAt": "2025-03-07T18:05:45Z"
+      },
+      "regrowDays": 3
+    },
+    {
+      "name": "Kale",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 6,
+      "seedPrice": 70,
+      "sellPrice": 110,
+      "source": {
+        "title": "Kale",
+        "url": "https://stardewvalley.fandom.com/wiki/Kale",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Kale?action=history",
+        "revisedAt": "2025-01-07T22:57:37Z"
+      }
+    },
+    {
+      "name": "Melon",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 12,
+      "seedPrice": 80,
+      "sellPrice": 250,
+      "source": {
+        "title": "Melon",
+        "url": "https://stardewvalley.fandom.com/wiki/Melon",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Melon?action=history",
+        "revisedAt": "2026-02-11T05:32:34Z"
+      }
+    },
+    {
+      "name": "Poppy",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 7,
+      "seedPrice": 100,
+      "sellPrice": 140,
+      "source": {
+        "title": "Poppy",
+        "url": "https://stardewvalley.fandom.com/wiki/Poppy",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Poppy?action=history",
+        "revisedAt": "2025-01-07T23:16:35Z"
+      }
+    },
+    {
+      "name": "Potato",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 6,
+      "seedPrice": 50,
+      "sellPrice": 80,
+      "source": {
+        "title": "Potato",
+        "url": "https://stardewvalley.fandom.com/wiki/Potato",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Potato?action=history",
+        "revisedAt": "2025-01-07T23:01:14Z"
+      }
+    },
+    {
+      "name": "Pumpkin",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 13,
+      "seedPrice": 100,
+      "sellPrice": 320,
+      "source": {
+        "title": "Pumpkin",
+        "url": "https://stardewvalley.fandom.com/wiki/Pumpkin",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Pumpkin?action=history",
+        "revisedAt": "2025-01-07T23:47:36Z"
+      }
+    },
+    {
+      "name": "Radish",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 6,
+      "seedPrice": 40,
+      "sellPrice": 90,
+      "source": {
+        "title": "Radish",
+        "url": "https://stardewvalley.fandom.com/wiki/Radish",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Radish?action=history",
+        "revisedAt": "2025-01-07T23:18:57Z"
+      }
+    },
+    {
+      "name": "Red Cabbage",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 9,
+      "seedPrice": 100,
+      "sellPrice": 260,
+      "source": {
+        "title": "Red Cabbage",
+        "url": "https://stardewvalley.fandom.com/wiki/Red_Cabbage",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Red_Cabbage?action=history",
+        "revisedAt": "2025-01-07T23:13:39Z"
+      }
+    },
+    {
+      "name": "Rhubarb",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 13,
+      "seedPrice": 100,
+      "sellPrice": 220,
+      "source": {
+        "title": "Rhubarb",
+        "url": "https://stardewvalley.fandom.com/wiki/Rhubarb",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Rhubarb?action=history",
+        "revisedAt": "2026-07-11T19:13:14Z"
+      }
+    },
+    {
+      "name": "Starfruit",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 13,
+      "seedPrice": 400,
+      "sellPrice": 750,
+      "source": {
+        "title": "Starfruit",
+        "url": "https://stardewvalley.fandom.com/wiki/Starfruit",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Starfruit?action=history",
+        "revisedAt": "2026-02-21T17:46:05Z"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 8,
+      "seedPrice": 100,
+      "sellPrice": 120,
+      "source": {
+        "title": "Strawberry",
+        "url": "https://stardewvalley.fandom.com/wiki/Strawberry",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Strawberry?action=history",
+        "revisedAt": "2025-01-07T23:00:30Z"
+      },
+      "regrowDays": 4
+    },
+    {
+      "name": "Summer Spangle",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 8,
+      "seedPrice": 50,
+      "sellPrice": 90,
+      "source": {
+        "title": "Summer Spangle",
+        "url": "https://stardewvalley.fandom.com/wiki/Summer_Spangle",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Summer_Spangle?action=history",
+        "revisedAt": "2025-01-07T23:16:12Z"
+      }
+    },
+    {
+      "name": "Sunflower",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 8,
+      "seedPrice": 200,
+      "sellPrice": 80,
+      "source": {
+        "title": "Sunflower",
+        "url": "https://stardewvalley.fandom.com/wiki/Sunflower",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Sunflower?action=history",
+        "revisedAt": "2025-01-07T23:19:33Z"
+      }
+    },
+    {
+      "name": "Sweet Gem Berry",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 24,
+      "seedPrice": 1000,
+      "sellPrice": 3000,
+      "source": {
+        "title": "Sweet Gem Berry",
+        "url": "https://stardewvalley.fandom.com/wiki/Sweet_Gem_Berry",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Sweet_Gem_Berry?action=history",
+        "revisedAt": "2025-01-07T23:51:14Z"
+      }
+    },
+    {
+      "name": "Tomato",
+      "seasons": [
+        "summer"
+      ],
+      "growthDays": 11,
+      "seedPrice": 50,
+      "sellPrice": 60,
+      "source": {
+        "title": "Tomato",
+        "url": "https://stardewvalley.fandom.com/wiki/Tomato",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Tomato?action=history",
+        "revisedAt": "2025-01-10T23:19:05Z"
+      },
+      "regrowDays": 4
+    },
+    {
+      "name": "Tulip",
+      "seasons": [
+        "spring"
+      ],
+      "growthDays": 6,
+      "seedPrice": 20,
+      "sellPrice": 30,
+      "source": {
+        "title": "Tulip",
+        "url": "https://stardewvalley.fandom.com/wiki/Tulip",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Tulip?action=history",
+        "revisedAt": "2025-01-07T23:01:33Z"
+      }
+    },
+    {
+      "name": "Yam",
+      "seasons": [
+        "fall"
+      ],
+      "growthDays": 10,
+      "seedPrice": 60,
+      "sellPrice": 160,
+      "source": {
+        "title": "Yam",
+        "url": "https://stardewvalley.fandom.com/wiki/Yam",
+        "historyUrl": "https://stardewvalley.fandom.com/wiki/Yam?action=history",
+        "revisedAt": "2025-01-07T23:50:06Z"
+      }
+    }
+  ]
+}

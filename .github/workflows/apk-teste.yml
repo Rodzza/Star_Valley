@@ -1,0 +1,33 @@
+# Gera um APK de TESTE (anúncios de teste, assinado com a chave de debug) na nuvem do GitHub.
+# Use: aba Actions › "APK de teste" › Run workflow. Depois baixe o artefato "valley-tracker-apk".
+name: APK de teste
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npx cap add android
+      - run: npx tsx tools/configureAndroid.ts --test
+      - run: npx cap sync android
+      - name: Compilar APK de debug
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: valley-tracker-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
