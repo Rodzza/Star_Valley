@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Desenhar o botão flutuante sobre o jogo (o usuário concede em Ajustes > Exibir sobre outros apps) -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Serviço em primeiro plano que mantém o botão vivo enquanto o jogo está aberto -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <application>
+        <service
+            android:name="com.valleytracker.nativeplugin.OverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Floating button that shows quest tips over the game, started and stopped by the user" />
+        </service>
+    </application>
+</manifest>
