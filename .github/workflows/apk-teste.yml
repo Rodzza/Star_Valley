@@ -1,9 +1,15 @@
 # Gera um APK de TESTE (anúncios de teste, assinado com a chave de debug) na nuvem do GitHub.
-# Use: aba Actions › "APK de teste" › Run workflow. Depois baixe o artefato "valley-tracker-apk".
+# Roda sozinho a cada envio para a branch main (ou manualmente em Actions › Run workflow).
+# O APK fica na aba Releases (release "teste"), pronto para baixar e instalar direto pelo celular.
 name: APK de teste
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -27,7 +33,18 @@ jobs:
       - name: Compilar APK de debug
         working-directory: android
         run: ./gradlew assembleDebug --no-daemon
+      - name: Renomear APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk ValleyTracker-teste.apk
       - uses: actions/upload-artifact@v4
         with:
           name: valley-tracker-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: ValleyTracker-teste.apk
+      - name: Publicar na aba Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete teste --cleanup-tag --yes || true
+          gh release create teste ValleyTracker-teste.apk \
+            --title "Valley Tracker (teste)" \
+            --notes "APK de teste com anúncios de teste do AdMob. Gerado do commit ${GITHUB_SHA::7}. Baixe ValleyTracker-teste.apk e instale." \
+            --prerelease
