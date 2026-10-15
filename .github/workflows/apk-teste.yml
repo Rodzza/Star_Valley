@@ -32,6 +32,10 @@ jobs:
       - run: npx cap add android
       - run: npx tsx tools/configureAndroid.ts --test
       - run: npx cap sync android
+      - name: Usar sempre a mesma chave de teste (permite atualizar o app por cima)
+        run: |
+          mkdir -p ~/.android
+          cp ci/debug.keystore ~/.android/debug.keystore
       - name: Compilar APK de debug
         working-directory: android
         run: ./gradlew assembleDebug --no-daemon
