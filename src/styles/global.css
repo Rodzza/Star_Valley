@@ -268,3 +268,21 @@ ol.plain li { margin: 8px 0; }
 .small { font-size: 0.82rem; }
 
 .vgroup { margin: 14px 0 0; font-size: 1.05rem; color: var(--text-muted); }
+
+/* Calendário */
+.cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin: 12px 0 6px; }
+.cal-head { text-align: center; font-weight: 800; font-size: 0.74rem; color: var(--text-muted); padding-bottom: 2px; }
+.cal-day {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; padding: 4px 0; cursor: pointer;
+  font: inherit; color: var(--text); background: var(--surface-alt); border: 2px solid var(--wood); border-radius: 12px;
+}
+.cal-day.sel { background: var(--accent); border-color: var(--accent); color: var(--on-accent); box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent); }
+.cal-n { font-weight: 800; font-size: 0.95rem; line-height: 1; }
+.cal-marks { display: flex; gap: 3px; height: 8px; margin-top: 4px; }
+.mk { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
+.mk.bday { background: #d6336c; }
+.mk.fest { background: #e8a000; border: 1px solid #7a4a22; }
+.cal-legend { display: flex; gap: 6px; align-items: center; margin: 4px 0 8px; }
+.agenda li { display: flex; gap: 10px; align-items: baseline; }
+.agenda .rel-link { white-space: nowrap; min-width: 56px; text-align: left; }
+.cal-seasons { flex-wrap: nowrap; } .cal-seasons .chip { flex: 1 1 0; padding: 0 4px; font-size: 0.9rem; }

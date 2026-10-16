@@ -13,7 +13,7 @@ export const TILES: readonly Tile[] = [
   { label: 'Fazenda', art: 'casa', feature: 'cropPlanner' },
   { label: 'Pets', art: 'pets' },
   { label: 'Animais', art: 'animais' },
-  { label: 'Estações', art: 'estacoes' },
+  { label: 'Estações', art: 'estacoes', feature: 'calendar' },
   { label: 'Moradores', art: 'moradores', feature: 'villagers' },
   { label: 'Receitas', art: 'receitas' },
   { label: 'Projetos', art: 'ferramentas', feature: 'floatingQuests' },

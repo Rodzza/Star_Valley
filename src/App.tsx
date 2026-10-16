@@ -1,6 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { FEATURE_BY_ID, type FeatureId } from './features/registry';
 import { EntitlementsProvider, useEntitlements } from './monetization/EntitlementsContext';
+import { Calendar } from './screens/Calendar';
 import { CropPlanner } from './screens/CropPlanner';
 import { Credits } from './screens/Credits';
 import { FloatingQuests } from './screens/FloatingQuests';
@@ -28,6 +29,8 @@ type Route =
 
 function FeatureContent({ id }: { id: FeatureId }) {
   switch (id) {
+    case 'calendar':
+      return <Calendar />;
     case 'villagers':
       return <Villagers />;
     case 'cropPlanner':
