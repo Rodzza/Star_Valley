@@ -234,3 +234,35 @@ ol.plain li { margin: 8px 0; }
 
 @media (min-width: 380px) { .welcome h1 { font-size: 1.8rem; } }
 @media (prefers-reduced-motion: reduce) { .btn, .card, .tile, .tab, .hero, .poster { transition: none; } }
+
+/* Moradores */
+.vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 4px; }
+.vcard {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 4px 10px; cursor: pointer; font: inherit;
+  background: var(--surface-alt); color: var(--text); border: 2px solid var(--wood); border-radius: 20px; transition: transform 0.12s;
+}
+.vcard:active { transform: scale(0.96); }
+.vcard span { font-weight: 800; font-size: 0.95rem; line-height: 1.1; }
+.portrait { display: block; border-radius: 16px; object-fit: cover; }
+.portrait.fallback { display: inline-flex; align-items: center; justify-content: center; color: #fff; font-family: var(--font-display); font-weight: 700; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
+.vhead { display: flex; gap: 14px; align-items: flex-start; margin: 8px 0 14px; }
+.vhead .portrait { flex: none; }
+.vinfo { flex: 1; margin: 0; padding: 10px 14px; background: var(--surface-alt); border: 2px solid var(--wood); border-radius: 18px; }
+.vinfo div { margin: 6px 0; }
+.vinfo dt { display: inline; font-weight: 800; }
+.vinfo dt::after { content: ': '; }
+.vinfo dd { display: inline; margin: 0; }
+.vsec { cursor: default; margin: 12px 0; }
+.vsec:active { transform: none; }
+.vsec h2 { text-align: center; margin: 0 0 8px; }
+.vsec h3 { margin: 10px 0 2px; font-size: 1rem; color: var(--text-muted); }
+.center { text-align: center; font-style: italic; }
+.rel { list-style: none; margin: 4px 0; padding: 0; }
+.rel li { padding: 3px 0; }
+.rel-link { font: inherit; font-weight: 700; padding: 6px 0; border: 0; background: none; color: var(--accent-text); text-decoration: underline; cursor: pointer; min-height: 36px; }
+.taste-tabs { display: flex; gap: 6px; padding: 5px; background: rgba(68, 34, 14, 0.12); border-radius: 999px; }
+.taste-tab { flex: 1; min-height: 44px; border: 0; border-radius: 999px; background: transparent; font-size: 1.3rem; cursor: pointer; }
+.taste-tab[aria-selected='true'] { background: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+.taste-title { font-weight: 800; margin: 12px 0 4px; }
+.gift-chip { padding: 6px 12px; border-radius: 999px; background: #fffaf0; border: 2px solid var(--wood); font-weight: 700; font-size: 0.9rem; }
+.small { font-size: 0.82rem; }

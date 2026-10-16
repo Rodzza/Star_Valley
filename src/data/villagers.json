@@ -1,0 +1,822 @@
+{
+  "_licenca": "Dados extraídos da Stardew Valley Wiki (Fandom), conteúdo sob CC BY-SA (padrão da Fandom: 3.0). Adaptação; deve continuar sob CC BY-SA. Entradas com \"manual\": true foram corrigidas/complementadas à mão.",
+  "_origem": "https://stardewvalley.fandom.com/wiki/Stardew_Valley_Wiki",
+  "_exportadoDe": "StardewValleyWiki-villagers-2026-10-15.xml",
+  "villagers": [
+    {
+      "name": "Abigail",
+      "birthday": {
+        "season": "fall",
+        "day": 13
+      },
+      "location": "Pelican Town",
+      "address": "Pierre's General Store",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Caroline",
+          "role": "Mother"
+        },
+        {
+          "name": "Pierre",
+          "role": "Father"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Sam"
+        },
+        {
+          "name": "Sebastian"
+        }
+      ]
+    },
+    {
+      "name": "Alex",
+      "birthday": {
+        "season": "summer",
+        "day": 13
+      },
+      "location": "Pelican Town",
+      "address": "1 River Road",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "George",
+          "role": "Grandpa"
+        },
+        {
+          "name": "Evelyn",
+          "role": "Grandma"
+        },
+        {
+          "name": "Clara",
+          "role": "Late Mother"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Haley"
+        }
+      ]
+    },
+    {
+      "name": "Caroline",
+      "birthday": {
+        "season": "winter",
+        "day": 7
+      },
+      "location": "Pelican Town",
+      "address": "Pierre's General Store",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Pierre",
+          "role": "Husband"
+        },
+        {
+          "name": "Abigail",
+          "role": "Daughter"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Wizard",
+          "role": "lover"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "name": "Clint",
+      "birthday": {
+        "season": "winter",
+        "day": 26
+      },
+      "location": "Pelican Town",
+      "address": "Blacksmith",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Emily"
+        }
+      ]
+    },
+    {
+      "name": "Demetrius",
+      "birthday": {
+        "season": "summer",
+        "day": 19
+      },
+      "location": "The Mountain",
+      "address": "24 Mountain Road",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Robin",
+          "role": "Wife"
+        },
+        {
+          "name": "Maru",
+          "role": "Daughter"
+        },
+        {
+          "name": "Sebastian",
+          "role": "Step-Son"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "name": "Dwarf",
+      "birthday": {
+        "season": "summer",
+        "day": 22
+      },
+      "location": "The Mountain",
+      "address": "The Mines",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Wizard"
+        }
+      ]
+    },
+    {
+      "name": "Elliott",
+      "birthday": {
+        "season": "fall",
+        "day": 5
+      },
+      "location": "The Beach",
+      "address": "Elliott's Cabin",
+      "romanceable": true,
+      "family": [],
+      "friends": [
+        {
+          "name": "Leah"
+        },
+        {
+          "name": "Willy"
+        }
+      ],
+      "manual": true
+    },
+    {
+      "name": "Emily",
+      "birthday": {
+        "season": "spring",
+        "day": 27
+      },
+      "location": "Pelican Town",
+      "address": "2 Willow Lane",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Haley",
+          "role": "Sister"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Clint"
+        },
+        {
+          "name": "Gus"
+        },
+        {
+          "name": "Sandy"
+        },
+        {
+          "name": "Shane"
+        }
+      ]
+    },
+    {
+      "name": "Evelyn",
+      "birthday": {
+        "season": "winter",
+        "day": 20
+      },
+      "location": "Pelican Town",
+      "address": "1 River Road",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "George",
+          "role": "Husband"
+        },
+        {
+          "name": "Alex",
+          "role": "Grandson"
+        },
+        {
+          "name": "Clara",
+          "role": "Late Daughter"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "name": "George",
+      "birthday": {
+        "season": "fall",
+        "day": 24
+      },
+      "location": "Pelican Town",
+      "address": "1 River Road",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Evelyn",
+          "role": "Wife"
+        },
+        {
+          "name": "Alex",
+          "role": "Grandson"
+        },
+        {
+          "name": "Clara",
+          "role": "Late Daughter"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "name": "Gus",
+      "birthday": {
+        "season": "summer",
+        "day": 8
+      },
+      "location": "Pelican Town",
+      "address": "The Stardrop Saloon",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Emily"
+        },
+        {
+          "name": "Pam"
+        }
+      ]
+    },
+    {
+      "name": "Haley",
+      "birthday": {
+        "season": "spring",
+        "day": 14
+      },
+      "location": "Pelican Town",
+      "address": "2 Willow Lane",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Emily",
+          "role": "Sister"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Alex"
+        }
+      ]
+    },
+    {
+      "name": "Harvey",
+      "birthday": {
+        "season": "winter",
+        "day": 14
+      },
+      "location": "Pelican Town",
+      "address": "Harvey's Clinic",
+      "romanceable": true,
+      "family": [],
+      "friends": [
+        {
+          "name": "Maru"
+        }
+      ]
+    },
+    {
+      "name": "Jas",
+      "family": [
+        {
+          "name": "Marnie",
+          "role": "Aunt"
+        },
+        {
+          "name": "Shane",
+          "role": "God-Father"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Vincent"
+        },
+        {
+          "name": "Leo"
+        }
+      ],
+      "romanceable": false,
+      "location": "Cindersap Forest",
+      "address": "Marnie's Ranch",
+      "birthday": {
+        "season": "summer",
+        "day": 4
+      },
+      "manual": true
+    },
+    {
+      "name": "Jodi",
+      "birthday": {
+        "season": "fall",
+        "day": 11
+      },
+      "location": "Pelican Town",
+      "address": "1 Willow Lane",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Kent",
+          "role": "Husband"
+        },
+        {
+          "name": "Sam",
+          "role": "Son"
+        },
+        {
+          "name": "Vincent",
+          "role": "Son"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Caroline"
+        }
+      ]
+    },
+    {
+      "name": "Kent",
+      "birthday": {
+        "season": "spring",
+        "day": 4
+      },
+      "location": "Pelican Town",
+      "address": "1 Willow Lane",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Jodi",
+          "role": "Wife"
+        },
+        {
+          "name": "Sam",
+          "role": "Son"
+        },
+        {
+          "name": "Vincent",
+          "role": "Son"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "name": "Krobus",
+      "birthday": {
+        "season": "winter",
+        "day": 1
+      },
+      "location": "Pelican Town",
+      "address": "The Sewers",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Wizard"
+        }
+      ]
+    },
+    {
+      "name": "Leah",
+      "birthday": {
+        "season": "winter",
+        "day": 23
+      },
+      "location": "Cindersap Forest",
+      "address": "Leah's Cottage",
+      "romanceable": true,
+      "family": [],
+      "friends": [
+        {
+          "name": "Elliott"
+        }
+      ]
+    },
+    {
+      "name": "Leo",
+      "birthday": {
+        "season": "summer",
+        "day": 26
+      },
+      "location": "Ginger Island",
+      "address": "Treehouse",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Linus"
+        },
+        {
+          "name": "Penny"
+        },
+        {
+          "name": "Jas"
+        },
+        {
+          "name": "Vincent"
+        }
+      ]
+    },
+    {
+      "name": "Lewis",
+      "birthday": {
+        "season": "spring",
+        "day": 7
+      },
+      "location": "Pelican Town",
+      "address": "Mayor's Manor",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Grandpa"
+        },
+        {
+          "name": "Marnie"
+        }
+      ]
+    },
+    {
+      "name": "Linus",
+      "birthday": {
+        "season": "winter",
+        "day": 3
+      },
+      "location": "The Mountain",
+      "address": "Linus' Tent",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Leo"
+        },
+        {
+          "name": "Wizard"
+        }
+      ]
+    },
+    {
+      "name": "Marnie",
+      "birthday": {
+        "season": "fall",
+        "day": 18
+      },
+      "location": "Cindersap Forest",
+      "address": "Marnie's Ranch",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Shane",
+          "role": "Nephew"
+        },
+        {
+          "name": "Jas",
+          "role": "Niece"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Lewis"
+        }
+      ]
+    },
+    {
+      "name": "Maru",
+      "birthday": {
+        "season": "summer",
+        "day": 10
+      },
+      "location": "The Mountain",
+      "address": "24 Mountain Road",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Robin",
+          "role": "Mother"
+        },
+        {
+          "name": "Demetrius",
+          "role": "Father"
+        },
+        {
+          "name": "Sebastian",
+          "role": "Half-Brother"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Harvey"
+        }
+      ]
+    },
+    {
+      "name": "Pam",
+      "birthday": {
+        "season": "spring",
+        "day": 18
+      },
+      "location": "Pelican Town",
+      "address": "2 River Road",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Penny",
+          "role": "Daughter"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Gus"
+        }
+      ]
+    },
+    {
+      "name": "Penny",
+      "birthday": {
+        "season": "fall",
+        "day": 2
+      },
+      "location": "Pelican Town",
+      "address": "2 River Road",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Pam",
+          "role": "Mother"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Maru"
+        },
+        {
+          "name": "Sam"
+        }
+      ]
+    },
+    {
+      "name": "Pierre",
+      "birthday": {
+        "season": "spring",
+        "day": 26
+      },
+      "location": "Pelican Town",
+      "address": "Pierre's General Store",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Caroline",
+          "role": "Wife"
+        },
+        {
+          "name": "Abigail",
+          "role": "Daughter"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "name": "Robin",
+      "birthday": {
+        "season": "fall",
+        "day": 21
+      },
+      "location": "The Mountain",
+      "address": "24 Mountain Road",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Demetrius",
+          "role": "Husband"
+        },
+        {
+          "name": "Maru",
+          "role": "Daughter"
+        },
+        {
+          "name": "Sebastian",
+          "role": "Son"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "name": "Sam",
+      "birthday": {
+        "season": "summer",
+        "day": 17
+      },
+      "location": "Pelican Town",
+      "address": "1 Willow Lane",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Jodi",
+          "role": "Mother"
+        },
+        {
+          "name": "Kent",
+          "role": "Father"
+        },
+        {
+          "name": "Vincent",
+          "role": "Brother"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Abigail"
+        },
+        {
+          "name": "Penny"
+        },
+        {
+          "name": "Sebastian"
+        }
+      ]
+    },
+    {
+      "name": "Sandy",
+      "birthday": {
+        "season": "fall",
+        "day": 15
+      },
+      "location": "Calico Desert",
+      "address": "Oasis",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Emily"
+        },
+        {
+          "name": "Desert Trader"
+        }
+      ]
+    },
+    {
+      "name": "Sebastian",
+      "birthday": {
+        "season": "winter",
+        "day": 10
+      },
+      "location": "The Mountain",
+      "address": "24 Mountain Road",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Robin",
+          "role": "Mother"
+        },
+        {
+          "name": "Demetrius",
+          "role": "Step-Father"
+        },
+        {
+          "name": "Maru",
+          "role": "Half-Sister"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Abigail"
+        },
+        {
+          "name": "Sam"
+        }
+      ]
+    },
+    {
+      "name": "Shane",
+      "birthday": {
+        "season": "spring",
+        "day": 20
+      },
+      "location": "Cindersap Forest",
+      "address": "Marnie's Ranch",
+      "romanceable": true,
+      "family": [
+        {
+          "name": "Marnie",
+          "role": "Aunt"
+        },
+        {
+          "name": "Jas",
+          "role": "God-Daughter"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Charlie"
+        },
+        {
+          "name": "Emily"
+        }
+      ]
+    },
+    {
+      "name": "Vincent",
+      "birthday": {
+        "season": "spring",
+        "day": 10
+      },
+      "location": "Pelican Town",
+      "address": "1 Willow Lane",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Jodi",
+          "role": "Mother"
+        },
+        {
+          "name": "Kent",
+          "role": "Father"
+        },
+        {
+          "name": "Sam",
+          "role": "Brother"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Penny"
+        },
+        {
+          "name": "Leo"
+        },
+        {
+          "name": "Jas"
+        }
+      ]
+    },
+    {
+      "name": "Willy",
+      "birthday": {
+        "season": "summer",
+        "day": 24
+      },
+      "location": "The Beach",
+      "address": "Fish Shop",
+      "romanceable": false,
+      "family": [],
+      "friends": [
+        {
+          "name": "Clint"
+        },
+        {
+          "name": "Elliott"
+        }
+      ]
+    },
+    {
+      "name": "Wizard",
+      "birthday": {
+        "season": "winter",
+        "day": 17
+      },
+      "location": "Cindersap Forest",
+      "address": "Wizard's Tower",
+      "romanceable": false,
+      "family": [
+        {
+          "name": "Witch",
+          "role": "Ex-Wife"
+        }
+      ],
+      "friends": [
+        {
+          "name": "Dwarf"
+        },
+        {
+          "name": "Linus"
+        },
+        {
+          "name": "Krobus"
+        }
+      ]
+    }
+  ]
+}

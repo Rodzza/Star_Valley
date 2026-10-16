@@ -1,0 +1,4 @@
+Retratos dos moradores (opcional).
+Coloque aqui um PNG por personagem com o nome em minúsculas: abigail.png, alex.png, caroline.png, ...
+O app usa a imagem sozinho quando o arquivo existe; sem ele, mostra um avatar com a inicial.
+Use apenas imagens que você tenha direito de distribuir (arte original ou licenciada).

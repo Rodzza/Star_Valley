@@ -6,6 +6,7 @@ import { Credits } from './screens/Credits';
 import { FloatingQuests } from './screens/FloatingQuests';
 import { GiftFinder } from './screens/GiftFinder';
 import { SaveProgress } from './screens/SaveProgress';
+import { Villagers } from './screens/Villagers';
 import { AdGate, ProGate } from './screens/Gates';
 import { Explore } from './screens/Explore';
 import { Home } from './screens/Home';
@@ -27,6 +28,8 @@ type Route =
 
 function FeatureContent({ id }: { id: FeatureId }) {
   switch (id) {
+    case 'villagers':
+      return <Villagers />;
     case 'cropPlanner':
       return <CropPlanner />;
     case 'giftFinder':

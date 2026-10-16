@@ -1,0 +1,38 @@
+{
+  "Caroline": {
+    "birthday": {
+      "season": "winter",
+      "day": 7
+    }
+  },
+  "Jas": {
+    "birthday": {
+      "season": "summer",
+      "day": 4
+    },
+    "location": "Cindersap Forest",
+    "address": "Marnie's Ranch",
+    "romanceable": false,
+    "family": [
+      {
+        "name": "Marnie",
+        "role": "Aunt"
+      },
+      {
+        "name": "Shane",
+        "role": "God-Father"
+      }
+    ],
+    "friends": [
+      {
+        "name": "Vincent"
+      },
+      {
+        "name": "Leo"
+      }
+    ]
+  },
+  "Elliott": {
+    "romanceable": true
+  }
+}
