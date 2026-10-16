@@ -266,3 +266,5 @@ ol.plain li { margin: 8px 0; }
 .taste-title { font-weight: 800; margin: 12px 0 4px; }
 .gift-chip { padding: 6px 12px; border-radius: 999px; background: #fffaf0; border: 2px solid var(--wood); font-weight: 700; font-size: 0.9rem; }
 .small { font-size: 0.82rem; }
+
+.vgroup { margin: 14px 0 0; font-size: 1.05rem; color: var(--text-muted); }

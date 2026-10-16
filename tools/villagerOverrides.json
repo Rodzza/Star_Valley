@@ -33,6 +33,7 @@
     ]
   },
   "Elliott": {
-    "romanceable": true
+    "romanceable": true,
+    "romance": "bachelor"
   }
 }

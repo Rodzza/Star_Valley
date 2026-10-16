@@ -17,6 +17,9 @@ import {
 const data = villagersJson as unknown as VillagerData;
 const gifts = giftsJson as unknown as GiftData;
 const ALL = [...data.villagers].sort((a, b) => displayName(a.name).localeCompare(displayName(b.name), 'pt-BR'));
+const MEN = ALL.filter((v) => v.romance === 'bachelor');
+const WOMEN = ALL.filter((v) => v.romance === 'bachelorette');
+const OTHERS = ALL.filter((v) => !v.romance);
 const KNOWN = new Set(ALL.map((v) => v.name));
 
 const TASTE_EMOJI: Record<Taste, string> = { love: '🥰', like: '🙂', neutral: '😐', dislike: '😕', hate: '😡' };
@@ -31,15 +34,27 @@ export function Villagers() {
     <>
       <h1>Moradores</h1>
       <p className="muted">Toque em um personagem para ver aniversário, onde mora, família e presentes.</p>
-      <div className="vgrid">
-        {ALL.map((v) => (
-          <button key={v.name} type="button" className="vcard" onClick={() => setSelected(v.name)} aria-label={displayName(v.name)}>
-            <Portrait name={v.name} size={72} />
-            <span>{displayName(v.name)}</span>
-          </button>
-        ))}
-      </div>
+      <h2>Candidatos de casamento</h2>
+      <h3 className="vgroup">Homens</h3>
+      <Grid list={MEN} onOpen={setSelected} />
+      <h3 className="vgroup">Mulheres</h3>
+      <Grid list={WOMEN} onOpen={setSelected} />
+      <h2>NPCs não casáveis</h2>
+      <Grid list={OTHERS} onOpen={setSelected} />
     </>
+  );
+}
+
+function Grid({ list, onOpen }: { list: readonly Villager[]; onOpen: (name: string) => void }) {
+  return (
+    <div className="vgrid">
+      {list.map((v) => (
+        <button key={v.name} type="button" className="vcard" onClick={() => onOpen(v.name)} aria-label={displayName(v.name)}>
+          <Portrait name={v.name} size={72} />
+          <span>{displayName(v.name)}</span>
+        </button>
+      ))}
+    </div>
   );
 }
 

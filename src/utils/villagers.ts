@@ -17,6 +17,8 @@ export interface Villager {
   address: string;
   /** Pode ser cortejado/casar (Bachelor/Bachelorette na wiki). */
   romanceable: boolean;
+  /** Homem (Bachelor) ou mulher (Bachelorette) entre os candidatos de casamento. */
+  romance?: 'bachelor' | 'bachelorette';
   family: Relative[];
   friends: Relative[];
   /** true quando o dado veio de correção manual, não da wiki. */
@@ -31,7 +33,7 @@ const SEASON_PT: Record<SeasonKey, string> = { spring: 'Primavera', summer: 'Ver
 export const seasonLabel = (s: SeasonKey): string => SEASON_PT[s];
 
 /** Nomes de exibição em português quando diferem do original. */
-const DISPLAY_NAME: Record<string, string> = { Dwarf: 'Anão', Wizard: 'Mago', Witch: 'Bruxa', Grandpa: 'Vovô', Clara: 'Clara' };
+const DISPLAY_NAME: Record<string, string> = { Dwarf: 'Anão', Wizard: 'Feiticeiro', Witch: 'Bruxa', Grandpa: 'Vovô', Clara: 'Clara' };
 export const displayName = (name: string): string => DISPLAY_NAME[name] ?? name;
 
 const LOCATION_PT: Record<string, string> = {

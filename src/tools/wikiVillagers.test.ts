@@ -52,7 +52,9 @@ describe('src/data/villagers.json', () => {
     const names = new Set(list.map((v) => v.name));
     for (const g of (gifts as unknown as { villagers: { name: string }[] }).villagers) expect(names.has(g.name), g.name).toBe(true);
   });
-  it('são 12 romanceáveis', () => {
+  it('são 12 romanceáveis: 6 homens e 6 mulheres', () => {
     expect(list.filter((v) => v.romanceable)).toHaveLength(12);
+    expect(list.filter((v) => v.romance === 'bachelor')).toHaveLength(6);
+    expect(list.filter((v) => v.romance === 'bachelorette')).toHaveLength(6);
   });
 });

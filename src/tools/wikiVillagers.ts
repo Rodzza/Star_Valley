@@ -39,6 +39,7 @@ export function parseVillagerInfo(page: WikiPage): VillagerOutcome {
   if (!address) warnings.push('sem endereço');
 
   const marriage = (t.marriage ?? '').trim().toLowerCase();
+  const romance = marriage === 'bachelor' || marriage === 'bachelorette' ? marriage : undefined;
   return {
     ok: true,
     warnings,
@@ -47,7 +48,8 @@ export function parseVillagerInfo(page: WikiPage): VillagerOutcome {
       birthday: { season, day },
       location,
       address,
-      romanceable: marriage === 'bachelor' || marriage === 'bachelorette',
+      romanceable: romance !== undefined,
+      ...(romance ? { romance } : {}),
       family: parseRelatives(t.family),
       friends: parseRelatives(t.friends),
     },

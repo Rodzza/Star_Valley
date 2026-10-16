@@ -12,6 +12,7 @@
       "location": "Pelican Town",
       "address": "Pierre's General Store",
       "romanceable": true,
+      "romance": "bachelorette",
       "family": [
         {
           "name": "Caroline",
@@ -40,6 +41,7 @@
       "location": "Pelican Town",
       "address": "1 River Road",
       "romanceable": true,
+      "romance": "bachelor",
       "family": [
         {
           "name": "George",
@@ -162,6 +164,7 @@
           "name": "Willy"
         }
       ],
+      "romance": "bachelor",
       "manual": true
     },
     {
@@ -173,6 +176,7 @@
       "location": "Pelican Town",
       "address": "2 Willow Lane",
       "romanceable": true,
+      "romance": "bachelorette",
       "family": [
         {
           "name": "Haley",
@@ -272,6 +276,7 @@
       "location": "Pelican Town",
       "address": "2 Willow Lane",
       "romanceable": true,
+      "romance": "bachelorette",
       "family": [
         {
           "name": "Emily",
@@ -293,6 +298,7 @@
       "location": "Pelican Town",
       "address": "Harvey's Clinic",
       "romanceable": true,
+      "romance": "bachelor",
       "family": [],
       "friends": [
         {
@@ -408,6 +414,7 @@
       "location": "Cindersap Forest",
       "address": "Leah's Cottage",
       "romanceable": true,
+      "romance": "bachelorette",
       "family": [],
       "friends": [
         {
@@ -512,6 +519,7 @@
       "location": "The Mountain",
       "address": "24 Mountain Road",
       "romanceable": true,
+      "romance": "bachelorette",
       "family": [
         {
           "name": "Robin",
@@ -562,6 +570,7 @@
       "location": "Pelican Town",
       "address": "2 River Road",
       "romanceable": true,
+      "romance": "bachelorette",
       "family": [
         {
           "name": "Pam",
@@ -632,6 +641,7 @@
       "location": "Pelican Town",
       "address": "1 Willow Lane",
       "romanceable": true,
+      "romance": "bachelor",
       "family": [
         {
           "name": "Jodi",
@@ -686,6 +696,7 @@
       "location": "The Mountain",
       "address": "24 Mountain Road",
       "romanceable": true,
+      "romance": "bachelor",
       "family": [
         {
           "name": "Robin",
@@ -718,6 +729,7 @@
       "location": "Cindersap Forest",
       "address": "Marnie's Ranch",
       "romanceable": true,
+      "romance": "bachelor",
       "family": [
         {
           "name": "Marnie",
