@@ -4,8 +4,8 @@ import { FEATURES, type FeatureId } from '../features/registry';
 import { useEntitlements } from '../monetization/EntitlementsContext';
 import { loadStoredSave } from '../save/storage';
 import { FeatureList } from '../ui/FeatureList';
-import { FEATURE_ICON } from '../ui/featureIcons';
 import { PixelIcon } from '../ui/PixelIcon';
+import { ART, type ArtName } from '../ui/tileArt';
 import { TILES } from '../ui/tiles';
 import { UiIcon } from '../ui/UiIcon';
 
@@ -17,9 +17,9 @@ interface Props {
 
 const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
-const SHOWCASE: ReadonlyArray<{ id: FeatureId; tone: string }> = [
-  { id: 'cropPlanner', tone: 'green' },
-  { id: 'giftFinder', tone: 'gold' },
+const SHOWCASE: ReadonlyArray<{ id: FeatureId; tone: string; art: ArtName }> = [
+  { id: 'cropPlanner', tone: 'green', art: 'verao' },
+  { id: 'giftFinder', tone: 'gold', art: 'primavera' },
 ];
 
 export function Home({ onOpen, onSoon, onPaywall }: Props) {
@@ -85,7 +85,7 @@ export function Home({ onOpen, onSoon, onPaywall }: Props) {
                   aria-label={t.feature ? `${t.label}${locked ? ' (bloqueado)' : ''}` : `${t.label} (em breve)`}
                   onClick={() => (t.feature ? onOpen(t.feature) : onSoon(t.label))}
                 >
-                  <PixelIcon name={t.icon} size={44} />
+                  <img className="tile-art" src={ART[t.art]} alt="" draggable={false} />
                   <span>{t.label}</span>
                   {locked && (
                     <span className="tile-lock">
@@ -108,9 +108,9 @@ export function Home({ onOpen, onSoon, onPaywall }: Props) {
 
           <h2 className="section">Mais ferramentas</h2>
           <div className="duo">
-            {SHOWCASE.map(({ id, tone }) => (
+            {SHOWCASE.map(({ id, tone, art }) => (
               <button key={id} type="button" className={`poster ${tone}`} onClick={() => onOpen(id)}>
-                <PixelIcon name={FEATURE_ICON[id]} size={84} />
+                <img className="poster-art" src={ART[art]} alt="" draggable={false} />
                 <span className="pill">
                   <PixelIcon name="star" size={16} />
                   {id === 'cropPlanner' ? 'Plantio' : 'Presente certo'}
