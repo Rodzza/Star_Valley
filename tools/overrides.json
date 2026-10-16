@@ -1,1 +1,5 @@
-{}
+{
+  "Blueberry": { "sellPrice": 50, "note": "Wiki trazia 80 g (erro). 50 g conferido: preço do jogo e guia de fã v5 (62/75/100 g por qualidade)." },
+  "Corn": { "sellPrice": 50, "note": "Wiki trazia 55 g (erro). 50 g conferido: preço do jogo e guia de fã v5 (62/75/100 g por qualidade)." },
+  "Fairy Rose": { "sellPrice": 290, "note": "Wiki trazia 319 g (erro). 290 g conferido: preço do jogo e guia de fã v5 (362/435/580 g por qualidade)." }
+}

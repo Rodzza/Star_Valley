@@ -17,7 +17,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Amaranth",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Amaranth?action=history",
         "revisedAt": "2025-01-07T23:49:35Z"
-      }
+      },
+      "energy": 50
     },
     {
       "name": "Artichoke",
@@ -32,7 +33,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Artichoke",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Artichoke?action=history",
         "revisedAt": "2025-01-07T23:49:19Z"
-      }
+      },
+      "energy": 30
     },
     {
       "name": "Beet",
@@ -47,7 +49,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Beet",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Beet?action=history",
         "revisedAt": "2025-01-07T23:47:11Z"
-      }
+      },
+      "energy": 30
     },
     {
       "name": "Blue Jazz",
@@ -62,7 +65,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Blue_Jazz",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Blue_Jazz?action=history",
         "revisedAt": "2025-01-07T23:03:05Z"
-      }
+      },
+      "energy": 45
     },
     {
       "name": "Blueberry",
@@ -71,14 +75,16 @@
       ],
       "growthDays": 13,
       "seedPrice": 80,
-      "sellPrice": 80,
+      "sellPrice": 50,
       "source": {
         "title": "Blueberry",
         "url": "https://stardewvalley.fandom.com/wiki/Blueberry",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Blueberry?action=history",
         "revisedAt": "2026-03-29T23:52:11Z"
       },
-      "regrowDays": 4
+      "regrowDays": 4,
+      "energy": 25,
+      "note": "Wiki trazia 80 g (erro). 50 g conferido: preço do jogo e guia de fã v5 (62/75/100 g por qualidade)."
     },
     {
       "name": "Bok Choy",
@@ -93,7 +99,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Bok_Choy",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Bok_Choy?action=history",
         "revisedAt": "2025-01-07T23:48:59Z"
-      }
+      },
+      "energy": 25
     },
     {
       "name": "Cauliflower",
@@ -108,7 +115,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Cauliflower",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Cauliflower?action=history",
         "revisedAt": "2025-01-07T22:58:38Z"
-      }
+      },
+      "energy": 75
     },
     {
       "name": "Corn",
@@ -118,14 +126,16 @@
       ],
       "growthDays": 14,
       "seedPrice": 150,
-      "sellPrice": 55,
+      "sellPrice": 50,
       "source": {
         "title": "Corn",
         "url": "https://stardewvalley.fandom.com/wiki/Corn",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Corn?action=history",
         "revisedAt": "2025-01-07T23:14:55Z"
       },
-      "regrowDays": 4
+      "regrowDays": 4,
+      "energy": 25,
+      "note": "Wiki trazia 55 g (erro). 50 g conferido: preço do jogo e guia de fã v5 (62/75/100 g por qualidade)."
     },
     {
       "name": "Eggplant",
@@ -141,7 +151,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Eggplant?action=history",
         "revisedAt": "2025-01-07T23:43:47Z"
       },
-      "regrowDays": 5
+      "regrowDays": 5,
+      "energy": 20
     },
     {
       "name": "Fairy Rose",
@@ -150,13 +161,15 @@
       ],
       "growthDays": 12,
       "seedPrice": 200,
-      "sellPrice": 319,
+      "sellPrice": 290,
       "source": {
         "title": "Fairy Rose",
         "url": "https://stardewvalley.fandom.com/wiki/Fairy_Rose",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Fairy_Rose?action=history",
         "revisedAt": "2025-01-07T23:42:50Z"
-      }
+      },
+      "energy": 45,
+      "note": "Wiki trazia 319 g (erro). 290 g conferido: preço do jogo e guia de fã v5 (362/435/580 g por qualidade)."
     },
     {
       "name": "Garlic",
@@ -171,7 +184,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Garlic",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Garlic?action=history",
         "revisedAt": "2025-01-07T22:58:06Z"
-      }
+      },
+      "energy": 20
     },
     {
       "name": "Grape",
@@ -187,7 +201,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Grape?action=history",
         "revisedAt": "2025-01-10T23:44:51Z"
       },
-      "regrowDays": 3
+      "regrowDays": 3,
+      "energy": 38
     },
     {
       "name": "Green Bean",
@@ -203,7 +218,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Green_Bean?action=history",
         "revisedAt": "2025-01-07T23:00:52Z"
       },
-      "regrowDays": 3
+      "regrowDays": 3,
+      "energy": 25
     },
     {
       "name": "Hops",
@@ -219,7 +235,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Hops?action=history",
         "revisedAt": "2025-01-07T23:15:11Z"
       },
-      "regrowDays": 1
+      "regrowDays": 1,
+      "energy": 45
     },
     {
       "name": "Hot Pepper",
@@ -235,7 +252,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Hot_Pepper?action=history",
         "revisedAt": "2025-03-07T18:05:45Z"
       },
-      "regrowDays": 3
+      "regrowDays": 3,
+      "energy": 13
     },
     {
       "name": "Kale",
@@ -250,7 +268,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Kale",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Kale?action=history",
         "revisedAt": "2025-01-07T22:57:37Z"
-      }
+      },
+      "energy": 50
     },
     {
       "name": "Melon",
@@ -265,7 +284,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Melon",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Melon?action=history",
         "revisedAt": "2026-02-11T05:32:34Z"
-      }
+      },
+      "energy": 113
     },
     {
       "name": "Poppy",
@@ -280,7 +300,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Poppy",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Poppy?action=history",
         "revisedAt": "2025-01-07T23:16:35Z"
-      }
+      },
+      "energy": 45
     },
     {
       "name": "Potato",
@@ -295,7 +316,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Potato",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Potato?action=history",
         "revisedAt": "2025-01-07T23:01:14Z"
-      }
+      },
+      "energy": 25
     },
     {
       "name": "Pumpkin",
@@ -325,7 +347,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Radish",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Radish?action=history",
         "revisedAt": "2025-01-07T23:18:57Z"
-      }
+      },
+      "energy": 45
     },
     {
       "name": "Red Cabbage",
@@ -340,7 +363,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Red_Cabbage",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Red_Cabbage?action=history",
         "revisedAt": "2025-01-07T23:13:39Z"
-      }
+      },
+      "energy": 75
     },
     {
       "name": "Rhubarb",
@@ -370,7 +394,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Starfruit",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Starfruit?action=history",
         "revisedAt": "2026-02-21T17:46:05Z"
-      }
+      },
+      "energy": 125
     },
     {
       "name": "Strawberry",
@@ -386,7 +411,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Strawberry?action=history",
         "revisedAt": "2025-01-07T23:00:30Z"
       },
-      "regrowDays": 4
+      "regrowDays": 4,
+      "energy": 50
     },
     {
       "name": "Summer Spangle",
@@ -401,7 +427,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Summer_Spangle",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Summer_Spangle?action=history",
         "revisedAt": "2025-01-07T23:16:12Z"
-      }
+      },
+      "energy": 45
     },
     {
       "name": "Sunflower",
@@ -416,7 +443,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Sunflower",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Sunflower?action=history",
         "revisedAt": "2025-01-07T23:19:33Z"
-      }
+      },
+      "energy": 45
     },
     {
       "name": "Sweet Gem Berry",
@@ -447,7 +475,8 @@
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Tomato?action=history",
         "revisedAt": "2025-01-10T23:19:05Z"
       },
-      "regrowDays": 4
+      "regrowDays": 4,
+      "energy": 20
     },
     {
       "name": "Tulip",
@@ -462,7 +491,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Tulip",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Tulip?action=history",
         "revisedAt": "2025-01-07T23:01:33Z"
-      }
+      },
+      "energy": 45
     },
     {
       "name": "Yam",
@@ -477,7 +507,8 @@
         "url": "https://stardewvalley.fandom.com/wiki/Yam",
         "historyUrl": "https://stardewvalley.fandom.com/wiki/Yam?action=history",
         "revisedAt": "2025-01-07T23:50:06Z"
-      }
+      },
+      "energy": 45
     }
   ]
 }

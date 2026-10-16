@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import data from '../data/crops.json';
 import { cropLabel } from '../utils/cropNames';
-import { SEASON_LENGTH, plantableCrops, type Crop, type Season } from '../utils/crops';
+import { QUALITY_LABEL, SEASON_LENGTH, plantableCrops, qualityTable, type Crop, type Season } from '../utils/crops';
 
 const SEASONS: Array<{ id: Season; label: string }> = [
   { id: 'spring', label: 'Primavera' },
@@ -59,6 +59,30 @@ export function CropPlanner() {
           <span style={{ display: 'block' }}>
             Lucro: {p.profit} g · {p.goldPerDay.toFixed(1)} g por dia
           </span>
+          <details className="quality">
+            <summary>Preço e energia por qualidade</summary>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Qualidade</th>
+                  <th scope="col">Venda</th>
+                  <th scope="col">Energia</th>
+                  <th scope="col">Vida</th>
+                </tr>
+              </thead>
+              <tbody>
+                {qualityTable(p.crop).map((r) => (
+                  <tr key={r.quality}>
+                    <th scope="row">{QUALITY_LABEL[r.quality]}</th>
+                    <td>{r.sell} g</td>
+                    <td>{r.energy ?? '—'}</td>
+                    <td>{r.health ?? '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {p.crop.energy === undefined && <p className="muted small">Não pode ser comida.</p>}
+          </details>
         </div>
       ))}
       <p className="muted">Valores sem qualidade, profissões nem fertilizante.</p>

@@ -286,3 +286,10 @@ ol.plain li { margin: 8px 0; }
 .agenda li { display: flex; gap: 10px; align-items: baseline; }
 .agenda .rel-link { white-space: nowrap; min-width: 56px; text-align: left; }
 .cal-seasons { flex-wrap: nowrap; } .cal-seasons .chip { flex: 1 1 0; padding: 0 4px; font-size: 0.9rem; }
+
+/* Qualidade das culturas */
+.quality { margin-top: 8px; }
+.quality summary { cursor: pointer; font-weight: 800; color: var(--accent-text); min-height: 36px; display: flex; align-items: center; }
+.quality table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 0.92rem; }
+.quality th, .quality td { padding: 6px 8px; text-align: right; border-bottom: 1px solid rgba(68, 34, 14, 0.2); }
+.quality th[scope='row'], .quality thead th:first-child { text-align: left; }

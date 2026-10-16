@@ -19,6 +19,8 @@ export interface Crop {
   seedPrice: number;
   sellPrice: number;
   yieldPerHarvest?: number;
+  /** Energia que restaura sem estrela. Ausente nas culturas que não se pode comer. */
+  energy?: number;
   source?: CropSource;
   /** Presente quando um valor foi corrigido manualmente. */
   note?: string;
@@ -66,4 +68,33 @@ export function plantableCrops(crops: readonly Crop[], season: Season, plantDay:
     .map((c) => planCrop(c, plantDay))
     .filter((p): p is CropPlan => p !== null)
     .sort((a, b) => b.goldPerDay - a.goldPerDay);
+}
+
+export const QUALITIES = ['normal', 'silver', 'gold', 'iridium'] as const;
+export type Quality = (typeof QUALITIES)[number];
+export const QUALITY_LABEL: Record<Quality, string> = { normal: 'Normal', silver: 'Prata', gold: 'Ouro', iridium: 'Irídio' };
+
+/** Multiplicadores do jogo: preço de venda e (energia/vida) por qualidade. */
+/** Em porcentagem, para fazer a conta com inteiros (45 × 1,4 dá 62,999… em ponto flutuante). */
+const SELL_PCT: Record<Quality, number> = { normal: 100, silver: 125, gold: 150, iridium: 200 };
+const EAT_PCT: Record<Quality, number> = { normal: 100, silver: 140, gold: 180, iridium: 260 };
+
+export interface QualityRow {
+  quality: Quality;
+  sell: number;
+  /** Ausentes quando a cultura não é comestível. */
+  energy?: number;
+  health?: number;
+}
+
+/** Preço de venda, energia e vida de uma cultura em cada qualidade (arredondando para baixo, como o jogo). */
+export function qualityTable(crop: Pick<Crop, 'sellPrice' | 'energy'>): QualityRow[] {
+  return QUALITIES.map((quality) => {
+    const row: QualityRow = { quality, sell: Math.floor((crop.sellPrice * SELL_PCT[quality]) / 100) };
+    if (crop.energy !== undefined && crop.energy > 0) {
+      row.energy = Math.floor((crop.energy * EAT_PCT[quality]) / 100);
+      row.health = Math.floor((crop.energy * 45 * EAT_PCT[quality]) / 10000);
+    }
+    return row;
+  });
 }

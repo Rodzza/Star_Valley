@@ -161,6 +161,36 @@ export function sourceOf(page: WikiPage): CropSource {
   };
 }
 
+/** Números de "No Star: +75, Silver: +105, Gold: +135" (ou "{{energy|+20}}<br>..."), em ordem. */
+function energyNumbers(value: string): number[] {
+  const labelled = [...value.matchAll(/(?:no star|normal|silver|gold|iridium)\s*:\s*\+?(\d+)/gi)].map((m) => Number(m[1]));
+  if (labelled.length > 0) return labelled;
+  const tpl = [...value.matchAll(/\{\{\s*energy\s*\|\s*\+?(\d+)/gi)].map((m) => Number(m[1]));
+  if (tpl.length > 0) return tpl;
+  const first = /^\s*\+?(\d+)/.exec(value);
+  return first?.[1] !== undefined ? [Number(first[1])] : [];
+}
+
+/**
+ * Energia sem estrela do campo "Energy" da wiki. A wiki às vezes erra o valor base (ex.: 50 com prata 63),
+ * então o base só é aceito quando bate com a prata (×1,4) da própria linha (ou o ouro, ×1,8, se não houver prata);
+ * se não bater, usa o primeiro base compatível e devolve um aviso.
+ */
+export function baseEnergy(value: string | undefined): { value?: number; warning?: string } {
+  if (!value) return {};
+  const [base, silver, gold] = energyNumbers(value);
+  if (base === undefined || base <= 0) return {};
+  // A prata é o conferidor principal; o ouro só vale quando não há prata (a wiki às vezes erra um dos dois).
+  const fits = (n: number) =>
+    silver !== undefined ? Math.floor((n * 140) / 100) === silver : gold === undefined || Math.floor((n * 180) / 100) === gold;
+  if (fits(base)) return { value: base };
+  if (silver === undefined && gold === undefined) return { value: base };
+  for (let n = 1; n <= 400; n++) {
+    if (fits(n)) return { value: n, warning: `energia base na wiki (${base}) não bate com prata/ouro; usei ${n}` };
+  }
+  return { value: base, warning: `energia base ${base} não bate com prata (${silver ?? '-'}) / ouro (${gold ?? '-'}): conferir no jogo` };
+}
+
 /** Converte uma página de cultura em `Crop`. Recusa (com motivo) quando faltam dados essenciais. */
 export function parseCropPage(page: WikiPage): ParseOutcome {
   const fail = (reason: string): ParseOutcome => ({ ok: false, title: page.title, reason });
@@ -198,6 +228,10 @@ export function parseCropPage(page: WikiPage): ParseOutcome {
   const seedPrice = firstInt(t['seed pierre buy'], /(\d+)\s*g/i) ?? firstInt(t['seed pierre buy'], /(\d+)/);
   if (seedPrice === undefined) return fail('preço da semente (Pierre) ausente na wiki');
 
+  const eng = baseEnergy(t.energy);
+  const energy = eng.value;
+  if (eng.warning) warnings.push(eng.warning);
+
   if (growthDays > 28) warnings.push(`crescimento de ${growthDays} dias passa de uma estação`);
   if (sellPrice < seedPrice && regrowDays === undefined) warnings.push('preço de venda menor que o da semente');
   if (seasons.length > 1) warnings.push('várias estações: o planejador usa só o fim de cada estação');
@@ -212,6 +246,7 @@ export function parseCropPage(page: WikiPage): ParseOutcome {
     source: sourceOf(page),
   };
   if (regrowDays !== undefined) crop.regrowDays = regrowDays;
+  if (energy !== undefined) crop.energy = energy;
   return { ok: true, value: { crop, warnings } };
 }
 
@@ -221,6 +256,7 @@ export interface CropOverride {
   growthDays?: number;
   regrowDays?: number;
   yieldPerHarvest?: number;
+  energy?: number;
   /** Explique de onde veio a correção (ex.: "conferido na loja do jogo"). */
   note: string;
 }
