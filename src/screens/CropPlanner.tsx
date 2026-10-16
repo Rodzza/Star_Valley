@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import data from '../data/crops.json';
+import { cropLabel } from '../utils/cropNames';
 import { SEASON_LENGTH, plantableCrops, type Crop, type Season } from '../utils/crops';
 
 const SEASONS: Array<{ id: Season; label: string }> = [
@@ -49,7 +50,7 @@ export function CropPlanner() {
       )}
       {plans.map((p) => (
         <div key={p.crop.name} className="card" style={{ cursor: 'default' }}>
-          <span className="title">{p.crop.name}</span>
+          <span className="title">{cropLabel(p.crop.name)}</span>
           <span className="muted" style={{ display: 'block' }}>
             {p.harvests === 1
               ? `Colhe no dia ${p.firstHarvestDay}`

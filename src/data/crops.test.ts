@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import data from './crops.json';
 import type { Crop } from '../utils/crops';
+import { CROP_PT } from '../utils/cropNames';
 
 const crops = data.crops as Crop[];
 
@@ -24,5 +25,9 @@ describe('crops.json (gerado do export da wiki)', () => {
 
   it('carrega a nota de licença', () => {
     expect(data._licenca).toContain('CC BY-SA');
+  });
+
+  it('toda cultura tem nome em português', () => {
+    for (const c of crops) expect(CROP_PT[c.name], c.name).toBeTruthy();
   });
 });
