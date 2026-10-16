@@ -1,76 +1,125 @@
-import type { ReactNode } from 'react';
-import { FEATURES, type FeatureDef } from '../features/registry';
+import { useEffect, useState } from 'react';
+import heroImg from '../assets/hero-farm.jpg';
+import { FEATURES, type FeatureId } from '../features/registry';
 import { useEntitlements } from '../monetization/EntitlementsContext';
+import { loadStoredSave } from '../save/storage';
+import { FeatureList } from '../ui/FeatureList';
 import { FEATURE_ICON } from '../ui/featureIcons';
 import { PixelIcon } from '../ui/PixelIcon';
+import { TILES } from '../ui/tiles';
+import { UiIcon } from '../ui/UiIcon';
 
 interface Props {
-  onOpen: (id: FeatureDef['id']) => void;
+  onOpen: (id: FeatureId) => void;
+  onSoon: (title: string) => void;
   onPaywall: () => void;
-  onCredits: () => void;
-  notices?: ReactNode;
 }
 
-export function Home({ onOpen, onPaywall, onCredits, notices }: Props) {
+const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+const SHOWCASE: ReadonlyArray<{ id: FeatureId; tone: string }> = [
+  { id: 'cropPlanner', tone: 'green' },
+  { id: 'giftFinder', tone: 'gold' },
+];
+
+export function Home({ onOpen, onSoon, onPaywall }: Props) {
   const { available, isPro, adsLeft } = useEntitlements();
+  const [query, setQuery] = useState('');
+  const [farm, setFarm] = useState<string | null>(null);
+
+  useEffect(() => {
+    void loadStoredSave().then((s) => setFarm(s?.save.farmName || null));
+  }, []);
+
+  const q = norm(query.trim());
+  const results = q ? FEATURES.filter((f) => norm(`${f.title} ${f.description}`).includes(q)) : [];
 
   return (
     <>
-      <header className="top">
-        <span className="cloud c1" aria-hidden="true" />
-        <span className="cloud c2" aria-hidden="true" />
-        <div className="brand">
-          <span className="brand-icon">
-            <PixelIcon name="sprout" size={34} />
-          </span>
-          <div>
-            <h1>Valley Tracker</h1>
-            <p>Seu caderno de campo do vale</p>
-          </div>
+      <header className="welcome">
+        <span className="avatar">
+          <PixelIcon name="person" size={40} />
+        </span>
+        <div className="welcome-text">
+          <h1>Bem-vindo!</h1>
+          <p>{farm ?? 'Seu vale'}</p>
         </div>
-        <div className="hud" role="status" aria-label={isPro ? 'Plano Pro ativo' : `Anúncios restantes hoje: ${adsLeft} de 5`}>
-          <PixelIcon name="coin" size={22} />
-          <span className="hud-count">{isPro ? 'Pro' : `${adsLeft}/5`}</span>
-          <span className="hud-label">{isPro ? 'tudo liberado' : 'anúncios hoje'}</span>
-        </div>
+        <button
+          type="button"
+          className="coins"
+          onClick={onPaywall}
+          disabled={isPro}
+          aria-label={isPro ? 'Plano Pro ativo' : `Anúncios restantes hoje: ${adsLeft} de 5. Toque para conhecer o Pro`}
+        >
+          <PixelIcon name="coin" size={20} />
+          <span>{isPro ? 'Pro' : `${adsLeft}/5`}</span>
+        </button>
       </header>
-      {notices}
 
-      {FEATURES.map((f) => {
-        const ok = available(f.id);
-        const label = ok
-          ? f.access === 'free'
-            ? null
-            : 'Liberado'
-          : f.access === 'ad'
-            ? 'Libere com 1 anúncio (vale até meia-noite)'
-            : 'Pro';
-        return (
-          <button key={f.id} className={`card feature ${f.access}`} onClick={() => onOpen(f.id)}>
-            <span className="feature-slot">
-              <PixelIcon name={FEATURE_ICON[f.id]} size={38} />
-              {!ok && (
-                <span className="slot-mark">
-                  <PixelIcon name="lock" size={18} />
-                </span>
-              )}
-            </span>
-            <span>
-              <span className="title">{f.title}</span>
-              <span className="desc">{f.description}</span>
-              {label && <span className={`badge ${ok ? 'ok' : f.access === 'pro' ? 'pro' : ''}`}>{label}</span>}
+      <label className="search">
+        <span className="search-icon">
+          <UiIcon name="search" size={20} />
+        </span>
+        <input type="search" placeholder="Buscar uma função…" aria-label="Buscar uma função" value={query} onChange={(e) => setQuery(e.target.value)} />
+      </label>
+
+      {q ? (
+        <section aria-live="polite">
+          <h2 className="section">Resultados</h2>
+          {results.length ? (
+            <FeatureList features={results} onOpen={onOpen} />
+          ) : (
+            <p className="empty">Nenhuma função com “{query.trim()}”. Tente outra palavra.</p>
+          )}
+        </section>
+      ) : (
+        <>
+          <div className="tiles">
+            {TILES.map((t) => {
+              const locked = t.feature ? !available(t.feature) : false;
+              return (
+                <button
+                  key={t.label}
+                  type="button"
+                  className={`tile${t.feature ? '' : ' soon'}`}
+                  aria-label={t.feature ? `${t.label}${locked ? ' (bloqueado)' : ''}` : `${t.label} (em breve)`}
+                  onClick={() => (t.feature ? onOpen(t.feature) : onSoon(t.label))}
+                >
+                  <PixelIcon name={t.icon} size={44} />
+                  <span>{t.label}</span>
+                  {locked && (
+                    <span className="tile-lock">
+                      <PixelIcon name="lock" size={12} />
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          <h2 className="section">Coleções</h2>
+          <button type="button" className="hero" onClick={() => onOpen('saveProgress')}>
+            <img src={heroImg} alt="" />
+            <span className="pill">
+              <PixelIcon name="star" size={18} />
+              Perfeição pelo save
             </span>
           </button>
-        );
-      })}
-      {!isPro && (
-        <button className="btn" onClick={onPaywall}>
-          Conhecer o Pro
-        </button>
+
+          <h2 className="section">Mais ferramentas</h2>
+          <div className="duo">
+            {SHOWCASE.map(({ id, tone }) => (
+              <button key={id} type="button" className={`poster ${tone}`} onClick={() => onOpen(id)}>
+                <PixelIcon name={FEATURE_ICON[id]} size={84} />
+                <span className="pill">
+                  <PixelIcon name="star" size={16} />
+                  {id === 'cropPlanner' ? 'Plantio' : 'Presente certo'}
+                </span>
+              </button>
+            ))}
+          </div>
+        </>
       )}
-      <button className="link" onClick={onCredits}>
-        Fontes e licenças
-      </button>
     </>
   );
 }

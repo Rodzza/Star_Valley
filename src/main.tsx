@@ -4,8 +4,8 @@ import { App } from './App';
 import '@fontsource/nunito/400.css';
 import '@fontsource/nunito/700.css';
 import '@fontsource/nunito/800.css';
-import '@fontsource/pixelify-sans/500.css';
-import '@fontsource/pixelify-sans/700.css';
+import '@fontsource/fraunces/600.css';
+import '@fontsource/fraunces/700.css';
 import './styles/global.css';
 import { applyPalette, preferredPalette } from './styles/tokens';
 

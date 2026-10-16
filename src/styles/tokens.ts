@@ -21,9 +21,9 @@ export interface Palette {
 
 /** Paleta tirada da folha de consulta: céu azul, pergaminho dourado, madeira laranja, verde das colinas. */
 export const light: Palette = {
-  bg: '#bfe8fa',
-  onBg: '#3a2110',
-  onBgMuted: '#5a3a1f',
+  bg: '#a4defd',
+  onBg: '#06342d',
+  onBgMuted: '#14493f',
   surface: '#ffd889',
   surfaceAlt: '#ffeabb',
   text: '#44220e',

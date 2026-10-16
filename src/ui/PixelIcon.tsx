@@ -2,12 +2,13 @@ import type { ReactElement } from 'react';
 /** Ícones desenhados em grade 12x12, um caractere por pixel. Arte própria, sem sprites de terceiros. */
 export type IconName =
   | 'house' | 'sprout' | 'gift' | 'chest' | 'scroll' | 'calendar'
-  | 'heart' | 'cloud' | 'lock' | 'coin' | 'note';
+  | 'heart' | 'cloud' | 'lock' | 'coin' | 'note'
+  | 'cat' | 'chick' | 'tree' | 'person' | 'pot' | 'hammer' | 'star';
 
 const COLORS: Record<string, string> = {
   k: '#3a1d0c', w: '#8b4a1e', W: '#c9893f', r: '#e0574a', R: '#b53a35',
   g: '#6fcf4f', G: '#2f7a2a', y: '#f6b92b', Y: '#b9801a', c: '#fff1d6',
-  b: '#5aa9e6', s: '#aab0b8',
+  b: '#5aa9e6', s: '#aab0b8', o: '#f29a3a', p: '#f4c08f',
 };
 
 const GRIDS: Record<IconName, string[]> = {
@@ -54,6 +55,27 @@ const GRIDS: Record<IconName, string[]> = {
   note: [
     '............', '.kkkkkkkkkk.', 'kcccccccccck', 'kcwwwwwwwwck', 'kcccccccccck', 'kcwwwwwwccck',
     'kcccccccccck', 'kcwwwwwwwwck', 'kcccccccccck', 'kcwwwwccccck', '.kkkkkkkkkk.', '............',
+  ],
+  cat: [
+    '............', '.kk......kk.', '.kok....kok.', '.kookkkkook.', '.kooooooook.', '.kokooookok.', '.kooooooook.', '.kooorrooook', '.kooooooook.', '..koooooook.', '...kkkkkk...', '............',
+  ],
+  chick: [
+    '............', '....kkkk....', '..kkyyyykk..', '.kyyyyyyyyk.', '.kyykyyykyyk', '.kyyyyyyyyyk', 'kyyyyoooyyyk', 'kyyyyyyyyyyk', '.kyyyyyyyyk.', '..kkyyyykk..', '....kkkk....', '............',
+  ],
+  tree: [
+    '............', '....kkkk....', '..kkggggkk..', '.kggggGgggk.', '.kgggggggGk.', 'kgGgggggggGk', 'kggggGgggggk', '.kgggggggGk.', '..kkggggkk..', '....kwwk....', '....kwwk....', '...kkwwkk...',
+  ],
+  person: [
+    '............', '...kkkkkk...', '..kyyyyyyk..', '.kkkkkkkkkk.', '..kppppppk..', '..kpkppkpk..', '..kppppppk..', '..kpprrppk..', '...kppppk...', '..kbbbbbbk..', '.kbbbbbbbbk.', '.kkkkkkkkkk.',
+  ],
+  pot: [
+    '............', '....s..s....', '...s..s.....', '..kkkkkkkk..', 'kkkRRRRRRkkk', 'kssssssssssk', 'kssssssssssk', 'kssssssssssk', '.kssssssssk.', '..kkkkkkkk..', '............', '............',
+  ],
+  hammer: [
+    '............', '..kkkkkkkk..', '.kssssssssk.', '.kssssssssk.', '..kkkwwkkk..', '....kwwk....', '....kwwk....', '....kwwk....', '....kwwk....', '....kwwk....', '....kwwk....', '....kkkk....',
+  ],
+  star: [
+    '............', '.....kk.....', '....kyyk....', '...kyyyyk...', 'kkkkyyyykkkk', 'kyyyyyyyyyyk', '.kyyyyyyyyk.', '..kyyyyyyk..', '..kyyyyyyk..', '.kyyykkyyyk.', '.kyyk..kyyk.', '..kk....kk..',
   ],
 };
 

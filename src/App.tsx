@@ -7,12 +7,23 @@ import { FloatingQuests } from './screens/FloatingQuests';
 import { GiftFinder } from './screens/GiftFinder';
 import { SaveProgress } from './screens/SaveProgress';
 import { AdGate, ProGate } from './screens/Gates';
+import { Explore } from './screens/Explore';
 import { Home } from './screens/Home';
+import { Profile } from './screens/Profile';
+import { Soon } from './screens/Soon';
 import { Paywall } from './screens/Paywall';
-import { Hotbar, type HotbarTarget } from './ui/Hotbar';
+import { TabBar, type TabId } from './ui/TabBar';
 import { applyPalette, preferredPalette } from './styles/tokens';
 
-type Route = { name: 'home' } | { name: 'feature'; id: FeatureId } | { name: 'paywall' } | { name: 'credits' };
+type Route =
+  | { name: 'home' }
+  | { name: 'explore' }
+  | { name: 'saved' }
+  | { name: 'profile' }
+  | { name: 'soon'; title: string }
+  | { name: 'feature'; id: FeatureId }
+  | { name: 'paywall' }
+  | { name: 'credits' };
 
 function FeatureContent({ id }: { id: FeatureId }) {
   switch (id) {
@@ -58,7 +69,9 @@ function Router() {
   const [route, setRoute] = useState<Route>({ name: 'home' });
   const goHome = () => setRoute({ name: 'home' });
   const goPaywall = () => setRoute({ name: 'paywall' });
-  const goTarget = (t: HotbarTarget) => (t === 'home' ? goHome() : setRoute({ name: 'feature', id: t }));
+  const openFeature = (id: FeatureId) => setRoute({ name: 'feature', id });
+  const goTab = (t: TabId) =>
+    setRoute(t === 'home' ? { name: 'home' } : t === 'explore' ? { name: 'explore' } : t === 'saved' ? { name: 'saved' } : { name: 'profile' });
 
   if (!ready) return <p className="muted">Carregando…</p>;
   if (route.name === 'paywall') {
@@ -72,54 +85,74 @@ function Router() {
     );
   }
 
-  const current: HotbarTarget | null = route.name === 'home' ? 'home' : route.name === 'feature' ? route.id : null;
+  const tab: TabId | null =
+    route.name === 'home' || route.name === 'explore' || route.name === 'saved' || route.name === 'profile' ? route.name : null;
+  const back = (
+    <button className="back" onClick={goHome}>
+      ← Voltar
+    </button>
+  );
+
   let content: ReactNode;
-  if (route.name === 'credits') {
-    content = (
-      <>
-        <Notices />
-        <button className="back" onClick={goHome}>
-          ← Voltar
-        </button>
-        <section className="panel">
-          <Credits />
-        </section>
-      </>
-    );
-  } else if (route.name === 'home') {
-    content = (
-      <Home
-        onOpen={(id) => setRoute({ name: 'feature', id })}
-        onPaywall={goPaywall}
-        onCredits={() => setRoute({ name: 'credits' })}
-        notices={<Notices />}
-      />
-    );
-  } else {
-    const def = FEATURE_BY_ID[route.id];
-    content = (
-      <>
-        <Notices />
-        <button className="back" onClick={goHome}>
-          ← Voltar
-        </button>
-        <section className="panel">
-          {available(route.id) ? (
-            <FeatureContent id={route.id} />
-          ) : def.access === 'ad' ? (
-            <AdGate feature={route.id} onPaywall={goPaywall} />
-          ) : (
-            <ProGate feature={route.id} onPaywall={goPaywall} />
-          )}
-        </section>
-      </>
-    );
+  switch (route.name) {
+    case 'home':
+      return (
+        <>
+          <Home onOpen={openFeature} onSoon={(title) => setRoute({ name: 'soon', title })} onPaywall={goPaywall} />
+          <Notices />
+          <TabBar current={tab} onGo={goTab} />
+        </>
+      );
+    case 'explore':
+      content = <Explore onOpen={openFeature} />;
+      break;
+    case 'saved':
+      content = <Soon title="Salvos" note="Aqui ficarão as funções e itens que você marcar como favoritos." />;
+      break;
+    case 'profile':
+      content = <Profile onPaywall={goPaywall} onOpen={openFeature} onCredits={() => setRoute({ name: 'credits' })} />;
+      break;
+    case 'soon':
+      content = (
+        <>
+          {back}
+          <Soon title={route.title} />
+        </>
+      );
+      break;
+    case 'credits':
+      content = (
+        <>
+          {back}
+          <section className="panel">
+            <Credits />
+          </section>
+        </>
+      );
+      break;
+    default: {
+      const def = FEATURE_BY_ID[route.id];
+      content = (
+        <>
+          {back}
+          <section className="panel">
+            {available(route.id) ? (
+              <FeatureContent id={route.id} />
+            ) : def.access === 'ad' ? (
+              <AdGate feature={route.id} onPaywall={goPaywall} />
+            ) : (
+              <ProGate feature={route.id} onPaywall={goPaywall} />
+            )}
+          </section>
+        </>
+      );
+    }
   }
 
   return (
     <>
       {content}
-      <Hotbar current={current} onGo={goTarget} />
+      <TabBar current={tab} onGo={goTab} />
     </>
   );
 }
