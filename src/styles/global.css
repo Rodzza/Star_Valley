@@ -243,7 +243,10 @@ ol.plain li { margin: 8px 0; }
 }
 .vcard:active { transform: scale(0.96); }
 .vcard span { font-weight: 800; font-size: 0.95rem; line-height: 1.1; }
-.portrait { display: block; border-radius: 16px; object-fit: cover; }
+/* Nos quadrados (lista, página do item) o corte mira o alto da imagem, onde fica o rosto. */
+.portrait { display: block; border-radius: 16px; object-fit: cover; object-position: 50% 8%; }
+/* Nas miniaturas, aproxima no rosto (Android WebView/Chrome); onde não houver suporte, fica o corte acima. */
+img.portrait:not(.vpx-portrait *) { object-view-box: inset(0% 14% 33% 14%); }
 .portrait.fallback { display: inline-flex; align-items: center; justify-content: center; color: #fff; font-family: var(--font-display); font-weight: 700; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
 .vhead { display: flex; gap: 14px; align-items: flex-start; margin: 8px 0 14px; }
 .vhead .portrait { flex: none; }
