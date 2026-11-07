@@ -492,3 +492,5 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .vpx-panel .vp-item-box { background: #3a2414; border-color: #6b4a2a; box-shadow: inset 0 0 0 2px #24150b, 0 4px 0 rgba(0, 0, 0, 0.3); }
 .vpx .vpx-panel .vp-item { max-width: 96px; }
 .vpx .vpx-panel .vp-item-box { width: 54px; height: 54px; font-size: 1.6rem; border-width: 3px; }
+.vpx-picker { display: grid; gap: 4px; margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--wood); }
+.vpx-picker-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }

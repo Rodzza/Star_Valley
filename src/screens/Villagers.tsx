@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 import giftsJson from '../data/gifts.json';
 import villagersJson from '../data/villagers.json';
+import { BIOS } from '../data/bios';
 import casaIcon from '../assets/icons/casa.png';
 import primaveraIcon from '../assets/icons/primavera.png';
 import veraoIcon from '../assets/icons/verao.png';
@@ -9,6 +10,7 @@ import invernoIcon from '../assets/icons/inverno.png';
 import { Portrait } from '../ui/Portrait';
 import { TASTES, TASTE_LABEL, tasteOf, type GiftData, type GiftEntry, type Taste } from '../utils/gifts';
 import { itemEmoji, itemLabel } from '../utils/items';
+import { removeUserPortrait, setUserPortrait, useUserPortrait } from '../utils/userPortraits';
 import {
   addressLabel,
   displayName,
@@ -127,8 +129,10 @@ function NameLink({ name, onVillager }: { name: string; onVillager: (n: string) 
   );
 }
 
-/** Texto "Sobre" montado só com os dados (onde mora, romance, família, amigos): nada inventado. */
+/** Caixa "Sobre": a descrição de data/bios.ts, ou um texto montado só com os dados (onde mora, romance, família, amigos). */
 function About({ v, onVillager }: { v: Villager; onVillager: (n: string) => void }) {
+  const bio = BIOS[v.name];
+  if (bio) return <p className="vpx-about">{bio}</p>;
   const nome = displayName(v.name);
   const romance =
     v.romance === 'bachelor' ? 'É um dos candidatos de casamento.' : v.romance === 'bachelorette' ? 'É uma das candidatas de casamento.' : 'Não é romanceável.';
@@ -161,6 +165,53 @@ function About({ v, onVillager }: { v: Villager; onVillager: (n: string) => void
         </>
       )}
     </p>
+  );
+}
+
+/** Escolher uma imagem da galeria para o retrato deste morador (fica só no aparelho). */
+function PortraitPicker({ name }: { name: string }) {
+  const atual = useUserPortrait(name);
+  const input = useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState('');
+  const nome = displayName(name);
+
+  async function onFile(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    setBusy(true);
+    setMsg('');
+    try {
+      await setUserPortrait(name, file);
+      setMsg('Imagem salva neste celular.');
+    } catch (err) {
+      setMsg(err instanceof Error ? err.message : 'Não foi possível salvar a imagem.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="vpx-picker">
+      <div className="vpx-picker-row">
+        <button type="button" className="btn" disabled={busy} onClick={() => input.current?.click()}>
+          {busy ? 'Salvando…' : atual ? '🖼️ Trocar imagem' : `🖼️ Usar uma imagem minha para ${nome}`}
+        </button>
+        {atual && (
+          <button type="button" className="link" disabled={busy} onClick={() => void removeUserPortrait(name).then(() => setMsg('Imagem removida.'))}>
+            Remover
+          </button>
+        )}
+      </div>
+      <input ref={input} type="file" accept="image/*" hidden onChange={(e) => void onFile(e)} />
+      <p className="muted small">A imagem fica só no seu celular e não é enviada para lugar nenhum.</p>
+      {msg && (
+        <p className="small" role="status">
+          {msg}
+        </p>
+      )}
+    </div>
   );
 }
 
@@ -296,6 +347,7 @@ function Dashboard({
             <strong>Em breve.</strong> Esta seção ainda está sendo preparada.
           </p>
         )}
+        <PortraitPicker name={v.name} />
         <p className="muted small">Fonte: Stardew Valley Wiki (CC BY-SA). Nomes de itens traduzidos sem conferência no jogo.</p>
       </section>
     </div>
