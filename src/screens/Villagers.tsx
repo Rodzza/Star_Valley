@@ -9,7 +9,7 @@ import outonoIcon from '../assets/icons/outono.png';
 import invernoIcon from '../assets/icons/inverno.png';
 import { Portrait } from '../ui/Portrait';
 import { TASTES, TASTE_LABEL, tasteOf, type GiftData, type GiftEntry, type Taste } from '../utils/gifts';
-import { itemEmoji, itemLabel } from '../utils/items';
+import { itemEmoji, itemLabel, noteLabel } from '../utils/items';
 import { removeUserPortrait, setUserPortrait, useUserPortrait } from '../utils/userPortraits';
 import {
   addressLabel,
@@ -101,7 +101,7 @@ function ItemTile({ entry, onItem, size = 'md' }: { entry: GiftEntry; onItem: (n
       </span>
       <span className="vp-item-name">
         {label}
-        {entry.note ? <small> ({entry.note})</small> : null}
+        {entry.note ? <small> ({noteLabel(entry.note)})</small> : null}
       </span>
     </button>
   );

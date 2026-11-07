@@ -90,3 +90,21 @@ export function itemEmoji(name: string): string {
   for (const [re, icon] of ICON_RULES) if (re.test(name)) return icon;
   return '🥕'; // frutas, legumes e o resto da roça
 }
+
+/** Observações da wiki sobre um presente ("All but Void", "Blackberry, Strawberry"...) em português. */
+const NOTE_PT: Record<string, string> = {
+  '8+ hearts only': 'só com 8+ corações',
+  All: 'todos', 'All Types': 'todos', 'All types': 'todos', Any: 'qualquer um',
+  'All but Void': 'todos, menos o do Vácuo', 'All except Void': 'todos, menos o do Vácuo', 'All, but Void': 'todos, menos o do Vácuo',
+  'All except Void and thunder': 'todos, menos o do Vácuo e o do Trovão', 'All, void?': 'todos (o do Vácuo, talvez)',
+  'Bar and Ore': 'barras e minérios', 'Chicken and Duck': 'de galinha e de pato',
+  'any vegetable': 'qualquer legume', 'available at book seller': 'vendido pelo livreiro',
+};
+export function noteLabel(note: string): string {
+  const fixed = NOTE_PT[note.trim()];
+  if (fixed) return fixed;
+  return note
+    .split(/\s*,\s*/)
+    .map((part) => itemLabel(part))
+    .join(', ');
+}
