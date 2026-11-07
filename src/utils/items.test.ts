@@ -33,3 +33,13 @@ describe('itens de presente', () => {
     expect(itemLabel('Grape')).toBe('Uva');
   });
 });
+
+import { BIOS } from '../data/bios';
+import villagersJson from '../data/villagers.json';
+
+describe('descrições dos moradores', () => {
+  it('só existem para moradores que estão na lista', () => {
+    const nomes = new Set((villagersJson as { villagers: { name: string }[] }).villagers.map((v) => v.name));
+    expect(Object.keys(BIOS).filter((n) => !nomes.has(n))).toEqual([]);
+  });
+});

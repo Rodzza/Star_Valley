@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 import giftsJson from '../data/gifts.json';
 import villagersJson from '../data/villagers.json';
+import { BIOS } from '../data/bios';
 import casaIcon from '../assets/icons/casa.png';
 import primaveraIcon from '../assets/icons/primavera.png';
 import veraoIcon from '../assets/icons/verao.png';
@@ -128,8 +129,10 @@ function NameLink({ name, onVillager }: { name: string; onVillager: (n: string) 
   );
 }
 
-/** Texto "Sobre" montado só com os dados (onde mora, romance, família, amigos): nada inventado. */
+/** Caixa "Sobre": a descrição de data/bios.ts, ou um texto montado só com os dados (onde mora, romance, família, amigos). */
 function About({ v, onVillager }: { v: Villager; onVillager: (n: string) => void }) {
+  const bio = BIOS[v.name];
+  if (bio) return <p className="vpx-about">{bio}</p>;
   const nome = displayName(v.name);
   const romance =
     v.romance === 'bachelor' ? 'É um dos candidatos de casamento.' : v.romance === 'bachelorette' ? 'É uma das candidatas de casamento.' : 'Não é romanceável.';
