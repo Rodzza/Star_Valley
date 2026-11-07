@@ -32,3 +32,31 @@ describe('retratos escolhidos pelo usuário', () => {
     await expect(removeUserPortrait('Leah')).resolves.toBeUndefined();
   });
 });
+
+import { edgeColor, isDark } from './userPortraits';
+
+function imagem(w: number, h: number, fundo: [number, number, number], centro: [number, number, number], alfa = 255) {
+  const d = new Uint8ClampedArray(w * h * 4);
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++) {
+      const borda = x === 0 || y === 0 || x === w - 1;
+      const [r, g, b] = borda ? fundo : centro;
+      d.set([r, g, b, borda ? alfa : 255], (y * w + x) * 4);
+    }
+  return d;
+}
+
+describe('cor do fundo da imagem', () => {
+  it('lê a cor das bordas, não do personagem no centro', () => {
+    expect(edgeColor(imagem(20, 30, [250, 230, 170], [200, 40, 40]), 20, 30)).toEqual([250, 230, 170]);
+  });
+
+  it('com borda transparente, não inventa cor', () => {
+    expect(edgeColor(imagem(10, 10, [0, 0, 0], [255, 0, 0], 0), 10, 10)).toBeNull();
+  });
+
+  it('distingue fundo claro de escuro', () => {
+    expect(isDark([250, 230, 170])).toBe(false);
+    expect(isDark([45, 40, 55])).toBe(true);
+  });
+});

@@ -15,11 +15,74 @@ export const MAX_SIDE = 900;
 export const MAX_FILE_BYTES = 15 * 1024 * 1024;
 
 const cache = new Map<string, string>();
+/** Cor do fundo de cada imagem escolhida (lida das bordas), para o painel combinar com ela. */
+const colors = new Map<string, Rgb>();
 const listeners = new Set<() => void>();
 let loaded: Promise<void> | null = null;
 
 function emit() {
   for (const l of listeners) l();
+}
+
+export type Rgb = readonly [number, number, number];
+
+/**
+ * Cor de fundo de uma imagem: mediana dos pixels da borda de cima e das laterais (até 70% da
+ * altura, porque o personagem costuma ocupar a parte de baixo). Ignora pixels transparentes;
+ * se a borda for toda transparente, devolve null (o painel mantém o cenário da região).
+ */
+export function edgeColor(data: ArrayLike<number>, width: number, height: number): Rgb | null {
+  const r: number[] = [];
+  const g: number[] = [];
+  const b: number[] = [];
+  const take = (x: number, y: number) => {
+    const i = (y * width + x) * 4;
+    if ((data[i + 3] ?? 0) < 128) return;
+    r.push(data[i]!);
+    g.push(data[i + 1]!);
+    b.push(data[i + 2]!);
+  };
+  for (let x = 0; x < width; x++) take(x, 0);
+  const ate = Math.max(1, Math.floor(height * 0.7));
+  for (let y = 1; y < ate; y++) {
+    take(0, y);
+    take(width - 1, y);
+  }
+  if (r.length === 0) return null;
+  const median = (v: number[]) => {
+    const o = [...v].sort((x, y) => x - y);
+    return o[Math.floor(o.length / 2)]!;
+  };
+  return [median(r), median(g), median(b)];
+}
+
+/** Fundo escuro pede molduras e texto da versão escura. */
+export function isDark([r, g, b]: Rgb): boolean {
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b < 128;
+}
+
+async function colorOf(dataUrl: string): Promise<Rgb | null> {
+  try {
+    const img = new Image();
+    img.src = dataUrl;
+    await img.decode();
+    const { width, height } = fitSize(img.naturalWidth, img.naturalHeight, 64);
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    if (!ctx) return null;
+    ctx.drawImage(img, 0, 0, width, height);
+    return edgeColor(ctx.getImageData(0, 0, width, height).data, width, height);
+  } catch {
+    return null;
+  }
+}
+
+async function rememberColor(key: string, dataUrl: string) {
+  const c = await colorOf(dataUrl);
+  if (c) colors.set(key, c);
+  else colors.delete(key);
 }
 
 /** Tamanho final mantendo a proporção, sem nunca aumentar a imagem. */
@@ -47,7 +110,10 @@ export function loadUserPortraits(): Promise<void> {
   loaded ??= (async () => {
     for (const key of await readIndex()) {
       const { value } = await Preferences.get({ key: PREFIX + key });
-      if (value?.startsWith('data:image/')) cache.set(key, value);
+      if (value?.startsWith('data:image/')) {
+        cache.set(key, value);
+        await rememberColor(key, value);
+      }
     }
     emit();
   })();
@@ -83,6 +149,7 @@ export async function setUserPortrait(villagerName: string, file: File): Promise
     throw new Error('Sem espaço para salvar a imagem neste aparelho.');
   }
   cache.set(key, dataUrl);
+  await rememberColor(key, dataUrl);
   await writeIndex();
   emit();
 }
@@ -91,6 +158,7 @@ export async function removeUserPortrait(villagerName: string): Promise<void> {
   const key = slug(villagerName);
   await Preferences.remove({ key: PREFIX + key });
   cache.delete(key);
+  colors.delete(key);
   await writeIndex();
   emit();
 }
@@ -105,4 +173,10 @@ function subscribe(listener: () => void) {
 export function useUserPortrait(villagerName: string): string | undefined {
   const key = slug(villagerName);
   return useSyncExternalStore(subscribe, () => cache.get(key));
+}
+
+/** Cor de fundo da imagem escolhida para este morador, ou undefined. */
+export function useUserPortraitColor(villagerName: string): Rgb | undefined {
+  const key = slug(villagerName);
+  return useSyncExternalStore(subscribe, () => colors.get(key));
 }
