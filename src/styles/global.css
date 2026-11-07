@@ -508,3 +508,7 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
       color-mix(in srgb, var(--scene-bg) 88%, black) 100%);
   }
 }
+.day-stepper { display: flex; align-items: end; gap: 10px; margin-top: 10px; }
+.day-stepper .btn { width: 56px; min-height: 48px; padding: 0; font-size: 1.5rem; }
+.day-stepper label { display: grid; gap: 2px; }
+.day-stepper input { width: 84px; min-height: 48px; text-align: center; font-size: 1.2rem; font-weight: 800; border-radius: 12px; border: 2px solid var(--wood); background: var(--paper); color: var(--ink); }
