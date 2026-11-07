@@ -56,12 +56,33 @@ Troque `appId` em `capacitor.config.ts` pelo ID definitivo do seu app **antes** 
   plano `specialUse` (Conteúdo do app › Permissões do serviço em primeiro plano), explicando que o botão é ativado pelo usuário.
 
 ## O que falta antes de publicar
-1. **Compras reais:** `src/monetization/billing.ts` é simulação. Integre o Google Play Billing (ex.: RevenueCat) e crie os produtos `pro_monthly` (assinatura mensal, R$ 4,99) e `pro_lifetime` (compra única, R$ 29,99). O Pro deve ser reconfirmado com a loja ao abrir o app.
+1. **Compras reais:** já integradas (RevenueCat + Google Play). Falta criar as contas e os produtos: veja "Compras reais" abaixo.
 2. **IDs reais do AdMob:** veja "Anúncios reais" acima.
 3. **Dados do jogo:** `src/data/crops.json` é gerado do export da wiki (veja "Dados e licença" abaixo) e `src/data/gifts.json` (presentes) é gerado do export dos personagens; nenhum dos dois foi conferido no jogo. Nomes de itens estão em inglês.
 4. **Teste no aparelho:** o plugin nativo e o parser do save nunca rodaram num Android de verdade. Teste o botão flutuante com o jogo aberto e a importação de um save real.
 5. **Anti-fraude simples:** o contador de anúncios fica no aparelho, então mudar a hora do celular pode burlá-lo. Para um app pequeno costuma ser aceitável.
 6. **Privacidade e termos:** publique uma política de privacidade que mencione anúncios e dados coletados.
+
+## Compras reais (Google Play + RevenueCat)
+O app usa o RevenueCat para vender pela Google Play: ele confere as compras com o Google e guarda quem é Pro,
+sem precisarmos de servidor. Grátis até US$ 2.500/mês de receita. Sem a chave, o app continua com compras simuladas.
+
+1. **Play Console** (precisa da conta de desenvolvedor e do app criado, com o `appId` definitivo):
+   - Monetizar › Assinaturas › criar `pro_monthly`, com um plano base mensal de R$ 4,99.
+   - Monetizar › Produtos no app › criar `pro_lifetime`, R$ 29,99.
+   - Os produtos só aparecem depois que um .aab for enviado (pode ser em Teste interno).
+2. **RevenueCat** (app.revenuecat.com):
+   - Criar o projeto e adicionar o app Android (Play Store) com o mesmo `appId`.
+   - Ligar a conta de serviço do Google (o próprio RevenueCat mostra o passo a passo).
+   - Product catalog › Entitlements › criar `pro` e anexar `pro_monthly` e `pro_lifetime`.
+   - Product catalog › Offerings › offering `default` com os pacotes **Monthly** (`pro_monthly`) e **Lifetime** (`pro_lifetime`).
+   - Project settings › API keys › copiar a chave **Android** (começa com `goog_`).
+3. **Gerar a versão da loja:** cadastre os segredos listados em `.github/workflows/versao-loja.yml` (GitHub › Settings ›
+   Secrets and variables › Actions) e rode Actions › **Versão para a loja**. O .aab sai em Artifacts.
+4. **Testar a compra sem pagar:** Play Console › Configuração › Teste de licença, adicione seu e-mail. Instale pelo link
+   do Teste interno; a compra aparece como teste e não cobra.
+
+O app reconfirma o Pro com a loja ao abrir: assinatura cancelada ou reembolsada deixa de valer sozinha.
 
 ## Dados e licença
 `src/data/crops.json` vem do export XML da Stardew Valley Wiki (Fandom), conteúdo sob **CC BY-SA**. Por isso:

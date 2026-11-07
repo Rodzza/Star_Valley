@@ -45,6 +45,13 @@ export function EntitlementsProvider({ children }: { children: ReactNode }) {
       setDaily(normalizeState(d, new Date()));
       setIsPro(pro);
       setReady(true);
+      // O cache abre o app rápido; a loja é quem decide. Assinatura cancelada ou
+      // reembolsada deixa de valer aqui. Sem internet (null), mantém o cache.
+      const daLoja = await billing.refresh();
+      if (daLoja !== null && daLoja !== pro) {
+        setIsPro(daLoja);
+        await saveProCache(daLoja);
+      }
     })();
     // Reavalia a cada minuto para a liberação expirar à meia-noite com o app aberto.
     const id = setInterval(() => setTick((t) => t + 1), 60_000);
