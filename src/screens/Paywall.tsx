@@ -12,23 +12,45 @@ export function Paywall({ onDone }: { onDone: () => void }) {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    void billing.getPlans().then(setPlans);
+    billing
+      .getPlans()
+      .then((lista) => {
+        setPlans(lista);
+        if (lista.length === 0) setMessage('Os planos não estão disponíveis agora. Tente de novo mais tarde.');
+        else if (!lista.some((p) => p.id === selected)) setSelected(lista[0]!.id);
+      })
+      .catch(() => setMessage('Não foi possível falar com a Google Play. Confira a internet e abra esta tela de novo.'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const plan = plans.find((p) => p.id === selected);
 
   async function onContinue() {
     setBusy(true);
-    const ok = await buyPro(selected);
-    setBusy(false);
-    if (ok) onDone();
-    else setMessage('A compra não foi concluída.');
+    setMessage('');
+    try {
+      const ok = await buyPro(selected);
+      if (ok) onDone();
+      else setMessage('A compra não foi concluída. Nada foi cobrado.');
+    } catch {
+      setMessage('A Google Play não conseguiu concluir a compra. Confira a internet e tente de novo.');
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function onRestore() {
-    const ok = await restorePurchases();
-    if (ok) onDone();
-    else setMessage('Nenhuma compra encontrada para restaurar.');
+    setBusy(true);
+    setMessage('');
+    try {
+      const ok = await restorePurchases();
+      if (ok) onDone();
+      else setMessage('Nenhuma compra encontrada nesta conta Google.');
+    } catch {
+      setMessage('Não foi possível consultar suas compras agora. Tente de novo.');
+    } finally {
+      setBusy(false);
+    }
   }
 
   return (
@@ -89,7 +111,7 @@ export function Paywall({ onDone }: { onDone: () => void }) {
         </p>
       )}
       {message && <p role="status">{message}</p>}
-      <button className="link" onClick={onRestore}>
+      <button className="link" disabled={busy} onClick={onRestore}>
         Restaurar compras
       </button>
       <button className="link" onClick={onDone}>

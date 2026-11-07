@@ -1,0 +1,93 @@
+# Gera a versão para a GOOGLE PLAY (.aab assinado) com anúncios e compras REAIS.
+# Só roda manualmente: Actions › "Versão para a loja" › Run workflow.
+#
+# Segredos necessários (Settings › Secrets and variables › Actions › New repository secret):
+#   ADMOB_APP_ID                 ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY  (ID do app no AdMob)
+#   VITE_ADMOB_REWARDED_ID       ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY  (unidade Premiado)
+#   VITE_REVENUECAT_ANDROID_KEY  goog_...                                (RevenueCat › API keys)
+#   ANDROID_KEYSTORE_BASE64      chave de upload (.jks) em base64
+#   ANDROID_KEYSTORE_PASSWORD    senha da chave
+#   ANDROID_KEY_ALIAS            alias da chave
+#   ANDROID_KEY_PASSWORD         senha do alias
+# O resultado fica em Actions › (execução) › Artifacts › valley-tracker-loja.
+name: Versão para a loja
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Conferir segredos e ID do app
+        env:
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+          VITE_ADMOB_REWARDED_ID: ${{ secrets.VITE_ADMOB_REWARDED_ID }}
+          VITE_REVENUECAT_ANDROID_KEY: ${{ secrets.VITE_REVENUECAT_ANDROID_KEY }}
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          falta=0
+          for v in ADMOB_APP_ID VITE_ADMOB_REWARDED_ID VITE_REVENUECAT_ANDROID_KEY ANDROID_KEYSTORE_BASE64; do
+            if [ -z "${!v}" ]; then echo "::error::Falta o segredo $v"; falta=1; fi
+          done
+          [[ "$ADMOB_APP_ID" =~ ^ca-app-pub-[0-9]{16}~[0-9]{10}$ ]] || { echo "::error::ADMOB_APP_ID fora do formato ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"; falta=1; }
+          [[ "$VITE_ADMOB_REWARDED_ID" =~ ^ca-app-pub-[0-9]{16}/[0-9]{10}$ ]] || { echo "::error::VITE_ADMOB_REWARDED_ID fora do formato ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY"; falta=1; }
+          [[ "$VITE_REVENUECAT_ANDROID_KEY" == goog_* ]] || { echo "::error::VITE_REVENUECAT_ANDROID_KEY deve começar com goog_"; falta=1; }
+          if grep -q "com.example" capacitor.config.ts; then
+            echo "::error::Troque o appId de capacitor.config.ts (ainda é com.example...) antes de gerar a versão da loja"; falta=1
+          fi
+          exit $falta
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm test
+
+      - name: Build de produção (anúncios e compras reais)
+        run: npm run build
+        env:
+          VITE_ADMOB_REWARDED_ID: ${{ secrets.VITE_ADMOB_REWARDED_ID }}
+          VITE_REVENUECAT_ANDROID_KEY: ${{ secrets.VITE_REVENUECAT_ANDROID_KEY }}
+
+      - run: npx cap add android
+      - run: npx tsx tools/configureAndroid.ts
+        env:
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+      - run: npx cap sync android
+
+      - name: Número da versão (a Play exige um número maior a cada envio)
+        run: |
+          NOME=$(node -p "require('./package.json').version")
+          sed -i -E "s/versionCode [0-9]+/versionCode ${{ github.run_number }}/; s/versionName \"[^\"]+\"/versionName \"$NOME\"/" android/app/build.gradle
+          grep -E "versionCode|versionName" android/app/build.gradle
+
+      - name: Compilar .aab assinado
+        working-directory: android
+        env:
+          KS_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          ./gradlew bundleRelease --no-daemon \
+            -Pandroid.injected.signing.store.file="$RUNNER_TEMP/upload.jks" \
+            -Pandroid.injected.signing.store.password="$KS_PASS" \
+            -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
+            -Pandroid.injected.signing.key.password="$KEY_PASS"
+          rm -f "$RUNNER_TEMP/upload.jks"
+
+      - run: cp android/app/build/outputs/bundle/release/app-release.aab ValleyTracker-${{ github.run_number }}.aab
+      - uses: actions/upload-artifact@v4
+        with:
+          name: valley-tracker-loja
+          path: ValleyTracker-*.aab
+          retention-days: 30
