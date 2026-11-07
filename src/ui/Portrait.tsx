@@ -1,4 +1,5 @@
 import { displayName, slug } from '../utils/villagers';
+import { useUserPortrait } from '../utils/userPortraits';
 
 const files = import.meta.glob('../assets/portraits/*.{png,webp,jpg,jpeg}', { eager: true, import: 'default' }) as Record<string, string>;
 const bySlug = new Map<string, string>(
@@ -11,9 +12,13 @@ const hue = (name: string): number => {
   return h;
 };
 
-/** Retrato do morador: usa src/assets/portraits/<nome>.png se existir; senão, avatar com a inicial. */
+/**
+ * Retrato do morador, nesta ordem: imagem que o usuário escolheu na galeria (fica só no aparelho),
+ * src/assets/portraits/<nome>.png (só arte com direito de uso) ou avatar com a inicial.
+ */
 export function Portrait({ name, size = 96 }: { name: string; size?: number }) {
-  const url = bySlug.get(slug(name));
+  const escolhida = useUserPortrait(name);
+  const url = escolhida ?? bySlug.get(slug(name));
   if (url) return <img className="portrait" src={url} alt="" width={size} height={size} draggable={false} />;
   const h = hue(name);
   return (
