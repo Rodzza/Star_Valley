@@ -105,47 +105,64 @@ function ItemTile({ entry, onItem, size = 'md' }: { entry: GiftEntry; onItem: (n
   );
 }
 
-function Relatives({ items, onVillager }: { items: readonly Relative[]; onVillager: (name: string) => void }) {
+type Tab = 'presentes' | 'horarios' | 'eventos' | 'casamento' | 'missoes';
+const TABS: ReadonlyArray<{ id: Tab; label: string; soon?: boolean }> = [
+  { id: 'presentes', label: 'Presentes' },
+  { id: 'horarios', label: 'Horários', soon: true },
+  { id: 'eventos', label: 'Eventos de\u00a0Coração', soon: true },
+  { id: 'casamento', label: 'Casamento', soon: true },
+  { id: 'missoes', label: 'Missões', soon: true },
+];
+
+/** Molduras e caixa de texto escuras nas regiões sombrias; pergaminho nas claras (como no painel da Haley). */
+const DARK_SCENES = new Set(['montanha', 'floresta']);
+
+/** Nome que leva ao painel do morador, quando ele existe na lista. */
+function NameLink({ name, onVillager }: { name: string; onVillager: (n: string) => void }) {
+  if (!KNOWN.has(name)) return <>{displayName(name)}</>;
   return (
-    <ul className="rel">
-      {items.map((r) => {
-        const label = displayName(r.name) + (r.role ? ` (${roleLabel(r.role)})` : '');
-        return (
-          <li key={r.name + (r.role ?? '')}>
-            {KNOWN.has(r.name) ? (
-              <button type="button" className="rel-link" onClick={() => onVillager(r.name)}>
-                {label}
-              </button>
-            ) : (
-              label
-            )}
-          </li>
-        );
-      })}
-    </ul>
+    <button type="button" className="vpx-name-link" onClick={() => onVillager(name)}>
+      {displayName(name)}
+    </button>
   );
 }
 
-/** Texto "Sobre" montado só com os dados (onde mora, romance, família): nada inventado. */
-function about(v: Villager): string {
+/** Texto "Sobre" montado só com os dados (onde mora, romance, família, amigos): nada inventado. */
+function About({ v, onVillager }: { v: Villager; onVillager: (n: string) => void }) {
   const nome = displayName(v.name);
-  const partes = [`${nome} mora em ${addressLabel(v.address)}, ${locationLabel(v.location)}.`];
-  if (v.romance === 'bachelor') partes.push('É um dos candidatos de casamento.');
-  else if (v.romance === 'bachelorette') partes.push('É uma das candidatas de casamento.');
-  else partes.push('Não é romanceável.');
-  if (v.family.length) partes.push(`Família: ${v.family.map((r) => displayName(r.name) + (r.role ? ` (${roleLabel(r.role).toLowerCase()})` : '')).join(', ')}.`);
-  if (v.friends.length) partes.push(`Amigos próximos: ${v.friends.map((r) => displayName(r.name)).join(', ')}.`);
-  return partes.join(' ');
+  const romance =
+    v.romance === 'bachelor' ? 'É um dos candidatos de casamento.' : v.romance === 'bachelorette' ? 'É uma das candidatas de casamento.' : 'Não é romanceável.';
+  return (
+    <p className="vpx-about">
+      {nome} mora em {addressLabel(v.address)}, {locationLabel(v.location)}. {romance}
+      {v.family.length > 0 && (
+        <>
+          {' '}Família:{' '}
+          {v.family.map((r, i) => (
+            <span key={r.name + (r.role ?? '')}>
+              {i > 0 && ', '}
+              <NameLink name={r.name} onVillager={onVillager} />
+              {r.role ? ` (${roleLabel(r.role).toLowerCase()})` : ''}
+            </span>
+          ))}
+          .
+        </>
+      )}
+      {v.friends.length > 0 && (
+        <>
+          {' '}Amigos próximos:{' '}
+          {v.friends.map((r, i) => (
+            <span key={r.name}>
+              {i > 0 && ', '}
+              <NameLink name={r.name} onVillager={onVillager} />
+            </span>
+          ))}
+          .
+        </>
+      )}
+    </p>
+  );
 }
-
-type Tab = 'presentes' | 'relacoes' | 'horarios' | 'eventos' | 'missoes';
-const TABS: ReadonlyArray<{ id: Tab; label: string; soon?: boolean }> = [
-  { id: 'presentes', label: 'Presentes' },
-  { id: 'relacoes', label: 'Relações' },
-  { id: 'horarios', label: 'Horários', soon: true },
-  { id: 'eventos', label: 'Eventos de Coração', soon: true },
-  { id: 'missoes', label: 'Missões', soon: true },
-];
 
 function Dashboard({
   villager: v,
@@ -166,6 +183,14 @@ function Dashboard({
     setTaste('love');
   }, [v.name]);
 
+  // O painel ocupa a tela inteira: esconde o cartão e o "Voltar" do app enquanto está aberto.
+  useEffect(() => {
+    document.body.classList.add('vpx-on');
+    return () => document.body.classList.remove('vpx-on');
+  }, []);
+
+  const scene = SCENE[v.location] ?? 'vila';
+  const tone = DARK_SCENES.has(scene) ? 'dark' : 'light';
   const loved = g?.tastes.love ?? [];
   const destaque = loved.slice(0, 6);
   const esquerda = destaque.filter((_, i) => i % 2 === 0);
@@ -173,67 +198,65 @@ function Dashboard({
   const items = g?.tastes[taste] ?? [];
   const groups = g?.groups[taste] ?? [];
   const nome = displayName(v.name);
+  const soon = TABS.find((t) => t.id === tab)?.soon;
 
   return (
-    <div className="vp">
-      <button type="button" className="back" onClick={onBack}>
-        ← Moradores
-      </button>
-
-      <header className="vp-top">
-        <div className="vp-top-item">
-          <img src={casaIcon} alt="" className="vp-top-icon" />
-          <span>
-            <small>Mora</small>
-            {locationLabel(v.location)}
-          </span>
+    <div className={`vpx vpx--${scene} vpx--${tone}`}>
+      <header className="vpx-top">
+        <button type="button" className="vpx-back" onClick={onBack} aria-label="Voltar para os moradores">
+          ‹
+        </button>
+        <div className="vpx-top-item">
+          <img src={casaIcon} alt="" className="vpx-top-icon" />
+          <span>Mora: {locationLabel(v.location)}</span>
         </div>
-        <div className="vp-top-item vp-top-item--right">
+        <div className="vpx-top-item vpx-top-item--right">
           <span>
-            <small>Aniversário</small>
-            {seasonLabel(v.birthday.season)} {v.birthday.day}
+            Aniversário: {seasonLabel(v.birthday.season)} {v.birthday.day}
           </span>
-          <img src={SEASON_ICON[v.birthday.season]} alt="" className="vp-top-icon" />
+          <img src={SEASON_ICON[v.birthday.season]} alt="" className="vpx-top-icon" />
         </div>
       </header>
 
-      <section className={`vp-stage vp-scene--${SCENE[v.location] ?? 'vila'}`} aria-label={`Presentes que ${nome} ama`}>
-        <div className="vp-col">
+      <section className="vpx-stage" aria-label={`Presentes que ${nome} ama`}>
+        <div className="vpx-portrait">
+          <Portrait name={v.name} size={240} />
+        </div>
+        <div className="vpx-col vpx-col--left">
           {esquerda.map((e) => (
             <ItemTile key={e.name} entry={e} onItem={onItem} />
           ))}
         </div>
-        <div className="vp-center">
-          <Portrait name={v.name} size={168} />
-          <h1 className="vp-plaque">{nome}</h1>
-        </div>
-        <div className="vp-col">
+        <div className="vpx-col vpx-col--right">
           {direita.map((e) => (
             <ItemTile key={e.name} entry={e} onItem={onItem} />
           ))}
         </div>
+        <h1 className="vpx-plaque">{nome}</h1>
       </section>
-      {loved.length === 0 && <p className="muted center small">Ainda não temos os presentes favoritos de {nome}.</p>}
+      {loved.length === 0 && <p className="vpx-note">Ainda não temos os presentes favoritos de {nome}.</p>}
 
-      <p className="vp-about">{about(v)}</p>
+      <About v={v} onVillager={onVillager} />
 
-      <nav className="vp-tabs" role="tablist" aria-label="Seções">
+      <nav className="vpx-tabs" role="tablist" aria-label="Seções">
         {TABS.map((t) => (
           <button
             key={t.id}
             type="button"
             role="tab"
             aria-selected={tab === t.id}
-            className={`vp-tab ${t.soon ? 'vp-tab--soon' : ''}`}
+            className={`vpx-tab ${t.soon ? 'vpx-tab--soon' : ''}`}
             onClick={() => setTab(t.id)}
           >
-            {t.soon && <span aria-hidden="true">🔒 </span>}
+            <span className="vpx-tab-badge" aria-hidden="true">
+              {t.soon ? '🔒' : '★'}
+            </span>
             {t.label}
           </button>
         ))}
       </nav>
 
-      <section className="card vp-panel" role="tabpanel">
+      <section className="vpx-panel" role="tabpanel">
         {tab === 'presentes' &&
           (g ? (
             <>
@@ -268,35 +291,13 @@ function Dashboard({
           ) : (
             <p className="muted">Ainda não temos os gostos de presente deste personagem.</p>
           ))}
-
-        {tab === 'relacoes' &&
-          (v.family.length === 0 && v.friends.length === 0 ? (
-            <p className="muted center">Nenhuma relação registrada.</p>
-          ) : (
-            <>
-              {v.family.length > 0 && (
-                <>
-                  <h3>Família</h3>
-                  <Relatives items={v.family} onVillager={onVillager} />
-                </>
-              )}
-              {v.friends.length > 0 && (
-                <>
-                  <h3>Amigos</h3>
-                  <Relatives items={v.friends} onVillager={onVillager} />
-                </>
-              )}
-            </>
-          ))}
-
-        {TABS.find((t) => t.id === tab)?.soon && (
+        {soon && (
           <p className="muted center">
             <strong>Em breve.</strong> Esta seção ainda está sendo preparada.
           </p>
         )}
+        <p className="muted small">Fonte: Stardew Valley Wiki (CC BY-SA). Nomes de itens traduzidos sem conferência no jogo.</p>
       </section>
-
-      <p className="muted small">Fonte: Stardew Valley Wiki (CC BY-SA). Nomes de itens traduzidos sem conferência no jogo.</p>
     </div>
   );
 }

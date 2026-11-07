@@ -19,9 +19,10 @@ describe('itens de presente', () => {
     expect(itemEmoji('Diamond')).toBe('💎');
     expect(itemEmoji('Pumpkin Soup')).toBe('🍲');
     expect(itemEmoji('Sturgeon')).toBe('🐟');
-    expect(itemEmoji('Pumpkin')).toBe('🥕');
+    expect(itemEmoji('Pumpkin')).toBe('🎃');
+    expect(itemEmoji('Parsnip')).toBe('🥕');
     expect(itemEmoji('Void Egg')).toBe('🥚');
-    expect(itemEmoji('Eggplant')).toBe('🥕');
+    expect(itemEmoji('Eggplant')).toBe('🍆');
     expect(itemEmoji('Sashimi')).toBe('🍣');
     expect(itemEmoji('Starfruit')).toBe('🥕');
     expect(itemEmoji('Truffle Oil')).toBe('🧺');

@@ -68,6 +68,12 @@ export const itemLabel = (name: string): string => ITEM_PT[name] ?? CROP_PT[name
 /** Ícone genérico por palavras do nome em inglês. A primeira regra que casar vence. */
 const ICON_RULES: ReadonlyArray<[RegExp, string]> = [
   [/sashimi|maki/i, '🍣'],
+  [/salad|coleslaw/i, '🥗'],
+  [/cheese(?! cauliflower)/i, '🧀'],
+  [/^coconut$/i, '🥥'], [/^apple$/i, '🍎'], [/^grapes?$/i, '🍇'], [/^melon$/i, '🍈'], [/^(golden )?pumpkin$/i, '🎃'],
+  [/^strawberry$/i, '🍓'], [/^cherry$/i, '🍒'], [/^peach$/i, '🍑'], [/^orange$/i, '🍊'], [/^mango$/i, '🥭'],
+  [/^(blueberry|blackberry|cranberry|salmonberry)$/i, '🫐'], [/^corn$/i, '🌽'], [/^tomato$/i, '🍅'], [/^eggplant$/i, '🍆'],
+  [/^potato$/i, '🥔'], [/^hot pepper$/i, '🌶️'], [/^sunflower$/i, '🌻'], [/^tulip$/i, '🌷'],
   [/\begg\b(?!plant)/i, '🥚'],
   [/wine|beer|ale|mead|juice|cola|coffee|tea\b/i, '🍷'],
   [/cake|cookie|pudding|pie|cobbler|tart|muffin|candy|ice cream|maple bar|treat/i, '🍰'],
