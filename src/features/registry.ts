@@ -49,8 +49,8 @@ export const FEATURES: readonly FeatureDef[] = [
   },
   {
     id: 'floatingQuests',
-    title: 'Assistente flutuante de missões',
-    description: 'Botão translúcido e arrastável sobre o jogo com as missões ativas do último save importado.',
+    title: 'Assistente flutuante',
+    description: 'Botão translúcido e arrastável sobre o jogo: festival, aniversariantes do dia e o que plantar.',
     access: 'pro',
   },
   { id: 'cloudSync', title: 'Sincronizar e fazer backup', description: 'Suas fazendas em todos os dispositivos.', access: 'pro' },
