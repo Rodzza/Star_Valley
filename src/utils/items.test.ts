@@ -43,3 +43,22 @@ describe('descrições dos moradores', () => {
     expect(Object.keys(BIOS).filter((n) => !nomes.has(n))).toEqual([]);
   });
 });
+
+import { noteLabel } from './items';
+import type { GiftData as GD } from './gifts';
+
+describe('observações dos presentes', () => {
+  it('traduz frases fixas e listas de itens', () => {
+    expect(noteLabel('any vegetable')).toBe('qualquer legume');
+    expect(noteLabel('All but Void')).toBe('todos, menos o do Vácuo');
+    expect(noteLabel('Blackberry, Strawberry')).toBe('Amora, Morango');
+  });
+
+  it('nenhuma observação da wiki fica totalmente em inglês', () => {
+    const g = giftsJson as unknown as GD;
+    const notas = new Set<string>();
+    for (const v of g.villagers) for (const lista of Object.values(v.tastes)) for (const e of lista) if (e.note) notas.add(e.note);
+    const iguais = [...notas].filter((n) => n !== '1' && noteLabel(n) === n);
+    expect(iguais).toEqual([]);
+  });
+});
