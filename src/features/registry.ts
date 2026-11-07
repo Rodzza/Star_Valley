@@ -50,7 +50,7 @@ export const FEATURES: readonly FeatureDef[] = [
   {
     id: 'floatingQuests',
     title: 'Assistente flutuante',
-    description: 'Botão translúcido e arrastável sobre o jogo: festival, aniversariantes do dia e o que plantar.',
+    description: 'Botão translúcido sobre o jogo: festival, Carrinho de Viagem, aniversariantes do dia e o que plantar.',
     access: 'pro',
   },
   { id: 'cloudSync', title: 'Sincronizar e fazer backup', description: 'Suas fazendas em todos os dispositivos.', access: 'pro' },

@@ -86,7 +86,7 @@ export function FloatingQuests() {
       <h1>Assistente flutuante</h1>
       <p>
         Um botão translúcido que fica sobre o jogo e que você arrasta pelas bordas da tela. Tocando nele, mostra o que
-        importa no dia: festival, aniversariantes e o que eles amam, e o que ainda vale plantar.
+        importa no dia: festival, Carrinho de Viagem, aniversariantes e o que eles amam, e o que ainda vale plantar.
       </p>
 
       {!overlaySupported() && (

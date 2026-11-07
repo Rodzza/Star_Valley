@@ -18,6 +18,35 @@ export interface GameDay {
 /** Sementes que não se compram normalmente (Semente Rara, só no Carrinho de Viagem): fora da sugestão do dia. */
 const SEMENTES_RARAS = new Set(['Sweet Gem Berry']);
 
+export interface CartVisit {
+  where: string;
+  hours: string;
+}
+
+/**
+ * Carrinho de Viagem (Stardew Valley Wiki, versão 1.6): sexta e domingo, 6h às 20h, na Floresta
+ * Cindersap. Também todo dia no Festival do Deserto (Primavera 15–17, 12h às 2h) e no Mercado
+ * Noturno (Inverno 15–17, 17h às 2h).
+ */
+export function cartOn({ season, day }: GameDay): CartVisit | null {
+  if (season === 'spring' && day >= 15 && day <= 17) return { where: 'Festival do Deserto', hours: '12h às 2h' };
+  if (season === 'winter' && day >= 15 && day <= 17) return { where: 'Mercado Noturno, na praia', hours: '17h às 2h' };
+  const w = weekdayOf(day);
+  if (w === 'Sex' || w === 'Dom') return { where: 'Floresta Cindersap, ao sul da fazenda', hours: '6h às 20h' };
+  return null;
+}
+
+/** Próximo dia (a partir de amanhã) em que o carrinho aparece. */
+export function nextCart(d: GameDay): { day: GameDay; visit: CartVisit } {
+  let cur = d;
+  for (let i = 0; i < 14; i++) {
+    cur = nextDay(cur);
+    const visit = cartOn(cur);
+    if (visit) return { day: cur, visit };
+  }
+  throw new Error('carrinho sem próxima visita'); // não acontece: toda semana tem sexta
+}
+
 const NEXT: Record<SeasonKey, SeasonKey> = { spring: 'summer', summer: 'fall', fall: 'winter', winter: 'spring' };
 
 /** Dia seguinte, virando a estação depois do dia 28. */
@@ -68,6 +97,15 @@ export function buildDayOverlay(d: GameDay, villagers: readonly Villager[], gift
   } else {
     const prox = nextBirthday(d, villagers);
     if (prox) lines.push(`🎂 Próximo aniversário: ${displayName(prox.v.name)}, dia ${prox.day}`);
+  }
+
+  const carrinho = cartOn(d);
+  if (carrinho) {
+    lines.push(`🛒 Carrinho de Viagem hoje: ${carrinho.where}, ${carrinho.hours}`);
+  } else {
+    const prox = nextCart(d);
+    const quando = prox.day.season === d.season ? `${weekdayOf(prox.day.day)}, dia ${prox.day.day}` : dayTitle(prox.day);
+    lines.push(`🛒 Próximo Carrinho de Viagem: ${quando}`);
   }
 
   if (d.season === 'winter') {

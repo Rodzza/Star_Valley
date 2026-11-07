@@ -46,3 +46,28 @@ describe('sugestão de plantio', () => {
     expect(c.lines.join(' ')).not.toContain('Baga-gema');
   });
 });
+
+import { cartOn, nextCart } from './dayOverlay';
+
+describe('Carrinho de Viagem', () => {
+  it('aparece sexta e domingo na floresta', () => {
+    expect(cartOn({ season: 'fall', day: 5 })?.where).toContain('Floresta Cindersap'); // sexta
+    expect(cartOn({ season: 'fall', day: 7 })?.hours).toBe('6h às 20h'); // domingo
+    expect(cartOn({ season: 'fall', day: 6 })).toBeNull(); // sábado
+  });
+
+  it('aparece todo dia no Festival do Deserto e no Mercado Noturno', () => {
+    expect(cartOn({ season: 'spring', day: 15 })?.where).toBe('Festival do Deserto');
+    expect(cartOn({ season: 'winter', day: 16 })?.hours).toBe('17h às 2h');
+  });
+
+  it('diz quando é o próximo, inclusive virando a estação', () => {
+    expect(nextCart({ season: 'fall', day: 11 }).day).toEqual({ season: 'fall', day: 12 });
+    expect(nextCart({ season: 'fall', day: 28 }).day).toEqual({ season: 'winter', day: 5 });
+  });
+
+  it('entra no botão flutuante', () => {
+    expect(build('fall', 12).lines.some((l) => l.startsWith('🛒 Carrinho de Viagem hoje'))).toBe(true);
+    expect(build('fall', 11).lines).toContain('🛒 Próximo Carrinho de Viagem: Sex, dia 12');
+  });
+});
