@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, type ChangeEvent, type CSSProperties } from 'react';
 import giftsJson from '../data/gifts.json';
 import villagersJson from '../data/villagers.json';
 import { BIOS } from '../data/bios';
@@ -10,7 +10,7 @@ import invernoIcon from '../assets/icons/inverno.png';
 import { Portrait } from '../ui/Portrait';
 import { TASTES, TASTE_LABEL, tasteOf, type GiftData, type GiftEntry, type Taste } from '../utils/gifts';
 import { itemEmoji, itemLabel, noteLabel } from '../utils/items';
-import { removeUserPortrait, setUserPortrait, useUserPortrait } from '../utils/userPortraits';
+import { isDark, removeUserPortrait, setUserPortrait, useUserPortrait, useUserPortraitColor } from '../utils/userPortraits';
 import {
   addressLabel,
   displayName,
@@ -241,7 +241,10 @@ function Dashboard({
   }, []);
 
   const scene = SCENE[v.location] ?? 'vila';
-  const tone = DARK_SCENES.has(scene) ? 'dark' : 'light';
+  // Com imagem escolhida pelo usuário, o painel assume a cor do fundo dela.
+  const cor = useUserPortraitColor(v.name);
+  const tone = cor ? (isDark(cor) ? 'dark' : 'light') : DARK_SCENES.has(scene) ? 'dark' : 'light';
+  const corStyle = cor ? ({ '--scene-bg': `rgb(${cor.join(' ')})` } as CSSProperties) : undefined;
   const loved = g?.tastes.love ?? [];
   const destaque = loved.slice(0, 6);
   const esquerda = destaque.filter((_, i) => i % 2 === 0);
@@ -252,7 +255,7 @@ function Dashboard({
   const soon = TABS.find((t) => t.id === tab)?.soon;
 
   return (
-    <div className={`vpx vpx--${scene} vpx--${tone}`}>
+    <div className={`vpx ${cor ? 'vpx--custom' : `vpx--${scene}`} vpx--${tone}`} style={corStyle}>
       <header className="vpx-top">
         <button type="button" className="vpx-back" onClick={onBack} aria-label="Voltar para os moradores">
           ‹
