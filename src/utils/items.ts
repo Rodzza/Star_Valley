@@ -196,6 +196,10 @@ export const ITEM_PT: Record<string, string> = {
   'Wheat Flour': 'Farinha de Trigo',
   'White Algae': 'Alga Branca',
   Wood: 'Madeira',
+  // Ingredientes de receitas.
+  Milk: 'Leite', Vinegar: 'Vinagre', Salmon: 'Salmão', Eel: 'Enguia', 'Any Fish': 'Qualquer peixe', Rice: 'Arroz',
+  'Midnight Carp': 'Carpa da Meia-noite', 'Squid Ink': 'Tinta de Lula', Banana: 'Banana', 'Taro Root': 'Raiz de Taro',
+  Pineapple: 'Abacaxi', Moss: 'Musgo',
 };
 
 /** Nome em português (itens de presente, depois culturas); sem tradução, mantém o original. */

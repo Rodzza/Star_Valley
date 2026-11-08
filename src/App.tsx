@@ -6,6 +6,7 @@ import { CropPlanner } from './screens/CropPlanner';
 import { Credits } from './screens/Credits';
 import { FloatingQuests, syncOverlayDay } from './screens/FloatingQuests';
 import { Pets } from './screens/Pets';
+import { Recipes } from './screens/Recipes';
 import { GiftFinder } from './screens/GiftFinder';
 import { SaveProgress } from './screens/SaveProgress';
 import { Villagers } from './screens/Villagers';
@@ -38,6 +39,8 @@ function FeatureContent({ id }: { id: FeatureId }) {
       return <Villagers />;
     case 'pets':
       return <Pets />;
+    case 'recipes':
+      return <Recipes />;
     case 'cropPlanner':
       return <CropPlanner />;
     case 'giftFinder':
