@@ -1,3 +1,4 @@
+import { useBackHandler } from '../native/backButton';
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type CSSProperties } from 'react';
 import giftsJson from '../data/gifts.json';
 import villagersJson from '../data/villagers.json';
@@ -53,6 +54,12 @@ export function Villagers() {
   const back = () => setStack((s) => (s.length > 1 ? s.slice(0, -1) : s));
   const openVillager = (name: string) => open({ kind: 'villager', name });
   const openItem = (name: string) => open({ kind: 'item', name });
+  // Botão voltar do Android: fecha item/personagem antes de sair dos Moradores.
+  useBackHandler(() => {
+    if (stack.length <= 1) return false;
+    back();
+    return true;
+  });
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
