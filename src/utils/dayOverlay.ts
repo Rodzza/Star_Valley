@@ -118,7 +118,7 @@ export function buildDayOverlay(d: GameDay, villagers: readonly Villager[], gift
     else lines.push('🌱 Não dá mais tempo de colher nada plantado hoje nesta estação.');
   }
 
-  lines.push('Mude o dia no Valley Tracker para atualizar.');
+  lines.push('Mude o dia no Valley Notes para atualizar.');
   return { title: dayTitle(d), lines };
 }
 
