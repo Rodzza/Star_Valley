@@ -71,3 +71,20 @@ describe('Carrinho de Viagem', () => {
     expect(build('fall', 11).lines).toContain('🛒 Próximo Carrinho de Viagem: Sex, dia 12');
   });
 });
+
+import { advanceDays, upcomingDays } from './dayOverlay';
+
+describe('dias enviados ao botão (Dormi sem abrir o app)', () => {
+  it('lista começa no dia marcado e atravessa as estações', () => {
+    const dias = upcomingDays({ season: 'fall', day: 27 }, 56);
+    expect(dias).toHaveLength(56);
+    expect(dias[0]).toEqual({ season: 'fall', day: 27 });
+    expect(dias[2]).toEqual({ season: 'winter', day: 1 });
+  });
+
+  it('avançar N dias no botão leva à mesma data no app', () => {
+    expect(advanceDays({ season: 'fall', day: 11 }, 3)).toEqual({ season: 'fall', day: 14 });
+    expect(advanceDays({ season: 'winter', day: 27 }, 2)).toEqual({ season: 'spring', day: 1 });
+    expect(advanceDays({ season: 'fall', day: 11 }, 0)).toEqual({ season: 'fall', day: 11 });
+  });
+});

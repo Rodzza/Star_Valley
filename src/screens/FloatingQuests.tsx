@@ -3,9 +3,9 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import cropsJson from '../data/crops.json';
 import giftsJson from '../data/gifts.json';
 import villagersJson from '../data/villagers.json';
-import { overlayHide, overlayRequestPermission, overlayShow, overlayStatus, overlaySupported } from '../native/overlay';
+import { overlayHide, overlayProgress, overlayRequestPermission, overlayShowDays, overlayStatus, overlaySupported } from '../native/overlay';
 import type { Crop } from '../utils/crops';
-import { buildDayOverlay, nextDay, previousDay, type GameDay } from '../utils/dayOverlay';
+import { advanceDays, buildDayOverlay, nextDay, previousDay, upcomingDays, type GameDay } from '../utils/dayOverlay';
 import type { GiftData } from '../utils/gifts';
 import { DAYS_IN_SEASON, SEASON_ORDER } from '../utils/calendar';
 import { seasonLabel, type VillagerData } from '../utils/villagers';
@@ -14,6 +14,11 @@ const villagers = (villagersJson as unknown as VillagerData).villagers;
 const gifts = giftsJson as unknown as GiftData;
 const crops = (cropsJson as unknown as { crops: Crop[] }).crops;
 const DAY_KEY = 'dia-do-jogo-v1';
+/** Quantos dias vão para o botão de uma vez: duas estações de "Dormi" sem abrir o app. */
+const DAYS_AHEAD = 56;
+
+const daysFrom = (d: GameDay) => upcomingDays(d, DAYS_AHEAD).map((x) => buildDayOverlay(x, villagers, gifts, crops));
+const saveDay = (d: GameDay) => void Preferences.set({ key: DAY_KEY, value: JSON.stringify(d) });
 
 async function loadDay(): Promise<GameDay> {
   try {
@@ -38,35 +43,51 @@ export function FloatingQuests() {
     setRunning(s.running);
   }, []);
 
+  /**
+   * Traz para o app os dias que o jogador avançou no botão ("Dormi") e reenvia a lista a partir
+   * do dia atual, para o botão nunca ficar sem dias pela frente.
+   */
+  const sync = useCallback(async () => {
+    const saved = await loadDay();
+    const s = await overlayStatus();
+    setGranted(s.granted);
+    setRunning(s.running);
+    const steps = s.running ? await overlayProgress() : 0;
+    const today = advanceDays(saved, steps);
+    setDay(today);
+    if (steps > 0) {
+      saveDay(today);
+      await overlayShowDays(daysFrom(today));
+    }
+  }, []);
+
   useEffect(() => {
-    void loadDay().then(setDay);
-    void refresh();
-    // Ao voltar da tela de permissão do Android, confere de novo.
-    const onVisible = () => void refresh();
+    void sync();
+    // Ao voltar do jogo ou da tela de permissão do Android, confere de novo.
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') void sync();
+    };
     document.addEventListener('visibilitychange', onVisible);
     window.addEventListener('focus', onVisible);
     return () => {
       document.removeEventListener('visibilitychange', onVisible);
       window.removeEventListener('focus', onVisible);
     };
-  }, [refresh]);
+  }, [sync]);
 
   const content = useMemo(() => (day ? buildDayOverlay(day, villagers, gifts, crops) : null), [day]);
 
   // Botão já ativo: troca de dia atualiza o que ele mostra.
   const changeDay = async (d: GameDay) => {
     setDay(d);
-    void Preferences.set({ key: DAY_KEY, value: JSON.stringify(d) });
-    if (running) {
-      const c = buildDayOverlay(d, villagers, gifts, crops);
-      await overlayShow(c.title, c.lines);
-    }
+    saveDay(d);
+    if (running) await overlayShowDays(daysFrom(d));
   };
 
   const show = async () => {
-    if (!content) return;
-    const r = await overlayShow(content.title, content.lines);
-    if (r === 'shown') setMessage('Botão ativado. Abra o jogo: ele aparece sobre a tela. Toque nele para ver o dia.');
+    if (!day) return;
+    const r = await overlayShowDays(daysFrom(day));
+    if (r === 'shown') setMessage('Botão ativado. Abra o jogo: ele aparece sobre a tela. Toque nele para ver o dia e, ao dormir no jogo, toque em Dormi.');
     else if (r === 'no-permission') setMessage('Falta permitir "Exibir sobre outros apps" para o Valley Tracker.');
     else if (r === 'unsupported') setMessage('O botão flutuante só funciona no app Android.');
     else setMessage('Não consegui ativar o botão.');
@@ -127,7 +148,10 @@ export function FloatingQuests() {
           +
         </button>
       </div>
-      <p className="muted small">Toque em + a cada dia que passar no jogo. O app guarda o dia marcado.</p>
+      <p className="muted small">
+        Com o botão ativo, você nem precisa voltar aqui: ao dormir no jogo, toque no botão e em <strong>🌙 Dormi</strong>.
+        Depois de uma pausa, ele pergunta se ainda é o mesmo dia. A data daqui se atualiza sozinha quando você abrir o app.
+      </p>
 
       <h2>2. Permita exibir sobre outros apps</h2>
       <p className="muted">
