@@ -1,0 +1,1933 @@
+[
+  {
+    "name": "Fried Egg",
+    "pt": "Ovo Frito",
+    "ingredients": [
+      {
+        "item": "Egg",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "starter"
+      }
+    ]
+  },
+  {
+    "name": "Omelet",
+    "pt": "Omelete",
+    "ingredients": [
+      {
+        "item": "Egg",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "spring",
+        "year": 1
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "100g"
+      }
+    ]
+  },
+  {
+    "name": "Salad",
+    "pt": "Salada",
+    "ingredients": [
+      {
+        "item": "Leek",
+        "qty": 1
+      },
+      {
+        "item": "Dandelion",
+        "qty": 1
+      },
+      {
+        "item": "Vinegar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Emily",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Cheese Cauliflower",
+    "pt": "Couve-flor com Queijo",
+    "ingredients": [
+      {
+        "item": "Cauliflower",
+        "qty": 1
+      },
+      {
+        "item": "Cheese",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Pam",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Baked Fish",
+    "pt": "Peixe Assado",
+    "ingredients": [
+      {
+        "item": "Sunfish",
+        "qty": 1
+      },
+      {
+        "item": "Bream",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "summer",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Parsnip Soup",
+    "pt": "Sopa de Chirivia",
+    "ingredients": [
+      {
+        "item": "Parsnip",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      },
+      {
+        "item": "Vinegar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Caroline",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Vegetable Medley",
+    "pt": "Mix de Legumes",
+    "ingredients": [
+      {
+        "item": "Tomato",
+        "qty": 1
+      },
+      {
+        "item": "Beet",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Caroline",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Complete Breakfast",
+    "pt": "Café da Manhã Completo",
+    "ingredients": [
+      {
+        "item": "Fried Egg",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      },
+      {
+        "item": "Hashbrowns",
+        "qty": 1
+      },
+      {
+        "item": "Pancakes",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "spring",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Fried Calamari",
+    "pt": "Lula Frita",
+    "ingredients": [
+      {
+        "item": "Squid",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Jodi",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Strange Bun",
+    "pt": "Pão Estranho",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Periwinkle",
+        "qty": 1
+      },
+      {
+        "item": "Void Mayonnaise",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Shane",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Lucky Lunch",
+    "pt": "Almoço da Sorte",
+    "ingredients": [
+      {
+        "item": "Sea Cucumber",
+        "qty": 1
+      },
+      {
+        "item": "Tortilla",
+        "qty": 1
+      },
+      {
+        "item": "Blue Jazz",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "spring",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Fried Mushroom",
+    "pt": "Cogumelo Frito",
+    "ingredients": [
+      {
+        "item": "Common Mushroom",
+        "qty": 1
+      },
+      {
+        "item": "Morel",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Demetrius",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Pizza",
+    "pt": "Pizza",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Tomato",
+        "qty": 1
+      },
+      {
+        "item": "Cheese",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "spring",
+        "year": 2
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "150g"
+      }
+    ]
+  },
+  {
+    "name": "Bean Hotpot",
+    "pt": "Ensopado de Feijão",
+    "ingredients": [
+      {
+        "item": "Green Bean",
+        "qty": 2
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Clint",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Glazed Yams",
+    "pt": "Inhame Glaceado",
+    "ingredients": [
+      {
+        "item": "Yam",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "fall",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Carp Surprise",
+    "pt": "Surpresa de Carpa",
+    "ingredients": [
+      {
+        "item": "Carp",
+        "qty": 4
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "summer",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Hashbrowns",
+    "pt": "Rösti",
+    "ingredients": [
+      {
+        "item": "Potato",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "spring",
+        "year": 2
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "50g"
+      }
+    ]
+  },
+  {
+    "name": "Pancakes",
+    "pt": "Panquecas",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Egg",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "summer",
+        "year": 1
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "100g"
+      }
+    ]
+  },
+  {
+    "name": "Salmon Dinner",
+    "pt": "Jantar de Salmão",
+    "ingredients": [
+      {
+        "item": "Salmon",
+        "qty": 1
+      },
+      {
+        "item": "Amaranth",
+        "qty": 1
+      },
+      {
+        "item": "Kale",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Gus",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Fish Taco",
+    "pt": "Taco de Peixe",
+    "ingredients": [
+      {
+        "item": "Tuna",
+        "qty": 1
+      },
+      {
+        "item": "Tortilla",
+        "qty": 1
+      },
+      {
+        "item": "Red Cabbage",
+        "qty": 1
+      },
+      {
+        "item": "Mayonnaise",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Linus",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Crispy Bass",
+    "pt": "Achigã Crocante",
+    "ingredients": [
+      {
+        "item": "Largemouth Bass",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Kent",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Pepper Poppers",
+    "pt": "Pimentas Recheadas",
+    "ingredients": [
+      {
+        "item": "Hot Pepper",
+        "qty": 1
+      },
+      {
+        "item": "Cheese",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Shane",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Bread",
+    "pt": "Pão",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "summer",
+        "year": 1
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "100g"
+      }
+    ]
+  },
+  {
+    "name": "Tom Kha Soup",
+    "pt": "Sopa Tom Kha",
+    "ingredients": [
+      {
+        "item": "Coconut",
+        "qty": 1
+      },
+      {
+        "item": "Shrimp",
+        "qty": 1
+      },
+      {
+        "item": "Common Mushroom",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Sandy",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Trout Soup",
+    "pt": "Sopa de Truta",
+    "ingredients": [
+      {
+        "item": "Rainbow Trout",
+        "qty": 1
+      },
+      {
+        "item": "Green Algae",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "fall",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Chocolate Cake",
+    "pt": "Bolo de Chocolate",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Egg",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "winter",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Pink Cake",
+    "pt": "Bolo Rosa",
+    "ingredients": [
+      {
+        "item": "Melon",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Egg",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "summer",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Rhubarb Pie",
+    "pt": "Torta de Ruibarbo",
+    "ingredients": [
+      {
+        "item": "Rhubarb",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Marnie",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Cookie",
+    "pt": "Biscoito",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Egg",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "event",
+        "npc": "Evelyn",
+        "hearts": 4
+      }
+    ]
+  },
+  {
+    "name": "Spaghetti",
+    "pt": "Espaguete",
+    "ingredients": [
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Tomato",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Lewis",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Fried Eel",
+    "pt": "Enguia Frita",
+    "ingredients": [
+      {
+        "item": "Eel",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "George",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Spicy Eel",
+    "pt": "Enguia Apimentada",
+    "ingredients": [
+      {
+        "item": "Eel",
+        "qty": 1
+      },
+      {
+        "item": "Hot Pepper",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "George",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Sashimi",
+    "pt": "Sashimi",
+    "ingredients": [
+      {
+        "item": "Any Fish",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Linus",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Maki Roll",
+    "pt": "Maki",
+    "ingredients": [
+      {
+        "item": "Any Fish",
+        "qty": 1
+      },
+      {
+        "item": "Seaweed",
+        "qty": 1
+      },
+      {
+        "item": "Rice",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "summer",
+        "year": 1
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "300g"
+      }
+    ]
+  },
+  {
+    "name": "Tortilla",
+    "pt": "Tortilha",
+    "ingredients": [
+      {
+        "item": "Corn",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "fall",
+        "year": 1
+      },
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "100g"
+      }
+    ]
+  },
+  {
+    "name": "Red Plate",
+    "pt": "Prato Vermelho",
+    "ingredients": [
+      {
+        "item": "Red Cabbage",
+        "qty": 1
+      },
+      {
+        "item": "Radish",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Emily",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "pt": "Berinjela à Parmegiana",
+    "ingredients": [
+      {
+        "item": "Eggplant",
+        "qty": 1
+      },
+      {
+        "item": "Tomato",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Lewis",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Rice Pudding",
+    "pt": "Arroz-doce",
+    "ingredients": [
+      {
+        "item": "Milk",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Rice",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Evelyn",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Ice Cream",
+    "pt": "Sorvete",
+    "ingredients": [
+      {
+        "item": "Milk",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Jodi",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Blueberry Tart",
+    "pt": "Torta de Mirtilo",
+    "ingredients": [
+      {
+        "item": "Blueberry",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Egg",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Pierre",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Autumn's Bounty",
+    "pt": "Fartura de Outono",
+    "ingredients": [
+      {
+        "item": "Yam",
+        "qty": 1
+      },
+      {
+        "item": "Pumpkin",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Demetrius",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Pumpkin Soup",
+    "pt": "Sopa de Abóbora",
+    "ingredients": [
+      {
+        "item": "Pumpkin",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Robin",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Super Meal",
+    "pt": "Super-refeição",
+    "ingredients": [
+      {
+        "item": "Bok Choy",
+        "qty": 1
+      },
+      {
+        "item": "Cranberries",
+        "qty": 1
+      },
+      {
+        "item": "Artichoke",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Kent",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Cranberry Sauce",
+    "pt": "Molho de Oxicoco",
+    "ingredients": [
+      {
+        "item": "Cranberries",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Gus",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Stuffing",
+    "pt": "Recheio",
+    "ingredients": [
+      {
+        "item": "Bread",
+        "qty": 1
+      },
+      {
+        "item": "Cranberries",
+        "qty": 1
+      },
+      {
+        "item": "Hazelnut",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Pam",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Farmer's Lunch",
+    "pt": "Almoço do Fazendeiro",
+    "ingredients": [
+      {
+        "item": "Omelet",
+        "qty": 1
+      },
+      {
+        "item": "Parsnip",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Cultivo",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Survival Burger",
+    "pt": "Hambúrguer de Sobrevivência",
+    "ingredients": [
+      {
+        "item": "Bread",
+        "qty": 1
+      },
+      {
+        "item": "Cave Carrot",
+        "qty": 1
+      },
+      {
+        "item": "Eggplant",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Coleta",
+        "level": 8
+      }
+    ]
+  },
+  {
+    "name": "Dish O' The Sea",
+    "pt": "Prato do Mar",
+    "ingredients": [
+      {
+        "item": "Sardine",
+        "qty": 2
+      },
+      {
+        "item": "Hashbrowns",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Pesca",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Miner's Treat",
+    "pt": "Delícia do Minerador",
+    "ingredients": [
+      {
+        "item": "Cave Carrot",
+        "qty": 2
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Mineração",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Roots Platter",
+    "pt": "Travessa de Raízes",
+    "ingredients": [
+      {
+        "item": "Cave Carrot",
+        "qty": 1
+      },
+      {
+        "item": "Winter Root",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Combate",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Triple Shot Espresso",
+    "pt": "Espresso Triplo",
+    "ingredients": [
+      {
+        "item": "Coffee",
+        "qty": 3
+      }
+    ],
+    "sources": [
+      {
+        "kind": "shop",
+        "where": "Saloon Fruta Estrelar (Gus)",
+        "price": "5.000g"
+      }
+    ]
+  },
+  {
+    "name": "Seafoam Pudding",
+    "pt": "Pudim de Espuma do Mar",
+    "ingredients": [
+      {
+        "item": "Flounder",
+        "qty": 1
+      },
+      {
+        "item": "Midnight Carp",
+        "qty": 1
+      },
+      {
+        "item": "Squid Ink",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Pesca",
+        "level": 9
+      }
+    ]
+  },
+  {
+    "name": "Algae Soup",
+    "pt": "Sopa de Algas",
+    "ingredients": [
+      {
+        "item": "Green Algae",
+        "qty": 4
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Clint",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Pale Broth",
+    "pt": "Caldo Pálido",
+    "ingredients": [
+      {
+        "item": "White Algae",
+        "qty": 2
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Marnie",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Plum Pudding",
+    "pt": "Pudim de Ameixa",
+    "ingredients": [
+      {
+        "item": "Wild Plum",
+        "qty": 2
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "winter",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Artichoke Dip",
+    "pt": "Pasta de Alcachofra",
+    "ingredients": [
+      {
+        "item": "Artichoke",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "fall",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Stir Fry",
+    "pt": "Refogado",
+    "ingredients": [
+      {
+        "item": "Cave Carrot",
+        "qty": 1
+      },
+      {
+        "item": "Common Mushroom",
+        "qty": 1
+      },
+      {
+        "item": "Kale",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "spring",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Roasted Hazelnuts",
+    "pt": "Avelãs Torradas",
+    "ingredients": [
+      {
+        "item": "Hazelnut",
+        "qty": 3
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "summer",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Pumpkin Pie",
+    "pt": "Torta de Abóbora",
+    "ingredients": [
+      {
+        "item": "Pumpkin",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "winter",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Radish Salad",
+    "pt": "Salada de Rabanete",
+    "ingredients": [
+      {
+        "item": "Oil",
+        "qty": 1
+      },
+      {
+        "item": "Vinegar",
+        "qty": 1
+      },
+      {
+        "item": "Radish",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "spring",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Fruit Salad",
+    "pt": "Salada de Frutas",
+    "ingredients": [
+      {
+        "item": "Blueberry",
+        "qty": 1
+      },
+      {
+        "item": "Melon",
+        "qty": 1
+      },
+      {
+        "item": "Apricot",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "fall",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Blackberry Cobbler",
+    "pt": "Torta de Amora",
+    "ingredients": [
+      {
+        "item": "Blackberry",
+        "qty": 2
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "fall",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Cranberry Candy",
+    "pt": "Bala de Oxicoco",
+    "ingredients": [
+      {
+        "item": "Cranberries",
+        "qty": 1
+      },
+      {
+        "item": "Apple",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "winter",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Bruschetta",
+    "pt": "Bruschetta",
+    "ingredients": [
+      {
+        "item": "Bread",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      },
+      {
+        "item": "Tomato",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "winter",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Coleslaw",
+    "pt": "Salada de Repolho",
+    "ingredients": [
+      {
+        "item": "Red Cabbage",
+        "qty": 1
+      },
+      {
+        "item": "Vinegar",
+        "qty": 1
+      },
+      {
+        "item": "Mayonnaise",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "spring",
+        "year": 1
+      }
+    ]
+  },
+  {
+    "name": "Fiddlehead Risotto",
+    "pt": "Risoto de Samambaia",
+    "ingredients": [
+      {
+        "item": "Oil",
+        "qty": 1
+      },
+      {
+        "item": "Fiddlehead Fern",
+        "qty": 1
+      },
+      {
+        "item": "Garlic",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "fall",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Poppyseed Muffin",
+    "pt": "Muffin de Papoula",
+    "ingredients": [
+      {
+        "item": "Poppy",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 7,
+        "season": "winter",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Chowder",
+    "pt": "Sopa de Mariscos",
+    "ingredients": [
+      {
+        "item": "Clam",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Willy",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Fish Stew",
+    "pt": "Ensopado de Peixe",
+    "ingredients": [
+      {
+        "item": "Crayfish",
+        "qty": 1
+      },
+      {
+        "item": "Mussel",
+        "qty": 1
+      },
+      {
+        "item": "Periwinkle",
+        "qty": 1
+      },
+      {
+        "item": "Tomato",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Willy",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Escargot",
+    "pt": "Escargô",
+    "ingredients": [
+      {
+        "item": "Snail",
+        "qty": 1
+      },
+      {
+        "item": "Garlic",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Willy",
+        "hearts": 5
+      }
+    ]
+  },
+  {
+    "name": "Lobster Bisque",
+    "pt": "Bisque de Lagosta",
+    "ingredients": [
+      {
+        "item": "Lobster",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "winter",
+        "year": 2
+      },
+      {
+        "kind": "mail",
+        "npc": "Willy",
+        "hearts": 9
+      }
+    ]
+  },
+  {
+    "name": "Maple Bar",
+    "pt": "Barra de Bordo",
+    "ingredients": [
+      {
+        "item": "Maple Syrup",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 14,
+        "season": "summer",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Crab Cakes",
+    "pt": "Bolinhos de Caranguejo",
+    "ingredients": [
+      {
+        "item": "Crab",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Egg",
+        "qty": 1
+      },
+      {
+        "item": "Oil",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 21,
+        "season": "fall",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Shrimp Cocktail",
+    "pt": "Coquetel de Camarão",
+    "ingredients": [
+      {
+        "item": "Tomato",
+        "qty": 1
+      },
+      {
+        "item": "Shrimp",
+        "qty": 1
+      },
+      {
+        "item": "Wild Horseradish",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "tv",
+        "day": 28,
+        "season": "winter",
+        "year": 2
+      }
+    ]
+  },
+  {
+    "name": "Ginger Ale",
+    "pt": "Refrigerante de Gengibre",
+    "ingredients": [
+      {
+        "item": "Ginger",
+        "qty": 3
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "shop",
+        "where": "Anão do Vulcão (Masmorra do Vulcão)",
+        "price": "1.000g"
+      }
+    ]
+  },
+  {
+    "name": "Banana Pudding",
+    "pt": "Pudim de Banana",
+    "ingredients": [
+      {
+        "item": "Banana",
+        "qty": 1
+      },
+      {
+        "item": "Milk",
+        "qty": 1
+      },
+      {
+        "item": "Sugar",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "shop",
+        "where": "Comerciante da Ilha",
+        "price": "30 Fragmentos de Osso"
+      }
+    ]
+  },
+  {
+    "name": "Mango Sticky Rice",
+    "pt": "Arroz Doce com Manga",
+    "ingredients": [
+      {
+        "item": "Mango",
+        "qty": 1
+      },
+      {
+        "item": "Coconut",
+        "qty": 1
+      },
+      {
+        "item": "Rice",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Leo",
+        "hearts": 7
+      }
+    ]
+  },
+  {
+    "name": "Poi",
+    "pt": "Poi",
+    "ingredients": [
+      {
+        "item": "Taro Root",
+        "qty": 4
+      }
+    ],
+    "sources": [
+      {
+        "kind": "mail",
+        "npc": "Leo",
+        "hearts": 3
+      }
+    ]
+  },
+  {
+    "name": "Tropical Curry",
+    "pt": "Curry Tropical",
+    "ingredients": [
+      {
+        "item": "Coconut",
+        "qty": 1
+      },
+      {
+        "item": "Pineapple",
+        "qty": 1
+      },
+      {
+        "item": "Hot Pepper",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "shop",
+        "where": "Resort da Ilha Gengibre (Gus)",
+        "price": "2.000g"
+      }
+    ]
+  },
+  {
+    "name": "Squid Ink Ravioli",
+    "pt": "Ravióli com Tinta de Lula",
+    "ingredients": [
+      {
+        "item": "Squid Ink",
+        "qty": 1
+      },
+      {
+        "item": "Wheat Flour",
+        "qty": 1
+      },
+      {
+        "item": "Tomato",
+        "qty": 1
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Combate",
+        "level": 9
+      }
+    ]
+  },
+  {
+    "name": "Moss Soup",
+    "pt": "Sopa de Musgo",
+    "ingredients": [
+      {
+        "item": "Moss",
+        "qty": 20
+      }
+    ],
+    "sources": [
+      {
+        "kind": "skill",
+        "skill": "Coleta",
+        "level": 3
+      }
+    ]
+  }
+]

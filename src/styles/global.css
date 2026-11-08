@@ -553,3 +553,15 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .pet-gifts { list-style: none; padding: 0; margin: 8px 0; }
 .pet-gifts li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
 .pet-gifts li span:last-child { flex: none; font-variant-numeric: tabular-nums; }
+
+/* Receitas */
+.recipe-search { width: 100%; margin-top: 8px; box-sizing: border-box; }
+.recipe-card__head { display: flex; align-items: center; gap: 10px; }
+.recipe-card__head .title { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.recipe-check { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 700; flex: none; min-height: 40px; cursor: pointer; }
+.recipe-check input { width: 22px; height: 22px; accent-color: var(--accent); }
+.recipe-ing { display: block; margin-top: 6px; }
+.recipe-src { list-style: none; padding: 0; margin: 6px 0 0; font-size: 0.92rem; }
+.recipe-src li { margin-top: 3px; }
+.recipe-card--done { opacity: 0.7; }
+.recipe-card--done .title { text-decoration: line-through; text-decoration-thickness: 2px; }
