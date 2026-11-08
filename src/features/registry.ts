@@ -13,6 +13,7 @@ export type FeatureId =
   | 'recipes'
   | 'skills'
   | 'buildings'
+  | 'animals'
   | 'cropPlanner'
   | 'giftFinder'
   | 'saveProgress'
@@ -36,6 +37,7 @@ export const FEATURES: readonly FeatureDef[] = [
   { id: 'recipes', title: 'Receitas', description: 'Os 81 pratos, ingredientes e como aprender: TV, cartas dos moradores, habilidade ou loja.', access: 'free' },
   { id: 'skills', title: 'Habilidades', description: 'O que cada nível libera, as profissões dos níveis 5 e 10 e a Caverna da Maestria.', access: 'free' },
   { id: 'buildings', title: 'Projetos e construções', description: 'Construções da Robin e do Mago, reformas da casa e da vila: custo, materiais e o que fazem.', access: 'free' },
+  { id: 'animals', title: 'Animais', description: 'Animais da fazenda, o que dão, quanto rendem por dia e as melhores estratégias de lucro.', access: 'free' },
   { id: 'pets', title: 'Pets', description: 'Amizade do seu pet, como adotar mais e os presentes que eles trazem.', access: 'free' },
   {
     id: 'cropPlanner',
