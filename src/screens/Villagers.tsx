@@ -142,7 +142,7 @@ function About({ v, onVillager }: { v: Villager; onVillager: (n: string) => void
   if (bio) return <p className="vpx-about">{bio}</p>;
   const nome = displayName(v.name);
   const romance =
-    v.romance === 'bachelor' ? 'É um dos candidatos de casamento.' : v.romance === 'bachelorette' ? 'É uma das candidatas de casamento.' : 'Não é romanceável.';
+    v.romance === 'bachelor' ? 'É um dos candidatos a casamento.' : v.romance === 'bachelorette' ? 'É uma das candidatas a casamento.' : 'Não é candidato a casamento.';
   return (
     <p className="vpx-about">
       {nome} mora em {addressLabel(v.address)}, {locationLabel(v.location)}. {romance}
