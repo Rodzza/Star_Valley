@@ -23,6 +23,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -49,7 +50,7 @@ public class OverlayService extends Service {
 
     private WindowManager windowManager;
     private LinearLayout root;
-    private TextView bubble;
+    private ImageView bubble;
     private ScrollView panelScroll;
     private LinearLayout panel;
     private WindowManager.LayoutParams params;
@@ -155,17 +156,15 @@ public class OverlayService extends Service {
         root.setOrientation(LinearLayout.VERTICAL);
         root.setAlpha(0.75f);
 
-        bubble = new TextView(this);
-        bubble.setText("V");
-        bubble.setTextColor(Color.WHITE);
-        bubble.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        bubble.setTypeface(bubble.getTypeface(), android.graphics.Typeface.BOLD);
-        bubble.setGravity(Gravity.CENTER);
+        bubble = new ImageView(this);
+        bubble.setImageResource(R.drawable.valley_bubble);
+        bubble.setScaleType(ImageView.ScaleType.FIT_CENTER);
         GradientDrawable circle = new GradientDrawable();
         circle.setShape(GradientDrawable.OVAL);
         circle.setColor(0xFF1F7A4D);
         circle.setStroke(dp(2), Color.WHITE);
         bubble.setBackground(circle);
+        bubble.setPadding(dp(2), dp(2), dp(2), dp(2));
         bubble.setContentDescription("Valley Notes: abrir ou fechar as dicas do dia");
         root.addView(bubble, new LinearLayout.LayoutParams(dp(48), dp(48)));
 
