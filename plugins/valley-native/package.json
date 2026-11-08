@@ -2,7 +2,7 @@
   "name": "valley-native",
   "version": "0.1.0",
   "private": true,
-  "description": "Plugin Capacitor local: botão flutuante (overlay) do Valley Tracker.",
+  "description": "Plugin Capacitor local: botão flutuante (overlay) do Valley Notes.",
   "files": ["android/"],
   "capacitor": {
     "android": {

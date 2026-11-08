@@ -88,7 +88,7 @@ export function FloatingQuests() {
     if (!day) return;
     const r = await overlayShowDays(daysFrom(day));
     if (r === 'shown') setMessage('Botão ativado. Abra o jogo: ele aparece sobre a tela. Toque nele para ver o dia e, ao dormir no jogo, toque em Dormi.');
-    else if (r === 'no-permission') setMessage('Falta permitir "Exibir sobre outros apps" para o Valley Tracker.');
+    else if (r === 'no-permission') setMessage('Falta permitir "Exibir sobre outros apps" para o Valley Notes.');
     else if (r === 'unsupported') setMessage('O botão flutuante só funciona no app Android.');
     else setMessage('Não consegui ativar o botão.');
     await refresh();

@@ -9,7 +9,7 @@
 #   ANDROID_KEYSTORE_PASSWORD    senha da chave
 #   ANDROID_KEY_ALIAS            alias da chave
 #   ANDROID_KEY_PASSWORD         senha do alias
-# O resultado fica em Actions › (execução) › Artifacts › valley-tracker-loja.
+# O resultado fica em Actions › (execução) › Artifacts › valley-notes-loja.
 name: Versão para a loja
 
 on:
@@ -85,9 +85,9 @@ jobs:
             -Pandroid.injected.signing.key.password="$KEY_PASS"
           rm -f "$RUNNER_TEMP/upload.jks"
 
-      - run: cp android/app/build/outputs/bundle/release/app-release.aab ValleyTracker-${{ github.run_number }}.aab
+      - run: cp android/app/build/outputs/bundle/release/app-release.aab ValleyNotes-${{ github.run_number }}.aab
       - uses: actions/upload-artifact@v4
         with:
-          name: valley-tracker-loja
-          path: ValleyTracker-*.aab
+          name: valley-notes-loja
+          path: ValleyNotes-*.aab
           retention-days: 30

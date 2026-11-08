@@ -12,13 +12,15 @@ As imagens usam só as artes próprias do app (ícones e ilustração da tela in
 Nenhuma arte de personagem ou do jogo.
 
 ## Nome do app (até 30 caracteres)
-Valley Tracker
+Valley Notes: Guia da Fazenda
+
+Nome embaixo do ícone no celular: Valley Notes
 
 ## Descrição curta (até 80 caracteres)
 Aniversários, presentes e plantio do vale, em português. App não oficial.
 
 ## Descrição completa (até 4.000 caracteres)
-Valley Tracker é um companheiro para quem joga Stardew Valley e quer tudo à mão, em português, sem ficar abrindo a wiki no meio da partida.
+Valley Notes é um companheiro para quem joga Stardew Valley e quer tudo à mão, em português, sem ficar abrindo a wiki no meio da partida.
 
 O QUE VOCÊ ENCONTRA
 • Moradores: aniversário, onde mora, família e o que cada um ama, gosta e odeia ganhar
@@ -34,7 +36,7 @@ VERSÃO PRO
 Libere ferramentas extras com a assinatura mensal ou a compra vitalícia, pela própria Google Play. Algumas funções também podem ser liberadas por um dia assistindo a um anúncio.
 
 AVISO
-Valley Tracker é um app de fã, não oficial, sem vínculo com a ConcernedApe nem aprovação dela. Stardew Valley é marca de seus respectivos donos. Os dados do jogo vêm da Stardew Valley Wiki e são usados sob a licença CC BY-SA, com créditos dentro do app.
+Valley Notes é um app de fã, não oficial, sem vínculo com a ConcernedApe nem aprovação dela. Stardew Valley é marca de seus respectivos donos. Os dados do jogo vêm da Stardew Valley Wiki e são usados sob a licença CC BY-SA, com créditos dentro do app.
 
 ## Categoria e contato
 - Categoria: Livros e referências (ou Entretenimento)

@@ -1,4 +1,4 @@
-# Valley Tracker (esqueleto)
+# Valley Notes (esqueleto)
 
 Companheiro de Stardew Valley para Android: React + Vite + Capacitor.
 
@@ -110,5 +110,5 @@ gosto, avisos e páginas sem dados. Grupos ("All Eggs"...) não viram itens. Gos
 ## Testar no celular sem computador
 - **Prévia no navegador:** `VITE_PREVIEW=true npx vite build --base=./ --outDir dist-preview` gera uma versão web com anúncios e compra simulados.
 - **APK na nuvem:** envie o projeto para um repositório do GitHub e rode a ação "APK de teste" (aba Actions › Run workflow).
-  Ao terminar, baixe o artefato `valley-tracker-apk`, extraia o zip e instale o `app-debug.apk` (permita instalar de fontes
+  Ao terminar, baixe o artefato `valley-notes-apk`, extraia o zip e instale o `app-debug.apk` (permita instalar de fontes
   desconhecidas). Troque `appId` em `capacitor.config.ts` por um ID seu antes de publicar na Play Store.
