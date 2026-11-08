@@ -535,3 +535,21 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
   opacity: 1;
   transform: translate(-50%, 0);
 }
+
+/* Pets */
+.pet-card__head { display: flex; align-items: center; gap: 10px; }
+.pet-card__head .title { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.pet-emoji { font-size: 1.8rem; line-height: 1; }
+.pet-remove { padding: 4px 0; font-size: 0.85rem; }
+.pet-hearts { display: flex; gap: 2px; margin-top: 6px; }
+.pet-heart { background: none; border: 0; font-size: 1.5rem; min-width: 40px; min-height: 40px; cursor: pointer; padding: 0; }
+.pet-heart:active { transform: scale(0.9); }
+.pet-toggle { display: flex; align-items: center; gap: 8px; margin: 12px 0; font-weight: 700; }
+.pet-toggle input { width: 22px; height: 22px; accent-color: var(--accent); }
+.pet-add { margin-top: 8px; }
+.pet-name { flex: 1; min-width: 0; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 2px solid var(--wood); background: var(--paper); color: var(--text); font: inherit; }
+.pet-rules { padding-left: 20px; line-height: 1.5; }
+.pet-rules li { margin: 6px 0; }
+.pet-gifts { list-style: none; padding: 0; margin: 8px 0; }
+.pet-gifts li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+.pet-gifts li span:last-child { flex: none; font-variant-numeric: tabular-nums; }
