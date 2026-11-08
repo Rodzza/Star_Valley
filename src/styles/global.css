@@ -512,3 +512,26 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .day-stepper .btn { width: 56px; min-height: 48px; padding: 0; font-size: 1.5rem; }
 .day-stepper label { display: grid; gap: 2px; }
 .day-stepper input { width: 84px; min-height: 48px; text-align: center; font-size: 1.2rem; font-weight: 800; border-radius: 12px; border: 2px solid var(--wood); background: var(--paper); color: var(--ink); }
+
+/* Aviso do botão voltar no Início: "aperte mais uma vez para sair". */
+.exit-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 12px);
+  max-width: calc(100vw - 32px);
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.88);
+  color: #fff;
+  font-size: 0.92rem;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 1000;
+}
+.exit-toast--on {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

@@ -16,6 +16,7 @@ import { Soon } from './screens/Soon';
 import { Paywall } from './screens/Paywall';
 import { TabBar, type TabId } from './ui/TabBar';
 import { applyPalette, preferredPalette } from './styles/tokens';
+import { installBackButton, useBackHandler } from './native/backButton';
 
 type Route =
   | { name: 'home' }
@@ -72,7 +73,26 @@ function Notices() {
 
 function Router() {
   const { ready, available } = useEntitlements();
-  const [route, setRoute] = useState<Route>({ name: 'home' });
+  const [history, setHistory] = useState<Route[]>([{ name: 'home' }]);
+  const route = history[history.length - 1]!;
+  /** Abas trocam o topo; telas abertas por cima (função, créditos…) empilham. Início zera a pilha. */
+  const setRoute = (r: Route) =>
+    setHistory((h) => {
+      if (r.name === 'home') return [r];
+      const isTab = (x: Route) => x.name === 'explore' || x.name === 'saved' || x.name === 'profile';
+      if (isTab(r) && isTab(h[h.length - 1]!)) return [...h.slice(0, -1), r];
+      return [...h, r];
+    });
+  // Botão voltar do Android: volta à tela anterior; no Início, pede um segundo toque para sair.
+  useBackHandler(() => {
+    if (history.length <= 1) return false;
+    setHistory((h) => (h.length > 1 ? h.slice(0, -1) : h));
+    return true;
+  }, true);
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [history.length]);
+  const goBack = () => setHistory((h) => (h.length > 1 ? h.slice(0, -1) : [{ name: 'home' }]));
   const goHome = () => setRoute({ name: 'home' });
   const goPaywall = () => setRoute({ name: 'paywall' });
   const openFeature = (id: FeatureId) => setRoute({ name: 'feature', id });
@@ -94,7 +114,7 @@ function Router() {
   const tab: TabId | null =
     route.name === 'home' || route.name === 'explore' || route.name === 'saved' || route.name === 'profile' ? route.name : null;
   const back = (
-    <button className="back" onClick={goHome}>
+    <button className="back" onClick={goBack}>
       ← Voltar
     </button>
   );
@@ -165,6 +185,7 @@ function Router() {
 
 export function App() {
   useEffect(() => {
+    installBackButton();
     applyPalette(preferredPalette());
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
     const onChange = () => applyPalette(preferredPalette());
