@@ -47,7 +47,7 @@ export function SaveProgress() {
           <div className="notice" role="note">
             <strong>Como é calculado</strong>
             Os pontos seguem as regras da Perfeição do jogo, a partir do seu save. O jogo mostra o número arredondado para baixo
-            na Sala de Nozes do Sr. Qi. Compare com o seu: se for diferente, avise.{result.waivers > 0 ? ` Mais ${result.waivers}% de Perfection Waivers comprados.` : ''}
+            na Sala de Nozes do Sr. Qi. Compare com o seu: se for diferente, avise.{result.waivers > 0 ? ` Mais ${result.waivers}% comprados do Sr. Qi como isenções de perfeição (Perfection Waivers).` : ''}
           </div>
 
           <h2>Por categoria</h2>
