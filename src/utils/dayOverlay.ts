@@ -121,3 +121,17 @@ export function buildDayOverlay(d: GameDay, villagers: readonly Villager[], gift
   lines.push('Mude o dia no Valley Tracker para atualizar.');
   return { title: dayTitle(d), lines };
 }
+
+/** Dias a partir de `d`: o próprio dia e os seguintes (`count` no total). */
+export function upcomingDays(d: GameDay, count: number): GameDay[] {
+  const out: GameDay[] = [d];
+  while (out.length < count) out.push(nextDay(out[out.length - 1]!));
+  return out;
+}
+
+/** O dia `steps` dias depois de `d`. */
+export function advanceDays(d: GameDay, steps: number): GameDay {
+  let cur = d;
+  for (let i = 0; i < steps; i++) cur = nextDay(cur);
+  return cur;
+}

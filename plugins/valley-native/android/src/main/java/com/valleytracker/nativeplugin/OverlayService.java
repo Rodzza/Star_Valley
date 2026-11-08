@@ -166,7 +166,7 @@ public class OverlayService extends Service {
         circle.setColor(0xFF1F7A4D);
         circle.setStroke(dp(2), Color.WHITE);
         bubble.setBackground(circle);
-        bubble.setContentDescription("Valley Tracker: abrir ou fechar dicas de missões");
+        bubble.setContentDescription("Valley Tracker: abrir ou fechar as dicas do dia");
         root.addView(bubble, new LinearLayout.LayoutParams(dp(48), dp(48)));
 
         panel = new LinearLayout(this);
@@ -204,25 +204,127 @@ public class OverlayService extends Service {
         windowManager.addView(root, params);
     }
 
+    /** Depois desta pausa sem confirmar o dia, o painel pergunta "Ainda é ...?". */
+    private static final long CONFIRM_AFTER_MS = 30L * 60L * 1000L;
+
+    private SharedPreferences prefs() {
+        return getSharedPreferences(ValleyOverlayPlugin.PREFS, Context.MODE_PRIVATE);
+    }
+
+    /** Dias enviados pelo app, ou null no modo antigo (só título e linhas). */
+    private JSONArray days() {
+        try {
+            String raw = prefs().getString(ValleyOverlayPlugin.KEY_DAYS, null);
+            if (raw == null) return null;
+            JSONArray arr = new JSONArray(raw);
+            return arr.length() > 0 ? arr : null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private void moveDay(int delta) {
+        JSONArray days = days();
+        if (days == null) return;
+        int index = clamp(prefs().getInt(ValleyOverlayPlugin.KEY_INDEX, 0) + delta, 0, days.length() - 1);
+        prefs().edit()
+                .putInt(ValleyOverlayPlugin.KEY_INDEX, index)
+                .putLong(ValleyOverlayPlugin.KEY_CONFIRMED_AT, System.currentTimeMillis())
+                .apply();
+        fillPanel();
+        if (expanded) setExpanded(true);
+    }
+
+    private void confirmDay() {
+        prefs().edit().putLong(ValleyOverlayPlugin.KEY_CONFIRMED_AT, System.currentTimeMillis()).apply();
+        fillPanel();
+        if (expanded) setExpanded(true);
+    }
+
     private void fillPanel() {
         if (panel == null) return;
-        SharedPreferences prefs = getSharedPreferences(ValleyOverlayPlugin.PREFS, Context.MODE_PRIVATE);
-        String title = prefs.getString(ValleyOverlayPlugin.KEY_TITLE, "");
-        String linesJson = prefs.getString(ValleyOverlayPlugin.KEY_LINES, "[]");
-
         panel.removeAllViews();
+
+        JSONArray days = days();
+        String title;
+        JSONArray lines;
+        int index = 0;
+        if (days != null) {
+            index = clamp(prefs().getInt(ValleyOverlayPlugin.KEY_INDEX, 0), 0, days.length() - 1);
+            org.json.JSONObject day = days.optJSONObject(index);
+            title = day == null ? "" : day.optString("title", "");
+            lines = day == null ? new JSONArray() : day.optJSONArray("lines");
+        } else {
+            title = prefs().getString(ValleyOverlayPlugin.KEY_TITLE, "");
+            try {
+                lines = new JSONArray(prefs().getString(ValleyOverlayPlugin.KEY_LINES, "[]"));
+            } catch (Exception e) {
+                lines = new JSONArray();
+            }
+        }
+
+        // Depois de uma pausa, confirma o dia antes de mostrar as dicas.
+        long confirmedAt = prefs().getLong(ValleyOverlayPlugin.KEY_CONFIRMED_AT, 0);
+        if (days != null && System.currentTimeMillis() - confirmedAt > CONFIRM_AFTER_MS) {
+            panel.addView(text("Ainda é " + title + " no jogo?", 15, Color.WHITE, true));
+            LinearLayout row = buttonRow();
+            row.addView(chip("Sim", 0xFF1F7A4D, v -> confirmDay()));
+            row.addView(chip("\uD83C\uDF19 Dormi, +1 dia", 0xFF6B4BB3, v -> moveDay(1)));
+            panel.addView(row);
+            addHide();
+            return;
+        }
+
         panel.addView(text(title, 15, Color.WHITE, true));
-        try {
-            JSONArray lines = new JSONArray(linesJson);
+        if (lines != null) {
             for (int i = 0; i < lines.length(); i++) {
                 TextView t = text(lines.optString(i, ""), 13, 0xFFE6EDF3, false);
                 t.setPadding(0, dp(6), 0, 0);
                 panel.addView(t);
             }
-        } catch (Exception ignored) {
-            // JSON inválido: mostra só o título.
         }
 
+        if (days != null) {
+            LinearLayout row = buttonRow();
+            if (index > 0) row.addView(chip("\u25C0 Voltar", 0xFF3A4652, v -> moveDay(-1)));
+            if (index < days.length() - 1) {
+                row.addView(chip("\uD83C\uDF19 Dormi, +1 dia", 0xFF6B4BB3, v -> moveDay(1)));
+            } else {
+                TextView end = text("Abra o Valley Tracker para carregar mais dias.", 12, 0xFFFFD38A, false);
+                end.setPadding(0, dp(10), 0, 0);
+                panel.addView(end);
+            }
+            panel.addView(row);
+        }
+        addHide();
+    }
+
+    private LinearLayout buttonRow() {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setPadding(0, dp(10), 0, 0);
+        return row;
+    }
+
+    /** Botão em formato de pílula, com área de toque confortável. */
+    private TextView chip(String label, int color, View.OnClickListener onClick) {
+        TextView c = text(label, 13, Color.WHITE, true);
+        c.setGravity(Gravity.CENTER);
+        c.setMinHeight(dp(40));
+        c.setPadding(dp(12), dp(6), dp(12), dp(6));
+        GradientDrawable bg = new GradientDrawable();
+        bg.setColor(color);
+        bg.setCornerRadius(dp(20));
+        c.setBackground(bg);
+        c.setOnClickListener(onClick);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.rightMargin = dp(8);
+        c.setLayoutParams(lp);
+        return c;
+    }
+
+    private void addHide() {
         TextView hide = text("Esconder botão", 13, 0xFF7FD6A5, true);
         hide.setPadding(0, dp(12), 0, 0);
         hide.setOnClickListener(v -> {
@@ -246,6 +348,8 @@ public class OverlayService extends Service {
         expanded = value;
         Rect s = screen();
         if (value) {
+            fillPanel(); // reavalia se precisa perguntar "Ainda é ...?"
+
             // Limita a altura do painel para caber na tela (o jogo roda na horizontal, onde sobra pouco).
             int maxH = (int) (s.height() * 0.6f);
             panel.measure(

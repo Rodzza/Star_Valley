@@ -28,6 +28,12 @@ public class ValleyOverlayPlugin extends Plugin {
     static final String KEY_LINES = "lines";
     static final String KEY_X = "x";
     static final String KEY_Y = "y";
+    /** Lista de dias já calculados pelo app: [{title, lines:[...]}, ...]. O índice 0 é o dia marcado no app. */
+    static final String KEY_DAYS = "days";
+    /** Quantos dias o jogador avançou pelo botão "Dormi" desde o último envio do app. */
+    static final String KEY_INDEX = "dayIndex";
+    /** Quando o jogador confirmou o dia pela última vez (ms), para perguntar "Ainda é ...?" depois de uma pausa. */
+    static final String KEY_CONFIRMED_AT = "confirmedAt";
 
     @PluginMethod
     public void status(PluginCall call) {
@@ -72,6 +78,63 @@ public class ValleyOverlayPlugin extends Plugin {
             getContext().startService(intent);
         }
         call.resolve();
+    }
+
+    /**
+     * Recebe os próximos dias já calculados. O botão flutuante avança entre eles com "Dormi",
+     * sem precisar do app aberto. Zera o avanço: o índice 0 passa a ser o dia enviado agora.
+     */
+    @PluginMethod
+    public void showDays(PluginCall call) {
+        if (!canDraw()) {
+            call.reject("PERMISSION_DENIED");
+            return;
+        }
+        JSArray days = call.getArray("days", new JSArray());
+        JSONArray safe = new JSONArray();
+        for (int i = 0; i < days.length(); i++) {
+            org.json.JSONObject d = days.optJSONObject(i);
+            if (d == null) continue;
+            org.json.JSONObject clean = new org.json.JSONObject();
+            try {
+                clean.put("title", d.optString("title", ""));
+                JSONArray lines = d.optJSONArray("lines");
+                JSONArray cleanLines = new JSONArray();
+                if (lines != null) {
+                    for (int j = 0; j < lines.length(); j++) cleanLines.put(lines.optString(j, ""));
+                }
+                clean.put("lines", cleanLines);
+            } catch (org.json.JSONException ignored) {
+                continue;
+            }
+            safe.put(clean);
+        }
+        if (safe.length() == 0) {
+            call.reject("NO_DAYS");
+            return;
+        }
+        getContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+                .putString(KEY_DAYS, safe.toString())
+                .putInt(KEY_INDEX, 0)
+                .putLong(KEY_CONFIRMED_AT, System.currentTimeMillis())
+                .apply();
+
+        Intent intent = new Intent(getContext(), OverlayService.class);
+        intent.setAction(OverlayService.ACTION_SHOW);
+        if (Build.VERSION.SDK_INT >= 26) {
+            getContext().startForegroundService(intent);
+        } else {
+            getContext().startService(intent);
+        }
+        call.resolve();
+    }
+
+    /** Quantos dias o jogador avançou no botão desde o último envio (para o app atualizar a data). */
+    @PluginMethod
+    public void progress(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("index", getContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE).getInt(KEY_INDEX, 0));
+        call.resolve(ret);
     }
 
     @PluginMethod
