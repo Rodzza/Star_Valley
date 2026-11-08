@@ -55,6 +55,11 @@ public class OverlayService extends Service {
     private LinearLayout panel;
     private WindowManager.LayoutParams params;
     private boolean expanded = false;
+    /** Alvo "X" que aparece embaixo da tela enquanto o botão é arrastado. */
+    private TextView dismissTarget;
+    private boolean overTarget = false;
+    /** Escondido pelo "X": o serviço continua, e o botão volta ao abrir o Valley Notes ou tocar na notificação. */
+    private boolean dismissed = false;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -72,6 +77,8 @@ public class OverlayService extends Service {
             return START_NOT_STICKY;
         }
 
+        // Qualquer outra ação (mostrar, reinício pelo sistema) traz o botão de volta.
+        dismissed = false;
         // Para qualquer outra ação (inclusive reinício pelo sistema) precisamos virar serviço em primeiro plano.
         startForegroundCompat();
 
@@ -108,13 +115,20 @@ public class OverlayService extends Service {
         }
         b.setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle("Valley Notes")
-                .setContentText("Botão flutuante ativo. Toque para abrir o app.")
+                .setContentText(dismissed
+                        ? "Botão escondido. Toque aqui para mostrar de novo."
+                        : "Botão flutuante ativo. Toque para abrir o app.")
                 .setOngoing(true);
 
-        Intent launch = getPackageManager().getLaunchIntentForPackage(getPackageName());
-        if (launch != null) {
-            int piFlags = PendingIntent.FLAG_UPDATE_CURRENT | (Build.VERSION.SDK_INT >= 23 ? PendingIntent.FLAG_IMMUTABLE : 0);
-            b.setContentIntent(PendingIntent.getActivity(this, 0, launch, piFlags));
+        int piFlags = PendingIntent.FLAG_UPDATE_CURRENT | (Build.VERSION.SDK_INT >= 23 ? PendingIntent.FLAG_IMMUTABLE : 0);
+        if (dismissed) {
+            Intent show = new Intent(this, OverlayService.class).setAction(ACTION_SHOW);
+            b.setContentIntent(Build.VERSION.SDK_INT >= 26
+                    ? PendingIntent.getForegroundService(this, 1, show, piFlags)
+                    : PendingIntent.getService(this, 1, show, piFlags));
+        } else {
+            Intent launch = getPackageManager().getLaunchIntentForPackage(getPackageName());
+            if (launch != null) b.setContentIntent(PendingIntent.getActivity(this, 0, launch, piFlags));
         }
 
         Notification n = b.build();
@@ -159,12 +173,13 @@ public class OverlayService extends Service {
         bubble = new ImageView(this);
         bubble.setImageResource(R.drawable.valley_bubble);
         bubble.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        // Redondo e sem borda: a própria imagem já é um círculo com fundo transparente.
+        if (Build.VERSION.SDK_INT >= 21) bubble.setElevation(dp(4));
+        bubble.setOutlineProvider(android.view.ViewOutlineProvider.BACKGROUND);
         GradientDrawable circle = new GradientDrawable();
         circle.setShape(GradientDrawable.OVAL);
-        circle.setColor(0xFF1F7A4D);
-        circle.setStroke(dp(2), Color.WHITE);
+        circle.setColor(Color.TRANSPARENT);
         bubble.setBackground(circle);
-        bubble.setPadding(dp(2), dp(2), dp(2), dp(2));
         bubble.setContentDescription("Valley Notes: abrir ou fechar as dicas do dia");
         root.addView(bubble, new LinearLayout.LayoutParams(dp(48), dp(48)));
 
@@ -397,11 +412,91 @@ public class OverlayService extends Service {
                 // já removido
             }
         }
+        hideTarget();
         root = null;
         panel = null;
         panelScroll = null;
         bubble = null;
         expanded = false;
+    }
+
+    // ---------- alvo "X" para fechar arrastando ----------
+
+    private int targetSize() {
+        return dp(64);
+    }
+
+    private int targetBottom() {
+        return dp(48);
+    }
+
+    private void showTarget() {
+        if (dismissTarget != null || windowManager == null) return;
+        dismissTarget = new TextView(this);
+        dismissTarget.setText("\u2715");
+        dismissTarget.setTextColor(Color.WHITE);
+        dismissTarget.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+        dismissTarget.setGravity(Gravity.CENTER);
+        GradientDrawable bg = new GradientDrawable();
+        bg.setShape(GradientDrawable.OVAL);
+        bg.setColor(0xCC1B1B1B);
+        bg.setStroke(dp(2), 0x66FFFFFF);
+        dismissTarget.setBackground(bg);
+        dismissTarget.setContentDescription("Solte aqui para esconder o botão");
+        int type = Build.VERSION.SDK_INT >= 26
+                ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                : WindowManager.LayoutParams.TYPE_PHONE;
+        WindowManager.LayoutParams tp = new WindowManager.LayoutParams(
+                targetSize(), targetSize(), type,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                PixelFormat.TRANSLUCENT);
+        tp.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
+        tp.y = targetBottom();
+        try {
+            windowManager.addView(dismissTarget, tp);
+        } catch (Exception e) {
+            dismissTarget = null;
+        }
+    }
+
+    private void hideTarget() {
+        overTarget = false;
+        if (dismissTarget != null && windowManager != null) {
+            try {
+                windowManager.removeView(dismissTarget);
+            } catch (Exception ignored) {
+                // já removido
+            }
+        }
+        dismissTarget = null;
+    }
+
+    /** O centro do botão está perto do "X"? */
+    private boolean nearTarget() {
+        Rect s = screen();
+        float bx = params.x + dp(24);
+        float by = params.y + dp(24);
+        float tx = s.width() / 2f;
+        float ty = s.height() - targetBottom() - targetSize() / 2f;
+        float dx = bx - tx;
+        float dy = by - ty;
+        return dx * dx + dy * dy < dp(80) * dp(80);
+    }
+
+    private void markOverTarget(boolean value) {
+        if (value == overTarget || dismissTarget == null) return;
+        overTarget = value;
+        float scale = value ? 1.25f : 1f;
+        dismissTarget.animate().scaleX(scale).scaleY(scale).setDuration(120).start();
+        if (value) dismissTarget.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
+    }
+
+    /** Solto no "X": esconde o botão, mas deixa o serviço vivo para voltar depois. */
+    private void dismissBubble() {
+        teardown();
+        dismissed = true;
+        running = true; // o app continua vendo o serviço ativo e reenvia o botão ao ser aberto
+        startForegroundCompat(); // atualiza a notificação: "toque para mostrar de novo"
     }
 
     /** Arrasta o botão; um toque curto (sem arrastar) abre ou fecha o painel. */
@@ -427,16 +522,34 @@ public class OverlayService extends Service {
                     float dx = e.getRawX() - touchX;
                     float dy = e.getRawY() - touchY;
                     if (!moved && Math.abs(dx) < slop && Math.abs(dy) < slop) return true;
-                    moved = true;
+                    if (!moved) {
+                        moved = true;
+                        if (expanded) {
+                            // Fecha o painel sem encostar na borda, para o botão seguir o dedo.
+                            expanded = false;
+                            panelScroll.setVisibility(View.GONE);
+                            root.setAlpha(0.75f);
+                        }
+                        showTarget();
+                    }
                     Rect s = screen();
                     int w = Math.max(dp(48), root.getWidth());
                     int h = Math.max(dp(48), root.getHeight());
                     params.x = clamp(startX + Math.round(dx), 0, Math.max(0, s.width() - w));
                     params.y = clamp(startY + Math.round(dy), 0, Math.max(0, s.height() - h));
                     windowManager.updateViewLayout(root, params);
+                    markOverTarget(nearTarget());
                     return true;
                 }
+                case MotionEvent.ACTION_CANCEL:
+                    hideTarget();
+                    return true;
                 case MotionEvent.ACTION_UP:
+                    if (moved && overTarget) {
+                        dismissBubble();
+                        return true;
+                    }
+                    hideTarget();
                     if (!moved) {
                         setExpanded(!expanded);
                     } else if (!expanded) {

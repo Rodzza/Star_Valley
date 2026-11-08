@@ -31,6 +31,31 @@ async function loadDay(): Promise<GameDay> {
   return { season: 'spring', day: 1 };
 }
 
+/**
+ * Traz para o app os dias que o jogador avançou no botão ("Dormi") e, com o botão ativo, reenvia a
+ * lista a partir do dia atual. Isso também traz de volta o botão escondido no "X".
+ */
+type SyncResult = { day: GameDay; granted: boolean; running: boolean };
+let inFlight: Promise<SyncResult> | null = null;
+
+/** Uma sincronização por vez: o app e esta tela chamam juntos ao voltar do jogo, e o "Dormi" não pode contar em dobro. */
+export function syncOverlayDay(): Promise<SyncResult> {
+  inFlight ??= doSync().finally(() => {
+    inFlight = null;
+  });
+  return inFlight;
+}
+
+async function doSync(): Promise<SyncResult> {
+  const saved = await loadDay();
+  const s = await overlayStatus();
+  const steps = s.running ? await overlayProgress() : 0;
+  const today = advanceDays(saved, steps);
+  if (steps > 0) saveDay(today);
+  if (s.running) await overlayShowDays(daysFrom(today));
+  return { day: today, granted: s.granted, running: s.running };
+}
+
 export function FloatingQuests() {
   const [day, setDay] = useState<GameDay | null>(null);
   const [granted, setGranted] = useState(false);
@@ -43,22 +68,11 @@ export function FloatingQuests() {
     setRunning(s.running);
   }, []);
 
-  /**
-   * Traz para o app os dias que o jogador avançou no botão ("Dormi") e reenvia a lista a partir
-   * do dia atual, para o botão nunca ficar sem dias pela frente.
-   */
   const sync = useCallback(async () => {
-    const saved = await loadDay();
-    const s = await overlayStatus();
-    setGranted(s.granted);
-    setRunning(s.running);
-    const steps = s.running ? await overlayProgress() : 0;
-    const today = advanceDays(saved, steps);
-    setDay(today);
-    if (steps > 0) {
-      saveDay(today);
-      await overlayShowDays(daysFrom(today));
-    }
+    const r = await syncOverlayDay();
+    setGranted(r.granted);
+    setRunning(r.running);
+    setDay(r.day);
   }, []);
 
   useEffect(() => {
@@ -151,6 +165,8 @@ export function FloatingQuests() {
       <p className="muted small">
         Com o botão ativo, você nem precisa voltar aqui: ao dormir no jogo, toque no botão e em <strong>🌙 Dormi</strong>.
         Depois de uma pausa, ele pergunta se ainda é o mesmo dia. A data daqui se atualiza sozinha quando você abrir o app.
+        Para tirar o botão da frente, segure e arraste até o <strong>✕</strong> embaixo da tela: ele volta quando você abrir o
+        Valley Notes ou tocar na notificação.
       </p>
 
       <h2>2. Permita exibir sobre outros apps</h2>
