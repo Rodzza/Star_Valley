@@ -4,7 +4,7 @@ import { EntitlementsProvider, useEntitlements } from './monetization/Entitlemen
 import { Calendar } from './screens/Calendar';
 import { CropPlanner } from './screens/CropPlanner';
 import { Credits } from './screens/Credits';
-import { FloatingQuests } from './screens/FloatingQuests';
+import { FloatingQuests, syncOverlayDay } from './screens/FloatingQuests';
 import { GiftFinder } from './screens/GiftFinder';
 import { SaveProgress } from './screens/SaveProgress';
 import { Villagers } from './screens/Villagers';
@@ -17,6 +17,7 @@ import { Paywall } from './screens/Paywall';
 import { TabBar, type TabId } from './ui/TabBar';
 import { applyPalette, preferredPalette } from './styles/tokens';
 import { installBackButton, useBackHandler } from './native/backButton';
+import { overlaySupported } from './native/overlay';
 
 type Route =
   | { name: 'home' }
@@ -186,11 +187,20 @@ function Router() {
 export function App() {
   useEffect(() => {
     installBackButton();
+    // Ao abrir ou voltar para o app, traz de volta o botão flutuante escondido no "X".
+    const resync = () => {
+      if (overlaySupported() && document.visibilityState === 'visible') void syncOverlayDay();
+    };
+    resync();
+    document.addEventListener('visibilitychange', resync);
     applyPalette(preferredPalette());
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
     const onChange = () => applyPalette(preferredPalette());
     mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
+    return () => {
+      mq.removeEventListener('change', onChange);
+      document.removeEventListener('visibilitychange', resync);
+    };
   }, []);
 
   return (
