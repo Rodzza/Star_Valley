@@ -595,3 +595,7 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .sv-edit input { width: 6.5em; min-height: 40px; border-radius: 8px; border: 2px solid #b5651d; background: #fff3d6; color: #4a2a0a; font: inherit; padding: 0 8px; }
 .sv-step { width: 44px; min-width: 44px; min-height: 40px; padding: 0; margin: 0; flex: none; }
 .sv-hint { font-size: 0.8rem; margin: 6px 0 0; opacity: 0.85; }
+
+/* Animais */
+.animal-price { flex: none; font-weight: 800; font-size: 0.9rem; }
+.animal-day { display: block; margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(0, 0, 0, 0.15); font-weight: 700; font-size: 0.92rem; }

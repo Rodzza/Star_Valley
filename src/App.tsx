@@ -9,6 +9,7 @@ import { Pets } from './screens/Pets';
 import { Recipes } from './screens/Recipes';
 import { Skills } from './screens/Skills';
 import { Buildings } from './screens/Buildings';
+import { Animals } from './screens/Animals';
 import { GiftFinder } from './screens/GiftFinder';
 import { SaveProgress } from './screens/SaveProgress';
 import { Villagers } from './screens/Villagers';
@@ -47,6 +48,8 @@ function FeatureContent({ id }: { id: FeatureId }) {
       return <Skills />;
     case 'buildings':
       return <Buildings />;
+    case 'animals':
+      return <Animals />;
     case 'cropPlanner':
       return <CropPlanner />;
     case 'giftFinder':

@@ -12,7 +12,7 @@ export interface Tile {
 export const TILES: readonly Tile[] = [
   { label: 'Fazenda', art: 'casa', feature: 'cropPlanner' },
   { label: 'Pets', art: 'pets', feature: 'pets' },
-  { label: 'Animais', art: 'animais' },
+  { label: 'Animais', art: 'animais', feature: 'animals' },
   { label: 'Estações', art: 'estacoes', feature: 'calendar' },
   { label: 'Moradores', art: 'moradores', feature: 'villagers' },
   { label: 'Receitas', art: 'receitas', feature: 'recipes' },

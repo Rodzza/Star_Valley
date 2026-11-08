@@ -8,6 +8,7 @@ export const FEATURE_ICON: Record<FeatureId, IconName> = {
   recipes: 'note',
   skills: 'chest',
   buildings: 'house',
+  animals: 'heart',
   cropPlanner: 'sprout',
   giftFinder: 'gift',
   saveProgress: 'chest',
