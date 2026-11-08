@@ -6,6 +6,7 @@ export const FEATURE_ICON: Record<FeatureId, IconName> = {
   villagers: 'heart',
   pets: 'heart',
   recipes: 'note',
+  skills: 'chest',
   cropPlanner: 'sprout',
   giftFinder: 'gift',
   saveProgress: 'chest',

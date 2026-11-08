@@ -11,6 +11,7 @@ export type FeatureId =
   | 'villagers'
   | 'pets'
   | 'recipes'
+  | 'skills'
   | 'cropPlanner'
   | 'giftFinder'
   | 'saveProgress'
@@ -32,6 +33,7 @@ export const FEATURES: readonly FeatureDef[] = [
   { id: 'calendar', title: 'Calendário', description: 'Aniversários, festivais e prazos de colheita.', access: 'free' },
   { id: 'villagers', title: 'Moradores', description: 'Perfis, locais e rotinas.', access: 'free' },
   { id: 'recipes', title: 'Receitas', description: 'Os 81 pratos, ingredientes e como aprender: TV, cartas dos moradores, habilidade ou loja.', access: 'free' },
+  { id: 'skills', title: 'Habilidades', description: 'O que cada nível libera, as profissões dos níveis 5 e 10 e a Caverna da Maestria.', access: 'free' },
   { id: 'pets', title: 'Pets', description: 'Amizade do seu pet, como adotar mais e os presentes que eles trazem.', access: 'free' },
   {
     id: 'cropPlanner',

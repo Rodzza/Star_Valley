@@ -17,5 +17,5 @@ export const TILES: readonly Tile[] = [
   { label: 'Moradores', art: 'moradores', feature: 'villagers' },
   { label: 'Receitas', art: 'receitas', feature: 'recipes' },
   { label: 'Projetos', art: 'ferramentas', feature: 'floatingQuests' },
-  { label: 'Habilidades', art: 'habilidades', feature: 'saveProgress' },
+  { label: 'Habilidades', art: 'habilidades', feature: 'skills' },
 ];
