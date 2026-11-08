@@ -4,7 +4,7 @@
  *   npx tsx tools/configureAndroid.ts --test     # usa o App ID de TESTE do Google
  * Ajusta o AndroidManifest.xml do projeto Android. Pode rodar quantas vezes quiser.
  */
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { TEST_APP_ID } from '../src/monetization/adsResolve';
 import { isValidAppId, patchAdMobAppId } from '../src/tools/androidManifest';
 
@@ -39,3 +39,7 @@ if (!isValidAppId(appId)) {
 
 writeFileSync(MANIFEST, patchAdMobAppId(readFileSync(MANIFEST, 'utf8'), appId));
 console.log(`AndroidManifest atualizado com o App ID ${useTest ? '(TESTE) ' : ''}${appId}`);
+
+// Ícone original do Valley Notes (arte/icone*.svg), por cima do ícone padrão do Capacitor.
+cpSync('arte/android-res', 'android/app/src/main/res', { recursive: true });
+console.log('Ícone do Valley Notes aplicado.');
