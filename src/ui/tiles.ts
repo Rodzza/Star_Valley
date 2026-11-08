@@ -11,7 +11,7 @@ export interface Tile {
 /** As 8 categorias da tela inicial. As que já têm página abrem a função correspondente. */
 export const TILES: readonly Tile[] = [
   { label: 'Fazenda', art: 'casa', feature: 'cropPlanner' },
-  { label: 'Pets', art: 'pets' },
+  { label: 'Pets', art: 'pets', feature: 'pets' },
   { label: 'Animais', art: 'animais' },
   { label: 'Estações', art: 'estacoes', feature: 'calendar' },
   { label: 'Moradores', art: 'moradores', feature: 'villagers' },

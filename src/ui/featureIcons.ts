@@ -4,6 +4,7 @@ import type { IconName } from './PixelIcon';
 export const FEATURE_ICON: Record<FeatureId, IconName> = {
   calendar: 'calendar',
   villagers: 'heart',
+  pets: 'heart',
   cropPlanner: 'sprout',
   giftFinder: 'gift',
   saveProgress: 'chest',

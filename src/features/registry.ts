@@ -9,6 +9,7 @@
 export type FeatureId =
   | 'calendar'
   | 'villagers'
+  | 'pets'
   | 'cropPlanner'
   | 'giftFinder'
   | 'saveProgress'
@@ -29,6 +30,7 @@ export interface FeatureDef {
 export const FEATURES: readonly FeatureDef[] = [
   { id: 'calendar', title: 'Calendário', description: 'Aniversários, festivais e prazos de colheita.', access: 'free' },
   { id: 'villagers', title: 'Moradores', description: 'Perfis, locais e rotinas.', access: 'free' },
+  { id: 'pets', title: 'Pets', description: 'Amizade do seu pet, como adotar mais e os presentes que eles trazem.', access: 'free' },
   {
     id: 'cropPlanner',
     title: 'Planejador de plantio',
