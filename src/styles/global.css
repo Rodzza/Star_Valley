@@ -574,3 +574,24 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .skill-choice { margin-top: 8px; display: grid; gap: 6px; }
 .skill-prof { background: var(--paper); border-radius: 10px; padding: 8px 10px; box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.06); }
 .skill-prof__eff { display: block; font-size: 0.92rem; margin-top: 2px; }
+
+/* Painel de habilidades no estilo do jogo */
+.sv-panel { background: #f6c97a; border: 3px solid #b5651d; border-radius: 10px; padding: 12px 10px 8px; margin: 12px 0; box-shadow: inset 0 0 0 2px #ffe3a6; color: #4a2a0a; }
+.sv-row { display: grid; grid-template-columns: minmax(0, 5.6em) 1.4em minmax(0, 1fr) 1.6em; align-items: center; gap: 6px; padding: 5px 0; }
+.sv-label { font-weight: 800; text-align: right; font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sv-icon { font-size: 1.1rem; text-align: center; }
+.sv-pips { display: grid; grid-template-columns: repeat(4, 1fr) 1.9fr repeat(4, 1fr) 1.9fr; gap: 3px; }
+.sv-pip { height: 22px; min-width: 0; padding: 0; border-radius: 4px; border: 2px solid #6b3a12; background: #c9955a; cursor: pointer; box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15); }
+.sv-pip--on { background: #d1203b; box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.35); }
+.sv-pip--big.sv-pip--on { background: #f4a521; }
+.sv-pip:active { transform: scale(0.92); }
+.sv-num { font-weight: 900; font-size: 1.05rem; text-align: center; font-variant-numeric: tabular-nums; }
+.sv-bar { position: relative; height: 24px; border: 2px solid #3c4a1e; border-radius: 4px; background: #a8865a; overflow: hidden; }
+.sv-bar__fill { position: absolute; inset: 0 auto 0 0; background: linear-gradient(#2f9a52, #1d7a3c); transition: width 0.25s; }
+.sv-bar__text { position: relative; display: block; text-align: center; font-size: 0.8rem; font-weight: 800; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6); line-height: 20px; }
+.sv-row--locked { opacity: 0.6; }
+.sv-edit { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; margin-top: 6px; }
+.sv-edit label { display: flex; align-items: center; gap: 6px; }
+.sv-edit input { width: 6.5em; min-height: 40px; border-radius: 8px; border: 2px solid #b5651d; background: #fff3d6; color: #4a2a0a; font: inherit; padding: 0 8px; }
+.sv-step { width: 44px; min-width: 44px; min-height: 40px; padding: 0; margin: 0; flex: none; }
+.sv-hint { font-size: 0.8rem; margin: 6px 0 0; opacity: 0.85; }
