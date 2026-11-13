@@ -17,6 +17,8 @@ import { AdGate, ProGate } from './screens/Gates';
 import { Explore } from './screens/Explore';
 import { Home } from './screens/Home';
 import { Profile } from './screens/Profile';
+import { Onboarding } from './screens/Onboarding';
+import { EMPTY_ONBOARDING, loadOnboarding, saveOnboarding, type OnboardingState } from './onboarding/state';
 import { Soon } from './screens/Soon';
 import { Paywall } from './screens/Paywall';
 import { TabBar, type TabId } from './ui/TabBar';
@@ -90,6 +92,10 @@ function Notices() {
 function Router() {
   const { ready, available } = useEntitlements();
   const [history, setHistory] = useState<Route[]>([{ name: 'home' }]);
+  const [onb, setOnb] = useState<OnboardingState | null>(null);
+  useEffect(() => {
+    void loadOnboarding().then(setOnb);
+  }, []);
   const route = history[history.length - 1]!;
   /** Abas trocam o topo; telas abertas por cima (função, créditos…) empilham. Início zera a pilha. */
   const setRoute = (r: Route) =>
@@ -115,7 +121,23 @@ function Router() {
   const goTab = (t: TabId) =>
     setRoute(t === 'home' ? { name: 'home' } : t === 'explore' ? { name: 'explore' } : t === 'saved' ? { name: 'saved' } : { name: 'profile' });
 
-  if (!ready) return <p className="muted">Carregando…</p>;
+  if (!ready || !onb) return <p className="muted">Carregando…</p>;
+  if (!onb.done) {
+    return (
+      <Onboarding
+        initial={onb}
+        onFinish={(s, openFloating) => {
+          setOnb(s);
+          setHistory(openFloating ? [{ name: 'home' }, { name: 'feature', id: 'floatingQuests' }] : [{ name: 'home' }]);
+        }}
+      />
+    );
+  }
+  const reviewIntro = () => {
+    const s = { ...onb, done: false };
+    void saveOnboarding(s);
+    setOnb(s);
+  };
   if (route.name === 'paywall') {
     return (
       <>
@@ -140,7 +162,7 @@ function Router() {
     case 'home':
       return (
         <>
-          <Home onOpen={openFeature} onSoon={(title) => setRoute({ name: 'soon', title })} onPaywall={goPaywall} />
+          <Home onOpen={openFeature} onSoon={(title) => setRoute({ name: 'soon', title })} onPaywall={goPaywall} onboarding={onb} />
           <Notices />
           <TabBar current={tab} onGo={goTab} />
         </>
@@ -152,7 +174,7 @@ function Router() {
       content = <Soon title="Salvos" note="Aqui ficarão as funções e itens que você marcar como favoritos." />;
       break;
     case 'profile':
-      content = <Profile onPaywall={goPaywall} onOpen={openFeature} onCredits={() => setRoute({ name: 'credits' })} />;
+      content = <Profile onPaywall={goPaywall} onOpen={openFeature} onCredits={() => setRoute({ name: 'credits' })} onReviewIntro={reviewIntro} />;
       break;
     case 'soon':
       content = (

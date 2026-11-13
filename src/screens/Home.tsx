@@ -8,11 +8,13 @@ import { PixelIcon } from '../ui/PixelIcon';
 import { ART, type ArtName } from '../ui/tileArt';
 import { TILES } from '../ui/tiles';
 import { UiIcon } from '../ui/UiIcon';
+import { shortcutsFor, type OnboardingState } from '../onboarding/state';
 
 interface Props {
   onOpen: (id: FeatureId) => void;
   onSoon: (title: string) => void;
   onPaywall: () => void;
+  onboarding?: OnboardingState;
 }
 
 const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -22,7 +24,7 @@ const SHOWCASE: ReadonlyArray<{ id: FeatureId; tone: string; art: ArtName }> = [
   { id: 'giftFinder', tone: 'gold', art: 'primavera' },
 ];
 
-export function Home({ onOpen, onSoon, onPaywall }: Props) {
+export function Home({ onOpen, onSoon, onPaywall, onboarding }: Props) {
   const { available, isPro, adsLeft } = useEntitlements();
   const [query, setQuery] = useState('');
   const [farm, setFarm] = useState<string | null>(null);
@@ -31,6 +33,9 @@ export function Home({ onOpen, onSoon, onPaywall }: Props) {
     void loadStoredSave().then((s) => setFarm(s?.save.farmName || null));
   }, []);
 
+  const shortcuts = shortcutsFor(onboarding?.interests ?? [])
+    .map((id) => FEATURES.find((f) => f.id === id))
+    .filter((f): f is (typeof FEATURES)[number] => Boolean(f));
   const q = norm(query.trim());
   const results = q ? FEATURES.filter((f) => norm(`${f.title} ${f.description}`).includes(q)) : [];
 
@@ -42,7 +47,7 @@ export function Home({ onOpen, onSoon, onPaywall }: Props) {
         </span>
         <div className="welcome-text">
           <h1>Bem-vindo!</h1>
-          <p>{farm ?? 'Seu vale'}</p>
+          <p>{farm ?? (onboarding?.farmName || 'Seu vale')}</p>
         </div>
         <button
           type="button"
@@ -74,6 +79,19 @@ export function Home({ onOpen, onSoon, onPaywall }: Props) {
         </section>
       ) : (
         <>
+          {shortcuts.length > 0 && (
+            <>
+              <h2 className="section">Seus atalhos</h2>
+              <div className="row home-shortcuts">
+                {shortcuts.map((f) => (
+                  <button key={f.id} type="button" className="chip" onClick={() => onOpen(f.id)}>
+                    {f.title}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+
           <div className="tiles">
             {TILES.map((t) => {
               const locked = t.feature ? !available(t.feature) : false;
