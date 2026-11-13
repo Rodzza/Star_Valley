@@ -6,9 +6,10 @@ interface Props {
   onPaywall: () => void;
   onOpen: (id: FeatureId) => void;
   onCredits: () => void;
+  onReviewIntro: () => void;
 }
 
-export function Profile({ onPaywall, onOpen, onCredits }: Props) {
+export function Profile({ onPaywall, onOpen, onCredits, onReviewIntro }: Props) {
   const { isPro, adsLeft } = useEntitlements();
   return (
     <>
@@ -30,6 +31,9 @@ export function Profile({ onPaywall, onOpen, onCredits }: Props) {
         )}
         <button className="btn secondary" onClick={() => onOpen('saveProgress')}>
           Importar ou ver meu save
+        </button>
+        <button className="btn secondary" onClick={onReviewIntro}>
+          Rever a introdução
         </button>
         <button className="link" onClick={onCredits}>
           Fontes e licenças

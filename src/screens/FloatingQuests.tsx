@@ -18,9 +18,9 @@ const DAY_KEY = 'dia-do-jogo-v1';
 const DAYS_AHEAD = 56;
 
 const daysFrom = (d: GameDay) => upcomingDays(d, DAYS_AHEAD).map((x) => buildDayOverlay(x, villagers, gifts, crops));
-const saveDay = (d: GameDay) => void Preferences.set({ key: DAY_KEY, value: JSON.stringify(d) });
+export const saveDay = (d: GameDay) => void Preferences.set({ key: DAY_KEY, value: JSON.stringify(d) });
 
-async function loadDay(): Promise<GameDay> {
+export async function loadDay(): Promise<GameDay> {
   try {
     const { value } = await Preferences.get({ key: DAY_KEY });
     const d = value ? (JSON.parse(value) as GameDay) : null;

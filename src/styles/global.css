@@ -599,3 +599,34 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 /* Animais */
 .animal-price { flex: none; font-weight: 800; font-size: 0.9rem; }
 .animal-day { display: block; margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(0, 0, 0, 0.15); font-weight: 700; font-size: 0.92rem; }
+
+/* Onboarding */
+.onb { min-height: 100dvh; display: flex; flex-direction: column; gap: 12px; padding: 12px 0 calc(16px + env(safe-area-inset-bottom, 0px)); box-sizing: border-box; }
+.onb-top { display: flex; align-items: center; justify-content: space-between; min-height: 44px; }
+.onb-dots { display: flex; gap: 6px; }
+.onb-dot { width: 8px; height: 8px; border-radius: 99px; background: rgba(0, 0, 0, 0.18); transition: width 0.2s, background 0.2s; }
+.onb-dot--done { background: var(--accent); opacity: 0.55; }
+.onb-dot--on { width: 22px; background: var(--accent); }
+.onb-skip { padding: 10px 4px; }
+.onb-body { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.onb-body h1 { margin: 4px 0 0; }
+.onb-lead { margin: 0; font-size: 1.02rem; }
+.onb-hero { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; border: 3px solid var(--wood); }
+.onb-points { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 10px; }
+.onb-points li { display: flex; gap: 10px; align-items: flex-start; background: var(--paper); border-radius: 12px; padding: 10px 12px; line-height: 1.35; }
+.onb-points li > span:first-child { font-size: 1.3rem; line-height: 1.1; }
+.onb-field { display: grid; gap: 6px; font-weight: 700; }
+.onb-label { font-weight: 700; margin-top: 6px; }
+.onb-interests { display: grid; gap: 8px; }
+.onb-interest { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 12px; border-radius: 12px; border: 2px solid var(--wood); background: var(--paper); color: var(--text); font: inherit; font-weight: 700; text-align: left; cursor: pointer; }
+.onb-interest[aria-pressed='true'] { border-color: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); }
+.onb-interest__emoji { font-size: 1.4rem; }
+.onb-interest > span:nth-child(2) { flex: 1; }
+.onb-interest__check { width: 24px; height: 24px; border-radius: 99px; display: grid; place-items: center; background: var(--accent); color: #fff; font-size: 0.9rem; }
+.onb-interest[aria-pressed='false'] .onb-interest__check { background: transparent; border: 2px solid rgba(0, 0, 0, 0.2); }
+.onb-actions { display: flex; gap: 10px; align-items: center; }
+.onb-actions .btn { margin: 0; }
+.onb-back { flex: 0 0 auto; width: auto; padding-left: 18px; padding-right: 18px; }
+.onb-next { flex: 1; }
+.onb-final { flex: 1; display: grid; gap: 6px; }
+.home-shortcuts { margin-bottom: 12px; }
