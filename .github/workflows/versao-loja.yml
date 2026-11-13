@@ -15,6 +15,10 @@ name: Versão para a loja
 on:
   workflow_dispatch:
 
+# Só lê o código: o .aab vai para os Artifacts, nada é escrito no repositório.
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
