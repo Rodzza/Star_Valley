@@ -1,0 +1,27 @@
+# Verificação de segurança antes do merge: SonarQube Community analisa o código de cada
+# pull request e reprova se encontrar vulnerabilidade ou bug grave.
+# Para bloquear o merge: Settings → Branches → regra da branch principal → exigir o check "SonarQube".
+name: Segurança
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seguranca-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Análise de segurança
+        run: ci/sonarqube.sh valley-notes
