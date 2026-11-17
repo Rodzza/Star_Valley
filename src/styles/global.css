@@ -630,3 +630,22 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .onb-next { flex: 1; }
 .onb-final { flex: 1; display: grid; gap: 6px; }
 .home-shortcuts { margin-bottom: 12px; }
+
+.disclaimer { text-align: center; margin: 16px 8px; }
+
+/* Minhas notas */
+.note-card { display: flex; flex-direction: column; align-items: stretch; gap: 4px; text-align: left; width: 100%; }
+.note-card__head { display: flex; align-items: center; gap: 8px; }
+.note-card__head .title { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.note-card__body { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; white-space: pre-line; }
+.note-card--done { opacity: 0.65; }
+.note-card--done .title { text-decoration: line-through; }
+.note-editor { display: flex; flex-direction: column; gap: 10px; }
+.note-title-input { font: inherit; font-size: 1.3rem; font-weight: 800; padding: 10px 12px; border-radius: 10px; border: 2px solid var(--wood); background: var(--paper); color: var(--text); }
+.note-body-input { font: inherit; min-height: 45dvh; padding: 12px; border-radius: 10px; border: 2px solid var(--wood); background: var(--paper); color: var(--text); resize: vertical; line-height: 1.45; }
+.note-editor__actions { display: flex; flex-direction: column; gap: 4px; }
+.note-editor__actions .pet-toggle { margin: 4px 0; }
+.note-delete { color: #b3261e; align-self: flex-start; padding: 8px 0; }
+.note-confirm { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.note-confirm .btn { width: auto; margin: 0; padding-left: 16px; padding-right: 16px; }
+.note-danger { background: #b3261e; }

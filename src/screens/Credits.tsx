@@ -11,7 +11,15 @@ const giftPages: Array<{ name: string; source: CropSource }> = [
 export function Credits() {
   return (
     <>
-      <h1>Fontes e licenças</h1>
+      <h1>Sobre o Stardew Notes</h1>
+      <div className="notice" role="note">
+        <strong>App de fã, não oficial</strong>
+        O Stardew Notes não é oficial nem endossado pela ConcernedApe. Stardew Valley e todos os seus nomes, imagens e
+        conceitos pertencem à ConcernedApe LLC; este app não reivindica nenhum direito sobre eles. O app é gratuito, sem
+        anúncios nem compras, e será retirado se a ConcernedApe pedir.
+      </div>
+
+      <h2>Fontes e licenças</h2>
 
       <h2>Dados de cultivo</h2>
       <p>

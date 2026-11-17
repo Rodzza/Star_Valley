@@ -58,7 +58,7 @@ public class OverlayService extends Service {
     /** Alvo "X" que aparece embaixo da tela enquanto o botão é arrastado. */
     private TextView dismissTarget;
     private boolean overTarget = false;
-    /** Escondido pelo "X": o serviço continua, e o botão volta ao abrir o Valley Notes ou tocar na notificação. */
+    /** Escondido pelo "X": o serviço continua, e o botão volta ao abrir o Stardew Notes ou tocar na notificação. */
     private boolean dismissed = false;
 
     @Override
@@ -114,7 +114,7 @@ public class OverlayService extends Service {
             b = new Notification.Builder(this);
         }
         b.setSmallIcon(android.R.drawable.ic_dialog_info)
-                .setContentTitle("Valley Notes")
+                .setContentTitle("Stardew Notes")
                 .setContentText(dismissed
                         ? "Botão escondido. Toque aqui para mostrar de novo."
                         : "Botão flutuante ativo. Toque para abrir o app.")
@@ -180,7 +180,7 @@ public class OverlayService extends Service {
         circle.setShape(GradientDrawable.OVAL);
         circle.setColor(Color.TRANSPARENT);
         bubble.setBackground(circle);
-        bubble.setContentDescription("Valley Notes: abrir ou fechar as dicas do dia");
+        bubble.setContentDescription("Stardew Notes: abrir ou fechar as dicas do dia");
         root.addView(bubble, new LinearLayout.LayoutParams(dp(48), dp(48)));
 
         panel = new LinearLayout(this);
@@ -304,7 +304,7 @@ public class OverlayService extends Service {
             if (index < days.length() - 1) {
                 row.addView(chip("\uD83C\uDF19 Dormi, +1 dia", 0xFF6B4BB3, v -> moveDay(1)));
             } else {
-                TextView end = text("Abra o Valley Notes para carregar mais dias.", 12, 0xFFFFD38A, false);
+                TextView end = text("Abra o Stardew Notes para carregar mais dias.", 12, 0xFFFFD38A, false);
                 end.setPadding(0, dp(10), 0, 0);
                 panel.addView(end);
             }

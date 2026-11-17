@@ -13,7 +13,5 @@ export const FEATURE_ICON: Record<FeatureId, IconName> = {
   giftFinder: 'gift',
   saveProgress: 'chest',
   floatingQuests: 'scroll',
-  cloudSync: 'cloud',
-  unlimitedFarms: 'house',
-  customNotes: 'note',
+  notes: 'note',
 };

@@ -27,10 +27,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
-        env:
-          VITE_UNLOCK_ALL: 'true'
       - run: npx cap add android
-      - run: npx tsx tools/configureAndroid.ts --test
+      - run: npx tsx tools/configureAndroid.ts
       - run: npx cap sync android
       - name: Usar sempre a mesma chave de teste (permite atualizar o app por cima)
         run: |
@@ -40,17 +38,17 @@ jobs:
         working-directory: android
         run: ./gradlew assembleDebug --no-daemon
       - name: Renomear APK
-        run: cp android/app/build/outputs/apk/debug/app-debug.apk ValleyNotes-teste.apk
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk StardewNotes-teste.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: valley-notes-apk
-          path: ValleyNotes-teste.apk
+          name: stardew-notes-apk
+          path: StardewNotes-teste.apk
       - name: Publicar na aba Releases
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete teste --cleanup-tag --yes || true
-          gh release create teste ValleyNotes-teste.apk \
-            --title "Valley Notes (teste)" \
-            --notes "APK de teste com anúncios de teste do AdMob. Gerado do commit ${GITHUB_SHA::7}. Baixe ValleyNotes-teste.apk e instale." \
+          gh release create teste StardewNotes-teste.apk \
+            --title "Stardew Notes (teste)" \
+            --notes "APK de teste. Gerado do commit ${GITHUB_SHA::7}. Baixe StardewNotes-teste.apk e instale." \
             --prerelease

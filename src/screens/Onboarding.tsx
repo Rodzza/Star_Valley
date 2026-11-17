@@ -44,7 +44,7 @@ export function Onboarding({ initial, onFinish }: Props) {
   const changeDay = (d: GameDay) => setDay(d);
 
   return (
-    <div className="onb" role="dialog" aria-modal="true" aria-label="Boas-vindas ao Valley Notes">
+    <div className="onb" role="dialog" aria-modal="true" aria-label="Boas-vindas ao Stardew Notes">
       <div className="onb-top">
         <div className="onb-dots" aria-label={`Passo ${step + 1} de ${STEPS}`}>
           {Array.from({ length: STEPS }, (_, i) => (
@@ -77,6 +77,7 @@ export function Onboarding({ initial, onFinish }: Props) {
               <span>Um botão sobre o jogo que mostra o que importa no dia, sem sair dele</span>
             </li>
           </ul>
+          <p className="muted small">Gratuito, sem anúncios. App de fã, não oficial e não endossado pela ConcernedApe.</p>
         </section>
       )}
 
