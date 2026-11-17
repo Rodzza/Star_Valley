@@ -14,7 +14,8 @@ export type FeatureId =
   | 'giftFinder'
   | 'saveProgress'
   | 'floatingQuests'
-  | 'notes';
+  | 'notes'
+  | 'backup';
 
 export interface FeatureDef {
   id: FeatureId;
@@ -51,6 +52,7 @@ export const FEATURES: readonly FeatureDef[] = [
     description: 'Botão translúcido sobre o jogo: festival, Carrinho de Viagem, aniversariantes do dia e o que plantar.',
   },
   { id: 'notes', title: 'Minhas notas', description: 'Seus planos, metas e lembretes da fazenda, salvos no celular.' },
+  { id: 'backup', title: 'Backup e restauração', description: 'Salve tudo num arquivo e recupere em outro celular.' },
 ];
 
 export const FEATURE_BY_ID: Readonly<Record<FeatureId, FeatureDef>> = Object.fromEntries(

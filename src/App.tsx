@@ -6,6 +6,10 @@ import { Credits } from './screens/Credits';
 import { FloatingQuests, syncOverlayDay } from './screens/FloatingQuests';
 import { Pets } from './screens/Pets';
 import { Notes } from './screens/Notes';
+import { Backup } from './screens/Backup';
+import { Saved } from './screens/Saved';
+import { loadFavorites, toggleFeature, useFavorites } from './favorites/favorites';
+import { FavoriteButton } from './ui/FavoriteButton';
 import { Recipes } from './screens/Recipes';
 import { Skills } from './screens/Skills';
 import { Buildings } from './screens/Buildings';
@@ -31,7 +35,8 @@ type Route =
   | { name: 'profile' }
   | { name: 'soon'; title: string }
   | { name: 'feature'; id: FeatureId }
-  | { name: 'credits' };
+  | { name: 'credits' }
+  | { name: 'villager'; villager: string };
 
 function FeatureContent({ id }: { id: FeatureId }) {
   switch (id) {
@@ -59,14 +64,18 @@ function FeatureContent({ id }: { id: FeatureId }) {
       return <FloatingQuests />;
     case 'notes':
       return <Notes />;
+    case 'backup':
+      return <Backup />;
   }
 }
 
 function Router() {
   const [history, setHistory] = useState<Route[]>([{ name: 'home' }]);
   const [onb, setOnb] = useState<OnboardingState | null>(null);
+  const favs = useFavorites();
   useEffect(() => {
     void loadOnboarding().then(setOnb);
+    void loadFavorites();
   }, []);
   const route = history[history.length - 1]!;
   /** Abas trocam o topo; telas abertas por cima (função, créditos…) empilham. Início zera a pilha. */
@@ -130,7 +139,7 @@ function Router() {
       content = <Explore onOpen={openFeature} />;
       break;
     case 'saved':
-      content = <Soon title="Salvos" note="Aqui ficarão as funções e itens que você marcar como favoritos." />;
+      content = <Saved onOpen={openFeature} onVillager={(v) => setRoute({ name: 'villager', villager: v })} />;
       break;
     case 'profile':
       content = <Profile onOpen={openFeature} onCredits={() => setRoute({ name: 'credits' })} onReviewIntro={reviewIntro} />;
@@ -153,10 +162,23 @@ function Router() {
         </>
       );
       break;
-    default: {
+    case 'villager':
       content = (
         <>
           {back}
+          <section className="panel">
+            <Villagers initial={route.villager} />
+          </section>
+        </>
+      );
+      break;
+    default: {
+      content = (
+        <>
+          <div className="feature-bar">
+            {back}
+            <FavoriteButton on={favs.features.includes(route.id)} label={FEATURE_BY_ID[route.id].title} onToggle={() => toggleFeature(route.id)} />
+          </div>
           <section className="panel">
             <FeatureContent id={route.id} />
           </section>

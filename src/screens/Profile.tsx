@@ -24,6 +24,9 @@ export function Profile({ onOpen, onCredits, onReviewIntro }: Props) {
         <button className="btn secondary" onClick={() => onOpen('notes')}>
           Minhas notas
         </button>
+        <button className="btn secondary" onClick={() => onOpen('backup')}>
+          Backup e restauração
+        </button>
         <button className="btn secondary" onClick={() => onOpen('saveProgress')}>
           Importar ou ver meu save
         </button>
