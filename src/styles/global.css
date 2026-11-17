@@ -649,3 +649,18 @@ body.vpx-on .app > .panel { padding: 0; margin: 0; border: 0; border-radius: 0; 
 .note-confirm { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .note-confirm .btn { width: auto; margin: 0; padding-left: 16px; padding-right: 16px; }
 .note-danger { background: #b3261e; }
+
+/* Backup */
+.backup-file { display: block; width: 100%; padding: 12px; border: 2px dashed var(--wood); border-radius: 10px; background: var(--paper); color: var(--text); font: inherit; box-sizing: border-box; }
+.backup-msg { font-weight: 700; }
+.backup-file-input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.backup-confirm { scroll-margin-bottom: 120px; }
+
+/* Favoritos */
+.feature-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.fav-btn { min-width: 44px; min-height: 44px; border-radius: 99px; border: 2px solid var(--wood); background: var(--paper); color: var(--wood-dark, #6b3a12); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.fav-btn--on { background: #f4b400; border-color: #b07d00; color: #fff; }
+.vpx-fav { position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); z-index: 3; width: 44px; height: 44px; min-width: 0; min-height: 0; padding: 0; font-size: 1.3rem; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35); }
+body.vpx-on .app > .feature-bar { display: none; }
+.saved-villagers { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 10px; margin-bottom: 8px; }
+.saved-villager { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; border-radius: 12px; border: 2px solid var(--wood); background: var(--paper); color: var(--text); font: inherit; font-weight: 700; font-size: 0.85rem; cursor: pointer; }

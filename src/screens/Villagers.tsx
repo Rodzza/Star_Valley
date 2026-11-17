@@ -1,3 +1,5 @@
+import { toggleVillager, useFavorites } from '../favorites/favorites';
+import { FavoriteButton } from '../ui/FavoriteButton';
 import { useBackHandler } from '../native/backButton';
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type CSSProperties } from 'react';
 import giftsJson from '../data/gifts.json';
@@ -47,8 +49,8 @@ const SCENE: Record<string, string> = {
 
 type View = { kind: 'list' } | { kind: 'villager'; name: string } | { kind: 'item'; name: string };
 
-export function Villagers() {
-  const [stack, setStack] = useState<View[]>([{ kind: 'list' }]);
+export function Villagers({ initial }: { initial?: string } = {}) {
+  const [stack, setStack] = useState<View[]>(initial ? [{ kind: 'list' }, { kind: 'villager', name: initial }] : [{ kind: 'list' }]);
   const view = stack[stack.length - 1]!;
   const open = (v: View) => setStack((s) => [...s, v]);
   const back = () => setStack((s) => (s.length > 1 ? s.slice(0, -1) : s));
@@ -233,6 +235,7 @@ function Dashboard({
   onVillager: (name: string) => void;
   onItem: (name: string) => void;
 }) {
+  const favs = useFavorites();
   const [tab, setTab] = useState<Tab>('presentes');
   const [taste, setTaste] = useState<Taste>('love');
   const g = useMemo(() => gifts.villagers.find((x) => x.name === v.name), [v.name]);
@@ -267,6 +270,7 @@ function Dashboard({
         <button type="button" className="vpx-back" onClick={onBack} aria-label="Voltar para os moradores">
           ‹
         </button>
+        <FavoriteButton className="vpx-fav" on={favs.villagers.includes(v.name)} label={displayName(v.name)} onToggle={() => toggleVillager(v.name)} />
         <div className="vpx-top-item">
           <img src={casaIcon} alt="" className="vpx-top-icon" />
           <span>Mora: {locationLabel(v.location)}</span>

@@ -14,4 +14,5 @@ export const FEATURE_ICON: Record<FeatureId, IconName> = {
   saveProgress: 'chest',
   floatingQuests: 'scroll',
   notes: 'note',
+  backup: 'chest',
 };

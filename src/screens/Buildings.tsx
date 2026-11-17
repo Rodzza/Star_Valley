@@ -100,7 +100,7 @@ export function Buildings() {
               </span>
               <span className="title">{b.pt}</span>
               <label className="recipe-check">
-                <input type="checkbox" checked={done} onChange={() => toggle(b.id)} />
+                <input type="checkbox" checked={done} aria-label={`Construí: ${b.pt}`} onChange={() => toggle(b.id)} />
                 <span>Construí</span>
               </label>
             </div>

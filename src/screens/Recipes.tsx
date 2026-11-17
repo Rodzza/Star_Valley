@@ -88,7 +88,7 @@ export function Recipes() {
               </span>
               <span className="title">{r.pt}</span>
               <label className="recipe-check">
-                <input type="checkbox" checked={done} onChange={() => toggle(r.name)} />
+                <input type="checkbox" checked={done} aria-label={`Aprendi: ${r.pt}`} onChange={() => toggle(r.name)} />
                 <span>Aprendi</span>
               </label>
             </div>

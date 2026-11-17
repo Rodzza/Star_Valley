@@ -24,6 +24,8 @@ importa no dia.
 | Habilidades | Níveis, profissões e Caverna da Maestria, com painel no estilo do jogo |
 | Animais, Pets e Construções | Rendimento por animal, estratégias de lucro, amizade dos pets e custos de cada obra |
 | Minhas notas | Planos, metas e lembretes, com busca, fixar e concluir |
+| Salvos | Funções e moradores marcados com ⭐, num lugar só |
+| Backup e restauração | Exporta tudo num arquivo .json (compartilhar no Android) e restaura com validação |
 | Perfeição pelo save | Importa o arquivo do save e mostra o progresso por categoria |
 | Assistente flutuante | Overlay nativo sobre o jogo: festival, Carrinho de Viagem, aniversários e o que plantar; botão "Dormi" avança o dia |
 
@@ -36,11 +38,13 @@ integrado à navegação.
 - **Nativo**: plugin Capacitor próprio em Java (`plugins/valley-native`) com serviço em primeiro plano e
   janela sobreposta (`SYSTEM_ALERT_WINDOW`) para o assistente flutuante
 - **Dados**: JSON gerados a partir da Stardew Valley Wiki (CC BY-SA), guardados no app; nada vai para servidor
-- **Armazenamento**: Capacitor Preferences (notas, progresso, preferências), tudo no aparelho
+- **Armazenamento**: Capacitor Preferences (notas, progresso, preferências), tudo no aparelho; backup com
+  Capacitor Filesystem + Share
 
 ## Qualidade e segurança
 
-- **Testes**: Vitest, com testes de lógica para dados, cálculos, notas, navegação e onboarding (`npm test`)
+- **Testes**: 174 testes no Vitest: lógica (dados, cálculos, backup, favoritos) e **interface com React Testing
+  Library** (onboarding, notas, receitas, backup e o fluxo do app do primeiro uso até os favoritos), rodando em jsdom
 - **CI**: cada push gera um APK de teste no GitHub Actions e publica na aba Releases
 - **Segurança antes do merge**: cada pull request passa por análise do **SonarQube Community**
   (`ci/sonarqube.sh`), que reprova vulnerabilidades e bugs graves
