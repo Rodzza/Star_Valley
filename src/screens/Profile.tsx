@@ -1,16 +1,13 @@
-import { useEntitlements } from '../monetization/EntitlementsContext';
 import type { FeatureId } from '../features/registry';
 import { PixelIcon } from '../ui/PixelIcon';
 
 interface Props {
-  onPaywall: () => void;
   onOpen: (id: FeatureId) => void;
   onCredits: () => void;
   onReviewIntro: () => void;
 }
 
-export function Profile({ onPaywall, onOpen, onCredits, onReviewIntro }: Props) {
-  const { isPro, adsLeft } = useEntitlements();
+export function Profile({ onOpen, onCredits, onReviewIntro }: Props) {
   return (
     <>
       <h1 className="page-title">Perfil</h1>
@@ -20,15 +17,13 @@ export function Profile({ onPaywall, onOpen, onCredits, onReviewIntro }: Props) 
             <PixelIcon name="person" size={52} />
           </span>
           <div>
-            <p className="profile-plan">{isPro ? 'Plano Pro' : 'Plano gratuito'}</p>
-            <p className="muted">{isPro ? 'Tudo liberado, sem anúncios.' : `Anúncios disponíveis hoje: ${adsLeft} de 5.`}</p>
+            <p className="profile-plan">Tudo liberado</p>
+            <p className="muted">O Stardew Notes é gratuito: sem anúncios e sem compras.</p>
           </div>
         </div>
-        {!isPro && (
-          <button className="btn" onClick={onPaywall}>
-            Conhecer o Pro
-          </button>
-        )}
+        <button className="btn secondary" onClick={() => onOpen('notes')}>
+          Minhas notas
+        </button>
         <button className="btn secondary" onClick={() => onOpen('saveProgress')}>
           Importar ou ver meu save
         </button>
@@ -36,9 +31,12 @@ export function Profile({ onPaywall, onOpen, onCredits, onReviewIntro }: Props) 
           Rever a introdução
         </button>
         <button className="link" onClick={onCredits}>
-          Fontes e licenças
+          Sobre, fontes e licenças
         </button>
       </section>
+      <p className="muted small disclaimer">
+        Aplicativo feito por fã, não oficial e não endossado pela ConcernedApe. Stardew Valley é marca da ConcernedApe LLC.
+      </p>
     </>
   );
 }

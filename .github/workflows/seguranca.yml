@@ -24,4 +24,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Análise de segurança
-        run: ci/sonarqube.sh valley-notes
+        run: ci/sonarqube.sh stardew-notes

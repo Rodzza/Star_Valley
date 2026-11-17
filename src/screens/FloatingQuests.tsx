@@ -102,7 +102,7 @@ export function FloatingQuests() {
     if (!day) return;
     const r = await overlayShowDays(daysFrom(day));
     if (r === 'shown') setMessage('Botão ativado. Abra o jogo: ele aparece sobre a tela. Toque nele para ver o dia e, ao dormir no jogo, toque em Dormi.');
-    else if (r === 'no-permission') setMessage('Falta permitir "Exibir sobre outros apps" para o Valley Notes.');
+    else if (r === 'no-permission') setMessage('Falta permitir "Exibir sobre outros apps" para o Stardew Notes.');
     else if (r === 'unsupported') setMessage('O botão flutuante só funciona no app Android.');
     else setMessage('Não consegui ativar o botão.');
     await refresh();
@@ -166,7 +166,7 @@ export function FloatingQuests() {
         Com o botão ativo, você nem precisa voltar aqui: ao dormir no jogo, toque no botão e em <strong>🌙 Dormi</strong>.
         Depois de uma pausa, ele pergunta se ainda é o mesmo dia. A data daqui se atualiza sozinha quando você abrir o app.
         Para tirar o botão da frente, segure e arraste até o <strong>✕</strong> embaixo da tela: ele volta quando você abrir o
-        Valley Notes ou tocar na notificação.
+        Stardew Notes ou tocar na notificação.
       </p>
 
       <h2>2. Permita exibir sobre outros apps</h2>

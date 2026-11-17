@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import heroImg from '../assets/hero-farm.jpg';
 import { FEATURES, type FeatureId } from '../features/registry';
-import { useEntitlements } from '../monetization/EntitlementsContext';
 import { loadStoredSave } from '../save/storage';
 import { FeatureList } from '../ui/FeatureList';
 import { PixelIcon } from '../ui/PixelIcon';
@@ -13,7 +12,6 @@ import { shortcutsFor, type OnboardingState } from '../onboarding/state';
 interface Props {
   onOpen: (id: FeatureId) => void;
   onSoon: (title: string) => void;
-  onPaywall: () => void;
   onboarding?: OnboardingState;
 }
 
@@ -24,8 +22,7 @@ const SHOWCASE: ReadonlyArray<{ id: FeatureId; tone: string; art: ArtName }> = [
   { id: 'giftFinder', tone: 'gold', art: 'primavera' },
 ];
 
-export function Home({ onOpen, onSoon, onPaywall, onboarding }: Props) {
-  const { available, isPro, adsLeft } = useEntitlements();
+export function Home({ onOpen, onSoon, onboarding }: Props) {
   const [query, setQuery] = useState('');
   const [farm, setFarm] = useState<string | null>(null);
 
@@ -49,16 +46,6 @@ export function Home({ onOpen, onSoon, onPaywall, onboarding }: Props) {
           <h1>Bem-vindo!</h1>
           <p>{farm ?? (onboarding?.farmName || 'Seu vale')}</p>
         </div>
-        <button
-          type="button"
-          className="coins"
-          onClick={onPaywall}
-          disabled={isPro}
-          aria-label={isPro ? 'Plano Pro ativo' : `Anúncios restantes hoje: ${adsLeft} de 5. Toque para conhecer o Pro`}
-        >
-          <PixelIcon name="coin" size={20} />
-          <span>{isPro ? 'Pro' : `${adsLeft}/5`}</span>
-        </button>
       </header>
 
       <label className="search">
@@ -94,22 +81,16 @@ export function Home({ onOpen, onSoon, onPaywall, onboarding }: Props) {
 
           <div className="tiles">
             {TILES.map((t) => {
-              const locked = t.feature ? !available(t.feature) : false;
               return (
                 <button
                   key={t.label}
                   type="button"
                   className={`tile${t.feature ? '' : ' soon'}`}
-                  aria-label={t.feature ? `${t.label}${locked ? ' (bloqueado)' : ''}` : `${t.label} (em breve)`}
+                  aria-label={t.feature ? t.label : `${t.label} (em breve)`}
                   onClick={() => (t.feature ? onOpen(t.feature) : onSoon(t.label))}
                 >
                   <img className="tile-art" src={ART[t.art]} alt="" draggable={false} />
                   <span>{t.label}</span>
-                  {locked && (
-                    <span className="tile-lock">
-                      <PixelIcon name="lock" size={12} />
-                    </span>
-                  )}
                 </button>
               );
             })}

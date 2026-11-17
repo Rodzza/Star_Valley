@@ -12,31 +12,35 @@ As imagens usam só as artes próprias do app (ícones e ilustração da tela in
 Nenhuma arte de personagem ou do jogo.
 
 ## Nome do app (até 30 caracteres)
-Valley Notes: Guia da Fazenda
+Stardew Notes: Guia da Fazenda
 
-Nome embaixo do ícone no celular: Valley Notes
+Nome embaixo do ícone no celular: Stardew Notes
 
 ## Descrição curta (até 80 caracteres)
-Aniversários, presentes e plantio do vale, em português. App não oficial.
+Guia gratuito do vale em português: presentes, plantio, receitas. Não oficial.
 
 ## Descrição completa (até 4.000 caracteres)
-Valley Notes é um companheiro para quem joga Stardew Valley e quer tudo à mão, em português, sem ficar abrindo a wiki no meio da partida.
+Stardew Notes é um companheiro para quem joga Stardew Valley e quer tudo à mão, em português, sem ficar abrindo a wiki no meio da partida.
 
 O QUE VOCÊ ENCONTRA
 • Moradores: aniversário, onde mora, família e o que cada um ama, gosta e odeia ganhar
 • Presente certo: toque num item e veja na hora quem ama, quem gosta e quem odeia
 • Calendário: aniversários e festivais de cada estação
 • Planejador de plantio: veja o que ainda dá tempo de colher na estação, com lucro por dia, preço e energia por qualidade
+• Receitas, habilidades e Caverna da Maestria, animais, pets e construções
+• Assistente flutuante: um botão sobre o jogo com festival, aniversários, Carrinho de Viagem e o que plantar no dia
+• Minhas notas: planos, metas e lembretes da fazenda
+• Perfeição pelo save: importe o arquivo e veja o progresso por categoria
 • Busca rápida por qualquer função
 
 PERSONALIZE
 Escolha uma imagem da sua galeria para o retrato de cada morador. A imagem fica só no seu celular, e o painel se adapta à cor dela.
 
-VERSÃO PRO
-Libere ferramentas extras com a assinatura mensal ou a compra vitalícia, pela própria Google Play. Algumas funções também podem ser liberadas por um dia assistindo a um anúncio.
+100% GRATUITO
+Sem anúncios, sem compras e sem cadastro. Tudo fica salvo só no seu celular.
 
 AVISO
-Valley Notes é um app de fã, não oficial, sem vínculo com a ConcernedApe nem aprovação dela. Stardew Valley é marca de seus respectivos donos. Os dados do jogo vêm da Stardew Valley Wiki e são usados sob a licença CC BY-SA, com créditos dentro do app.
+Stardew Notes é um app de fã, não oficial e não endossado pela ConcernedApe. Stardew Valley e todos os seus nomes e imagens pertencem à ConcernedApe LLC; este app não reivindica nenhum direito sobre eles. Os dados do jogo vêm da Stardew Valley Wiki e são usados sob a licença CC BY-SA, com créditos dentro do app.
 
 ## Categoria e contato
 - Categoria: Livros e referências (ou Entretenimento)

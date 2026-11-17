@@ -1,11 +1,11 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { FEATURE_BY_ID, type FeatureId } from './features/registry';
-import { EntitlementsProvider, useEntitlements } from './monetization/EntitlementsContext';
 import { Calendar } from './screens/Calendar';
 import { CropPlanner } from './screens/CropPlanner';
 import { Credits } from './screens/Credits';
 import { FloatingQuests, syncOverlayDay } from './screens/FloatingQuests';
 import { Pets } from './screens/Pets';
+import { Notes } from './screens/Notes';
 import { Recipes } from './screens/Recipes';
 import { Skills } from './screens/Skills';
 import { Buildings } from './screens/Buildings';
@@ -13,14 +13,12 @@ import { Animals } from './screens/Animals';
 import { GiftFinder } from './screens/GiftFinder';
 import { SaveProgress } from './screens/SaveProgress';
 import { Villagers } from './screens/Villagers';
-import { AdGate, ProGate } from './screens/Gates';
 import { Explore } from './screens/Explore';
 import { Home } from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Onboarding } from './screens/Onboarding';
 import { EMPTY_ONBOARDING, loadOnboarding, saveOnboarding, type OnboardingState } from './onboarding/state';
 import { Soon } from './screens/Soon';
-import { Paywall } from './screens/Paywall';
 import { TabBar, type TabId } from './ui/TabBar';
 import { applyPalette, preferredPalette } from './styles/tokens';
 import { installBackButton, useBackHandler } from './native/backButton';
@@ -33,7 +31,6 @@ type Route =
   | { name: 'profile' }
   | { name: 'soon'; title: string }
   | { name: 'feature'; id: FeatureId }
-  | { name: 'paywall' }
   | { name: 'credits' };
 
 function FeatureContent({ id }: { id: FeatureId }) {
@@ -60,37 +57,12 @@ function FeatureContent({ id }: { id: FeatureId }) {
       return <SaveProgress />;
     case 'floatingQuests':
       return <FloatingQuests />;
-    default:
-      return (
-        <>
-          <h1>{FEATURE_BY_ID[id].title}</h1>
-          <p className="muted">Em breve.</p>
-        </>
-      );
+    case 'notes':
+      return <Notes />;
   }
 }
 
-function Notices() {
-  return (
-    <>
-      {import.meta.env.VITE_PREVIEW === 'true' && (
-        <p className="notice" role="note">
-          <strong>Prévia no navegador</strong>
-          Anúncios e compras são simulados, e o botão flutuante só existe no app Android.
-        </p>
-      )}
-      {import.meta.env.VITE_UNLOCK_ALL === 'true' && (
-        <p className="notice" role="note">
-          <strong>Versão de teste</strong>
-          Todas as funções estão liberadas para você testar. Na versão publicada, valem os planos e anúncios.
-        </p>
-      )}
-    </>
-  );
-}
-
 function Router() {
-  const { ready, available } = useEntitlements();
   const [history, setHistory] = useState<Route[]>([{ name: 'home' }]);
   const [onb, setOnb] = useState<OnboardingState | null>(null);
   useEffect(() => {
@@ -116,12 +88,11 @@ function Router() {
   }, [history.length]);
   const goBack = () => setHistory((h) => (h.length > 1 ? h.slice(0, -1) : [{ name: 'home' }]));
   const goHome = () => setRoute({ name: 'home' });
-  const goPaywall = () => setRoute({ name: 'paywall' });
   const openFeature = (id: FeatureId) => setRoute({ name: 'feature', id });
   const goTab = (t: TabId) =>
     setRoute(t === 'home' ? { name: 'home' } : t === 'explore' ? { name: 'explore' } : t === 'saved' ? { name: 'saved' } : { name: 'profile' });
 
-  if (!ready || !onb) return <p className="muted">Carregando…</p>;
+  if (!onb) return <p className="muted">Carregando…</p>;
   if (!onb.done) {
     return (
       <Onboarding
@@ -138,17 +109,6 @@ function Router() {
     void saveOnboarding(s);
     setOnb(s);
   };
-  if (route.name === 'paywall') {
-    return (
-      <>
-        <Notices />
-        <section className="panel">
-          <Paywall onDone={goHome} />
-        </section>
-      </>
-    );
-  }
-
   const tab: TabId | null =
     route.name === 'home' || route.name === 'explore' || route.name === 'saved' || route.name === 'profile' ? route.name : null;
   const back = (
@@ -162,8 +122,7 @@ function Router() {
     case 'home':
       return (
         <>
-          <Home onOpen={openFeature} onSoon={(title) => setRoute({ name: 'soon', title })} onPaywall={goPaywall} onboarding={onb} />
-          <Notices />
+          <Home onOpen={openFeature} onSoon={(title) => setRoute({ name: 'soon', title })} onboarding={onb} />
           <TabBar current={tab} onGo={goTab} />
         </>
       );
@@ -174,7 +133,7 @@ function Router() {
       content = <Soon title="Salvos" note="Aqui ficarão as funções e itens que você marcar como favoritos." />;
       break;
     case 'profile':
-      content = <Profile onPaywall={goPaywall} onOpen={openFeature} onCredits={() => setRoute({ name: 'credits' })} onReviewIntro={reviewIntro} />;
+      content = <Profile onOpen={openFeature} onCredits={() => setRoute({ name: 'credits' })} onReviewIntro={reviewIntro} />;
       break;
     case 'soon':
       content = (
@@ -195,18 +154,11 @@ function Router() {
       );
       break;
     default: {
-      const def = FEATURE_BY_ID[route.id];
       content = (
         <>
           {back}
           <section className="panel">
-            {available(route.id) ? (
-              <FeatureContent id={route.id} />
-            ) : def.access === 'ad' ? (
-              <AdGate feature={route.id} onPaywall={goPaywall} />
-            ) : (
-              <ProGate feature={route.id} onPaywall={goPaywall} />
-            )}
+            <FeatureContent id={route.id} />
           </section>
         </>
       );
@@ -241,10 +193,8 @@ export function App() {
   }, []);
 
   return (
-    <EntitlementsProvider>
-      <main className="app">
-        <Router />
-      </main>
-    </EntitlementsProvider>
+    <main className="app">
+      <Router />
+    </main>
   );
 }
